@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
 #   	$teacher = "hoge"
-# 	$post = Post.find_by(:id => current_teacher[:id])
+ 	$post = Post.find_by(:id => current_teacher[:id])
   end
 
   def profile
@@ -25,10 +25,11 @@ class HomeController < ApplicationController
 #     	post.address ="hoge"
 #     else
 
-	post = Post.find_or_create_by(:id => current_teacher[:id])
+	$post = Post.find_or_create_by(:id => current_teacher[:id])
 
-	post.postal_code = params[:postal_code]
-	post.save
+	$post.postal_code = params[:postal_code]
+	$post.address = params[:address]
+	$post.save
 	
 	
     if teacher.save
