@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 Oz::Application.routes.draw do
 
   get "home/index"
@@ -8,7 +9,10 @@ Oz::Application.routes.draw do
   post "edit/post"
   post "home/create"
 
-  devise_for :teachers, path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :teachers, path_names: {
+    sign_in: "login",
+    sign_out: "logout"
+  }
 
   #郵便番号検索
   get "searches/search"
@@ -25,7 +29,7 @@ Oz::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  root 'home#index'
+  root "home#index"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
