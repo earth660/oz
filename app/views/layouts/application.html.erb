@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oz</title>
+  <title><%= yield :title %></title>
   <meta charset="UTF-8" />
-  <%= stylesheet_link_tag "search" %>
 
+  <%= favicon_link_tag "favicon.ico" %>
+  <%= yield :css %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  
-  
+  <!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+  <%= yield :javascript_header %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -24,6 +24,6 @@
 
 <br /><br />
 <%= yield %>
-
+<%= yield :javascript_footer %>
 </body>
 </html>
