@@ -1,0 +1,119 @@
+*{margin: 0; padding: 0;}
+body{width: 100%; height: 100%;overflow: hidden; background: #fff;}
+.clr{clear: both;}
+#setting{
+	position: relative;
+	width: 50%;
+	left: 50%;
+	margin-left: -25%;
+}
+.subject, .coin{
+	position: relative;
+	width: 67px;
+	height: 67px;
+	margin: 30px 0 30px 10px;
+	background: #fff;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	opacity: 0.3;
+}
+
+.coin{
+	background: url(../images/coin.png) center center no-repeat;
+	margin: 0 0 25px 19px;
+	border-radius: 50%;
+}
+
+.subject{border: solid 5px #ebebeb;}
+
+.subject p{
+	position: absolute;
+	width: 62px;
+	height: 42px;
+	top: 3px;
+	left: 3px;
+	padding-top: 20px;
+	border-radius: 50%;
+	font-size: 30px;
+}
+
+.subject span{
+	position: absolute;
+	width: 62px;
+	margin-top: 12px;
+	margin-left: -30px;
+	font-size: 12px;
+	text-align: center;
+	z-index: 1;
+}
+
+#Tue, #San{margin-top: 6%;}
+#Wed, #Sat{margin-top: 15.5%;}
+#Thu, #Fri{margin-top: 23.5%;}
+
+#Mon{right: 50%;}
+#Tue{right: 40%;}
+#Wed{right: 39%;}
+#Thu{right: 45%;}
+#Fri{right: 55%;}
+#Sat{right: 61%;}
+#San{right: 60%;}
+
+#Mon p{background: #EE6557;}
+#Tue p{background: #F27398;}
+#Wed p{background: #0E7AC4;}
+#Thu p{background: #008837;}
+#Fri p{background: #58BE89;}
+#Sat p{background: #E67E22;}
+#San p{background: #F1C40F;}
+
+#Eng p{background: #FF6FCF;}
+#Jpn p{background: #EB3C00;}
+#Gen p{background: #FFD800;}
+#Sci p{background: #93D87C;}
+#Mat p{background: #6FC9D8;}
+#Ath p{background: #a35ecd;}
+
+/* ----------8<----------8<--------------------8<----------8<---------- */
+
+#time{
+	position: relative;
+	margin-left: -250px;
+	width: 880px;
+}
+
+#text{
+	position: relative;
+	width: 410px;
+	height: 200px;
+	margin-left: 135px;
+}
+
+#cancel, #save, #ok{
+	width: 120px;
+	height: 50px;
+	border-radius: 25px;
+	margin-top: 15px;
+	margin-left: 20px;
+	padding-top: 10px;
+	float: left;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+}
+#cancel, #ok{
+	background: #adb0d3;
+	margin-left: 135px;
+	color: #fff;
+}
+
+#save{
+	height: 40px;
+	border: #adb0d3 solid 5px;
+	color: #adb0d3;
+}
+
+#ok{margin-left: 20px;}

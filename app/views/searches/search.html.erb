@@ -1,0 +1,118 @@
+<%= stylesheet_link_tag "searches/search", :media => "all" %>
+<%= stylesheet_link_tag "searches/introjs", :media => "all" %>
+  
+  <%= javascript_include_tag "search/jquery.min" %>
+  <%= javascript_include_tag "search/jquery-1.10.1.min" %>
+  <%= javascript_include_tag "search/jquery-1.9.0b1" %>
+  <%= javascript_include_tag "search/jquery-migrate-1.0.0b1" %>
+  <%= javascript_include_tag "search/jquery.transit" %><!-- くるくるメニュー -->
+  <%= javascript_include_tag "search/jquery" %>
+  <%= javascript_include_tag "search/intro" %>
+
+
+<!--     なんか下から書かれてる     -->
+<div class="menu">
+    <div class="item">
+        <div class="link icon_suport"></div>
+        <div class="item_content">
+            <h2>使い方</h2>
+        </div>
+    </div>
+    <div class="item">
+        <div class="link icon_money"></div>
+        <div class="item_content">
+            <h2>料金について</h2>
+        </div>
+    </div>
+    <div class="item">
+        <div class="link icon_teach"></div>
+        <div class="item_content">
+            <h2>先生を検索</h2>
+        </div>
+    </div>
+<%= link_to("/", :class => "item") do %>
+        <div class="link icon_home"></div>
+        <div class="item_content">
+            <h2>トップページ</h2>
+        </div>
+<% end %>
+    
+    
+</div>
+<!--       /menu       -->
+<!-- ↓郵便番号UI -->
+<form id="form" method="get" action="" name="fcset">
+<div class="button"></div>
+<div class="zip">
+	<INPUT TYPE="TEXT" NAME="n2" SIZE="5" MAXLENGTH="3" style="left:-15px;" onKeyUp="NextFocusMove(this, 'n3', 3)">
+<div class="hi">-</div>
+	<INPUT TYPE="TEXT" NAME="n3" SIZE="5" MAXLENGTH="4" style="margin-left:1.5px;" onkeyup="PrevFocusMove(this, 'n4', value)">
+</div>
+
+<!-- ↓変更 -->
+<div class="border"></div>
+<div class="man"></div><div class="woman"></div>
+<div class="maru">
+	<div class="con"></div>
+	<div class="con-2 pp icon"></div>
+	<div class="con-2 g icon"></div>
+	<div class="con-2 b icon"></div>
+	<div class="con-2 r icon"></div>
+	<div class="con-2 y icon"></div>
+	<div class="con-2 p icon"></div>
+</div>
+</form>
+<div class="clr"></div>
+<!-- ↑変更 -->
+<!-- ↑郵便番号UI -->
+
+<br /><br />
+<div id="cover">
+	<a href="details.html"><%= image_tag("1.png", :class => "1") %></a>
+	<a href="details.html"><%= image_tag("2.png", :class => "2") %></a>
+	<a href="details.html"><%= image_tag("3.png", :class => "3") %></a>
+	<a href="details.html"><%= image_tag("4.png", :class => "4") %></a>
+<!-- /1 -->
+	<a href="details.html"><%= image_tag("5.png", :class => "5") %></a>
+	<a href="details.html"><%= image_tag("6.png", :class => "6") %></a>
+	<a href="details.html"><%= image_tag("7.png", :class => "7") %></a>
+	<a href="details.html"><%= image_tag("8.png", :class => "8") %></a>
+<!-- /2 -->
+	<a href="details.html"><%= image_tag("9.png",  :class => "9") %></a>
+	<a href="details.html"><%= image_tag("10.png", :class => "10") %></a>
+	<a href="details.html"><%= image_tag("11.png", :class => "11") %></a>
+	<a href="details.html"><%= image_tag("12.png", :class => "12") %></a>
+<!-- /3 -->
+</div><!-- /#cover -->
+
+<div class="clr"></div>
+
+<nav class="cover">
+	<ul id="prof">
+		<li class="img"></li>
+		<li class="mail"></li>
+		<li class="name"></li>
+		<li class="univ"></li>
+		<li class="sub"></li>
+		<li class="station"></li>
+		<li class="car"></li>
+		<li class="money"></li>
+		<li class="message"></li>
+	</ul>
+	
+	<div class="rate1"></div>
+	<div class="rate2"></div>
+	<div class="rate3"></div>
+	<div style="margin-top: 100px;"></div>
+	<div class="paku"></div>
+	<div class="prate1"></div>
+	<div class="prate2"></div>
+	<div class="prate3"></div>
+	<div class="prate1_1">勉強面</div>
+	<div class="prate2_1">目標達成率</div>
+	<div class="prate3_1">人格面</div>
+</nav>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<%=  javascript_include_tag "search/jquery-css-transform" %>
+<%=  javascript_include_tag "search/jquery-animate-css-rotate-scale" %>

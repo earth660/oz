@@ -1,0 +1,113 @@
+
+/* menu */
+
+.icon {
+	display: inline-block;
+}
+.menu{
+    width:750px;
+    height:52px;
+    position:relative;
+    top:50px;
+    left: 38%;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.item{
+    position:relative;
+    float:left;
+    width:52px;
+    margin:0px 5px;
+    height:52px;
+    border:2px solid #ddd;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    background-color: #f0f0f0;
+
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.link{
+    left:2px;
+    top:2px;
+    position:absolute;
+    width:48px;
+    height:48px;
+}
+.icon_home{
+    background:transparent url(../images/home.png) no-repeat;
+}
+.icon_suport{
+    background:transparent url(../images/sche1.png) no-repeat;
+}
+.icon_money{
+    background:transparent url(../images/sche2.png) no-repeat;
+}
+.icon_teach{
+    background:transparent url(../images/sche3.png) no-repeat;
+}
+.icon_oz{
+    background:transparent url(../images/sche4.png) no-repeat;
+}
+
+.icon_set{
+    background:transparent url(../images/setting.png) no-repeat;
+}
+
+.icon_hot{
+    background:transparent url(../images/hot.png) no-repeat;
+}
+
+.icon_amazon{
+    background:transparent url(../images/amazon.png) no-repeat;
+}
+
+.icon_return{
+    background:transparent url(../images/return.png) no-repeat;
+}
+
+.item_content{
+    position:absolute;
+    height:52px;
+    width:220px;
+    overflow:hidden;
+    left:56px;
+    top:7px;
+    background:transparent;
+    display:none;
+}
+.item_content h2{
+    color:#aaa;
+    text-shadow: 1px 1px 1px #fff;
+    background-color:transparent;
+    font-size:30px;
+}
+.item_content a{
+    background-color:transparent;
+    float:left;
+    margin-right:7px;
+    margin-top:3px;
+    color:#bbb;
+    text-shadow: 1px 1px 1px #fff;
+    text-decoration:none;
+    font-size:12px;
+}
+.item_content a:hover{
+    color:#0b965b;
+}
+.item_content p {
+    background-color:transparent;
+    display:none;
+}
+.item_content p input{
+    border:1px solid #ccc;
+    padding:1px;
+    width:155px;
+    float:left;
+    margin-right:5px;
+}

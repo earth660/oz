@@ -1,0 +1,242 @@
+*{margin: 0; padding: 0;}
+body{width: 100%; height: 100%;overflow: hidden;}
+.clr{clear: both;}
+
+#jquery-cycle {
+	position: absolute;
+    width: 300px;
+    height: 90px;
+    background: #ebebeb;
+    border-radius: 25px;
+    left: 50%;
+    margin-left: -150px;
+    top: 15%;
+    color: #81817A;
+}
+
+#jquery-cycle h1{
+	margin-top: 5px;
+	font-size: 30px;
+}
+
+#jquery-cycle h2{font-size: 20px;}
+
+#jquery-cycle-prev{
+	position: absolute;
+	top: 19%;
+	right: 62%;
+}
+
+#jquery-cycle-next{
+	position: absolute;
+	top: 19%;
+	right: 35.5%;
+}
+
+#prev{
+	border-top: 20px solid transparent;
+	border-right: 30px solid #ADB0D3;
+	border-bottom: 20px solid transparent;
+}
+
+#next{
+	border-top: 20px solid transparent;
+	border-left: 30px solid #ADB0D3;
+	border-bottom: 20px solid transparent;	
+}
+
+.year{
+	width: 300px;
+	height: 120px;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.week, .subject{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	border-radius: 50%;
+	border: solid 5px #ebebeb;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.week{
+	margin-right: -60px;
+
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+.subject{opacity: 0.3;}
+
+.week p, .subject p{
+	position: absolute;
+	width: 90px;
+	height: 55px;
+	top: 5px;
+	left: 5px;
+	padding-top: 35px;
+	border-radius: 50%;
+	font-size: 30px;
+}
+
+.week span{
+	position: absolute;
+	width: 70px;
+	top: 15%;
+	left: 50%;
+	margin-left: -33px;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 3px;
+	z-index: 1;
+}
+
+.subject span{
+	position: absolute;
+	width: 80px;
+	top: 15%;
+	left: 50%;
+	margin-left: -40px;
+	font-size: 15px;
+	text-align: center;
+	z-index: 1;
+}
+
+#cycle{margin: 16.5% 0 0 0;}
+
+#Tue, #San{margin-top: 6%;}
+#Wed, #Sat{margin-top: 15.5%;}
+#Thu, #Fri{margin-top: 23.5%;}
+
+#Mon{right: 50%;}
+#Tue{right: 40%;}
+#Wed{right: 39%;}
+#Thu{right: 45%;}
+#Fri{right: 55%;}
+#Sat{right: 61%;}
+#San{right: 60%;}
+
+#Mon p{background: #EE6557;}
+#Tue p{background: #F27398;}
+#Wed p{background: #0E7AC4;}
+#Thu p{background: #008837;}
+#Fri p{background: #58BE89;}
+#Sat p{background: #E67E22;}
+#San p{background: #F1C40F;}
+
+#Eng p{background: #FF6FCF;}
+#Jpn p{background: #EB3C00;}
+#Gen p{background: #FFD800;}
+#Sci p{background: #93D87C;}
+#Mat p{background: #6FC9D8;}
+
+.btn{
+	position: relative;
+	width: 65px;
+	height: 65px;
+	right: -41%;
+	margin-right: 20px;
+	margin: 10% 20px -25px 0;
+	border-radius: 50%;
+	border: #efefef 3px solid;
+	cursor: pointer;
+	float: left;
+}
+
+#dust, #pen, #add{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: #fff 3px solid;
+}
+#dust{background: url(../images/dust.png) center center no-repeat #F58E7E;}
+
+#pen{background: url(../images/pen.png) center center no-repeat #FDC44F;}
+
+#add{background: #8FCCB0;
+	width: 42px;
+	color: #fff;
+	padding-left: 18px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+/* ----------8<----------8<--------------------8<----------8<---------- */
+
+#form{
+	position: relative;
+	right: -50%;
+	margin-left: -300px;
+}
+
+.coin{
+	position: relative;
+	width: 100px;
+	height: 97px;
+	background: url(../images/coin.png) center center no-repeat;
+	margin-left: 10px;
+	margin-top: 1%;
+	opacity: 0.3;
+	cursor: pointer;
+	float: left;
+}
+
+.time{
+	position: relative;
+	width: 500px;
+	height: 150px;
+	background: #ccc;
+	right: -1.5%;
+	margin-top: 10%;
+	border-radius: 25px;
+}
+
+#hour, #min{
+	position: absolute;
+	width: 180px;
+	height: 120px;
+	background: #fff;
+}
+
+#hour{top: 10%;right: 55%;}
+#min{top: 10%;right: 10%;}
+
+#time span{
+	position: absolute;
+	font-size: 100px;
+	top: -15%;
+	right: 18%;
+}
+
+.plus, .minuts{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #000;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 40px;
+	opacity: 0;
+}
+
+.plus p, .minuts p{
+	position: a;
+	margin-top: -15%;
+	margin-left: 25%;
+}
+
+.plus{top: -30%;}
+.minuts{top: 95%;}
+
+.p1, .m1{right: 68%;}
+.p2, .m2{right: 23%;}

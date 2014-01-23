@@ -1,0 +1,68 @@
+/* Core CSS. Do not edit unless your sure */
+.easy-select-box{
+	display:inline-block;
+	position:relative;
+}
+.easy-select-box > .esb-dropdown{
+	position:absolute;
+	top:130%;
+	z-index:99;
+	display:none;
+}
+
+/* > .easy-select-box  == selected */
+/* > .esb-displayer == selected (background) */
+/* > .esb-dropdown == option */
+
+/* Default Presentation CSS. You can edit appearance here or create a custom class below */
+.easy-select-box{
+	width: 150px;
+	margin-top: 3%;
+	left: 5%;
+	text-align: left;
+	font-size:30px;
+	color: #000;
+	font-weight: 900;
+}
+
+.easy-select-box:after{
+	content: '▼';
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 15px;
+	color: #000;
+	font-weight: 900;
+}
+
+.easy-select-box > .esb-displayer{
+	padding:0 3px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.easy-select-box > .esb-dropdown{
+	width: 50px;
+	max-height:130px;
+	padding: 10px;
+	overflow: auto;
+	font-size: 15px;
+	background: #5dade2;
+	border-radius: 10px;
+}
+
+.easy-select-box > .esb-dropdown > .esb-item{
+	padding:10px;
+	background: #5dade2;
+	color:#fff;
+	font-weight: 900;
+	cursor:default;
+}
+
+
+.easy-select-box > .esb-dropdown > .esb-item:hover{
+	background: #3580b9;
+	color:#FFFFFF;
+	border-radius: 10px;
+}
+

@@ -1,0 +1,10 @@
+<%= form_tag "/home/post" do %>
+
+  <%= label_tag "名前: " %>
+  <%= text_field_tag :post %><br />
+
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+
+<% end %>

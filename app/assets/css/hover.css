@@ -1,0 +1,8 @@
+.hover{ background:url("../images/hover.png") top left no-repeat; }
+.green:hover{ width:175px; height:245px; background-position:-10px -10px; }
+.perple:hover{ width:171px; height:245px; background-position:-10px -265px; }
+.yellow:hover{ width:214px; height:209px; background-position:-10px -520px; }
+.red:hover{ width:219px; height:209px; background-position:-10px -739px; }
+.blue:hover{ width:214px; height:201px; background-position:-10px -958px; }
+.pink:hover{ width:219px; height:201px; background-position:-10px -1169px; }
+

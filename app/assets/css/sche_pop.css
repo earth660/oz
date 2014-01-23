@@ -1,0 +1,578 @@
+body{
+	overflow: hidden;
+}
+
+
+#no1{
+	width: 170px;
+	height: 170px;
+	top: 10px;
+	left: 45%;
+	background: #fff;
+	border: solid 10px #eee;
+	border-radius: 50%;
+	position: relative;
+	cursor: pointer;
+
+	animation-name: anime1;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	-moz-animation-name: anime1;
+	-moz-animation-duration: 3s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction:alternate;
+	
+	-webkit-animation-name: anime1;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+	
+	-o-animation-name: anime1;
+	-o-animation-duration: 3s;
+	-o-animation-timing-function: ease;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction:alternate;
+	
+	-ms-animation-name: anime1;
+	-ms-animation-duration: 3s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction:alternate;
+	
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+#no1:hover{
+	animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+}
+
+#no1 #pop1{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background: #FF6FCF;
+	position: absolute;
+	margin: 3px;
+	opacity: 0.8;
+	color: #fff;
+	text-align: center;
+}
+
+#pop1 img{
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+
+#pop1 .name{
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+#no2{
+	width: 170px;
+	height: 170px;
+	background: #fff;
+	border: solid 10px #eee;
+	border-radius: 50%;
+	position: relative;
+	top: -70px;
+	left: 30%;
+	cursor: pointer;
+	
+	animation-name: anime2;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	-moz-animation-name: anime2;
+	-moz-animation-duration: 2s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction:alternate;
+	
+	-webkit-animation-name: anime2;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+	
+	-o-animation-name: anime2;
+	-o-animation-duration: 2s;
+	-o-animation-timing-function: ease;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction:alternate;
+	
+	-ms-animation-name: anime2;
+	-ms-animation-duration: 2;
+	-ms-animation-timing-function: ease;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction:alternate;
+
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+#no2 #pop2{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background: #FFD800;
+	position: absolute;
+	margin: 3px;
+	opacity: 0.8;
+	color: #fff;
+	text-align: center;
+}
+
+#pop2 img{
+	position: absolute;
+	left: 20px;
+	top: 0px;
+}
+
+
+#no2:hover{
+	animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+}
+
+#no3{
+	width: 170px;
+	height: 170px;
+	background: #fff;
+	border: solid 10px #eee;
+	border-radius: 50%;
+	position: relative;
+	top: -390px;
+	left: 70%;
+	cursor: pointer;
+
+	animation-name: anime3;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	-moz-animation-name: anime3;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction:alternate;
+	
+	-webkit-animation-name: anime3;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+	
+	-o-animation-name: anime3;
+	-o-animation-duration: 1s;
+	-o-animation-timing-function: ease;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction:alternate;
+	
+	-ms-animation-name: anime3;
+	-ms-animation-duration: 1s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction:alternate;
+
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+#no3 #pop3{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background: #93D87C;
+	position: absolute;
+	margin: 3px;
+	opacity: 0.8;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+
+#pop3 img{
+	position: absolute;
+	left: 33px;
+	top: 40px;
+}
+
+#pop3 .name{
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+#no3:hover{
+	animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+}
+
+#no4{
+	width: 170px;
+	height: 170px;
+	background: #fff;
+	border: solid 10px #eee;
+	border-radius: 50%;
+	position: relative;
+	margin-top: 250px;
+	left: 55%;
+	
+	animation-name: anime4;
+	animation-duration: 2.5s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	-moz-animation-name: anime4;
+	-moz-animation-duration: 2.5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction:alternate;
+	
+	-webkit-animation-name: anime4;
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+	
+	-o-animation-name: anime4;
+	-o-animation-duration: 2.5s;
+	-o-animation-timing-function: ease;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction:alternate;
+	
+	-ms-animation-name: anime4;
+	-ms-animation-duration: 2.5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction:alternate;
+
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+#no4 #pop4{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background: #EB3C00;
+	position: absolute;
+	margin: 3px;
+	opacity: 0.8;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+
+#pop4 img{
+	position: absolute;
+	left: 15px;
+	top: 25px;
+}
+
+#no4:hover{
+	animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+}
+
+
+#no5{
+	width: 170px;
+	height: 170px;
+	background: #fff;
+	border: solid 10px #eee;
+	border-radius: 50%;
+	position: relative;
+	margin-top: -550px;
+	left: 14%;
+
+	animation-name: anime5;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction:alternate;
+
+	-moz-animation-name: anime5;
+	-moz-animation-duration: 3s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction:alternate;
+	
+	-webkit-animation-name: anime5;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+	
+	-o-animation-name: anime5;
+	-o-animation-duration: 3s;
+	-o-animation-timing-function: ease;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction:alternate;
+	
+	-ms-animation-name: anime5;
+	-ms-animation-duration: 3s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction:alternate;
+
+	transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+}
+
+#no5 #pop5{
+	width: 165px;
+	height: 165px;
+	border-radius: 50%;
+	background: #6FC9D8;
+	position: absolute;
+	margin: 3px;
+	opacity: 0.8;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+}
+
+#pop5 img{
+	position: absolute;
+	left: 25px;
+	top: 20px;
+}
+
+
+#no5:hover{
+	animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+}
+
+#etc{
+	width: 170px;
+	height: 70px;
+	background: #eee;
+	position: relative;
+	margin-top: -370px;
+	left: 80%;
+	border-radius: 25px;
+	color: #CD7DC4;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+
+.name, .class{
+	opacity: 0;
+}
+
+.lv{
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.name{
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.class{
+	font-size: 20px;
+}
+
+
+@keyframes anime1{
+	0%{top: 10px;}
+	100%{top: -50px;}
+}
+
+@-moz-keyframes anime1{
+	0%{top: 10px;}
+	100%{top: -50px;}
+}
+
+@-webkit-keyframes anime1{
+	0%{top: 10px;}
+	100%{top: -50px;}
+}
+
+@-o-keyframes anime1{
+	0%{top: 10px;}
+	100%{top: -50px;}
+}
+
+@-ms-keyframes anime1{
+	0%{top: 10px;}
+	100%{top: -50px;}
+}
+
+@keyframes anime2{
+	0%{top: -70px;}
+	100%{top: -120px;}
+}
+
+@-moz-keyframes anime2{
+	0%{top: -70px;}
+	100%{top: -120px;}
+}
+
+@-webkit-keyframes anime2{
+	0%{top: -70px;}
+	100%{top: -120px;}
+}
+
+@-o-keyframes anime2{
+	0%{top: -70px;}
+	100%{top: -120px;}
+}
+
+@-ms-keyframes anime2{
+	0%{top: -70px;}
+	100%{top: -120px;}
+}
+
+@keyframes anime3{
+	0%{top: -390px;}
+	100%{top: -350px;}
+}
+
+@-moz-keyframes anime3{
+	0%{top: -390px;}
+	100%{top: -350px;}
+}
+
+@-webkit-keyframes anime3{
+	0%{top: -390px;}
+	100%{top: -350px;}
+}
+
+@-o-keyframes anime3{
+	0%{top: -390px;}
+	100%{top: -350px;}
+}
+
+@-ms-keyframes anime3{
+	0%{top: -390px;}
+	100%{top: -350px;}
+}
+
+@keyframes anime4{
+	0%{top: -600px;}
+	100%{top: -650px;}
+}
+
+@-moz-keyframes anime4{
+	0%{top: -600px;}
+	100%{top: -650px;}
+}
+
+@-webkit-keyframes anime4{
+	0%{top: -600px;}
+	100%{top: -650px;}
+}
+
+@-o-keyframes anime4{
+	0%{top: -600px;}
+	100%{top: -650px;}
+}
+
+@-ms-keyframes anime4{
+	0%{top: -600px;}
+	100%{top: -650px;}
+}
+
+@keyframes anime5{
+	0%{top: -500px;}
+	100%{top: -450px;}
+}
+
+@-moz-keyframes anime5{
+	0%{top: -500px;}
+	100%{top: -450px;}
+}
+
+@-webkit-keyframes anime5{
+	0%{top: -500px;}
+	100%{top: -450px;}
+}
+
+@-o-keyframes anime5{
+	0%{top: -500px;}
+	100%{top: -450px;}
+}
+
+@-ms-keyframes anime5{
+	0%{top: -500px;}
+	100%{top: -450px;}
+}
+
+@keyframes anime6{
+	0%{top: -870px;}
+	100%{top: -820px;}
+}
+
+@-moz-keyframes anime6{
+	0%{top: -870px;}
+	100%{top: -820px;}
+}
+
+@-webkit-keyframes anime6{
+	0%{top: -870px;}
+	100%{top: -820px;}
+}
+
+@-o-keyframes anime6{
+	0%{top: -870px;}
+	100%{top: -820px;}
+}
+
+@-ms-keyframes anime6{
+	0%{top: -870px;}
+	100%{top: -820px;}
+}
+

@@ -1,0 +1,286 @@
+html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
+.weight{font-weight: 900;}
+.center{text-align: center;}
+.clr{clear: both;}
+
+#content{
+	position: relative;
+	width: 70%;
+	height: 140%;
+	margin: 5% 0 0 15%;
+}
+#post{
+	position: relative;
+	left: auto;
+	width: 300px;
+	height: 50px;
+	border: solid 5px #33729f;
+	border-radius: 15px;
+	margin: 5% 0 0 10%;
+}
+#post:before{
+	position: absolute;
+	content: '〒';
+	width: 60px;
+	height: 60px;
+	background: #33729f;
+	border-radius: 15px;
+	margin: -2% 0 0 -25%;
+	color: #fff;
+	font-size: 40px;
+}
+#post:after{
+	position: absolute;
+	content: '−';
+	left: 47%;
+}
+#post > input{
+	position: relative;
+	width: 90px;
+	height: 40px;
+	left: -6%;
+	margin: 0.8% 0 0 12%;
+	border: none;
+}
+
+#post, #post > input{color: #33729f; font-size: 30px; }
+#parent-name > input, #child-name > input{
+	position: relative;
+	width: 270px;
+	height: 70px;
+	background: #efefef;
+	border: none;
+	border-radius: 35px;
+	padding: 0 0 0 90px;
+	font-size: 30px;
+}
+#parent-name:before, #child-name:before{
+	position: absolute;
+	content: '';
+	width: 55px;
+	height: 55px;
+	border: solid 5px #fff;
+	border-radius: 50%;
+	margin: 0.3% 0 0 0.5%;
+	z-index: 1;
+}
+#parent-name{margin: 5%; float: left;}
+#child-name{ margin: 5%;}
+#parent-name:before{background: url(../images/parent.png) #ff5c57 no-repeat center center; background-size: 90%; }
+#child-name:before{background: url(../images/child.png) #f9c732 no-repeat center center; background-size: 90%; }
+
+#child-date{
+	position: absolute;
+	width: 360px;
+	height: 150px;
+	left: 5%;
+	background: #efefef;
+	border-radius: 80px;
+}
+
+/* radio && checkbox setting */
+#sex input, #subject input, #week input, #purpose input, #howto input{display: none;}
+#sex label, #subject label, #week label, #purpose label, #howto label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin: 0;
+    transition: .2s;
+    opacity: 0.2;
+}
+
+#purpose label, #howto label{opacity: 0.5;}
+
+#sex input[type="radio"]:checked + label,
+#subject input[type="checkbox"]:checked + label, 
+#week input[type="checkbox"]:checked + label, 
+#purpose input[type="checkbox"]:checked + label, 
+#howto input[type="checkbox"]:checked + label
+ {opacity: 1; }
+
+/* radio #sex */
+#sex{margin: 12px 0 0 20px; width: 124px; height: 126px; border-radius: 50%; background: #fff; float: left;}
+#manradio{width: 62px; height: 126px; background: url(../images/man.png);}
+#womanradio{width: 62px; height: 126px; background: url(../images/woman.png);}
+
+/* school */ /* grade */
+.easy-select-box:focus { outline: none }
+
+/* Core CSS. Do not edit unless your sure */
+.easy-select-box{
+	display:inline-block;
+	position:relative;
+}
+.easy-select-box > .esb-dropdown{
+	position:absolute;
+	top:130%;
+	z-index:99;
+	display:none;
+}
+
+/* > .easy-select-box  == selected */
+/* > .esb-displayer == selected (background) */
+/* > .esb-dropdown == option */
+
+/* Default Presentation CSS. You can edit appearance here or create a custom class below */
+.easy-select-box{
+	width: 150px;
+	margin-top: 3%;
+	left: 5%;
+	text-align: left;
+	font-size:30px;
+	color: #000;
+	font-weight: 900;
+}
+
+.easy-select-box:after{
+	content: '▼';
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-size: 15px;
+	color: #000;
+	font-weight: 900;
+}
+
+.easy-select-box > .esb-displayer{
+	padding:0 3px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.easy-select-box > .esb-dropdown{
+	width: 50px;
+	max-height:130px;
+	padding: 10px;
+	overflow: auto;
+	font-size: 15px;
+	background: #5dade2;
+	border-radius: 10px;
+}
+
+.easy-select-box > .esb-dropdown > .esb-item{
+	padding:10px;
+	background: #5dade2;
+	color:#fff;
+	font-weight: 900;
+	cursor:default;
+}
+
+
+.easy-select-box > .esb-dropdown > .esb-item:hover{
+	background: #3580b9;
+	color:#FFFFFF;
+	border-radius: 10px;
+}
+
+#schooldata{position: absolute; top: 13%; right: 15%; width: 150px; height: 50px;}
+#gradedata{position: absolute; right: 15%; margin-top: 23%; width: 150px; height: 50px;}
+
+#subject{position: absolute; right: 15%; margin-top: 2%;}
+
+.eng, .jap, .soc, .sci, .mat, .ath{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: #efefef;
+	float: left;
+	border-radius: 50%;
+}
+
+.eng:before, .jap:before, .soc:before, .sci:before, .mat:before, .ath:before{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 5px; left: 5px;
+	border: solid 5px #fff;
+	border-radius: 50%;
+	color: #fff;
+	line-height: 40px;
+	font-size: 25px;
+}
+
+.jap:before{content: '国'; background: #ff5c57;}
+.soc:before{content: '社'; background: #f9c732;}
+.sci:before{content: '理'; background: #7fe35e;}
+.mat:before{content: '数'; background: #6fc9d8;}
+.eng:before{content: '英'; background: #ff6fcf;}
+.ath:before{content: '他'; background: #a35ecd;}
+
+#week{position: absolute; right: 15.5%; margin-top: 10%; }
+
+.Man, .Tue, .Wed, .Thu, .Fri, .Sut, .Sun{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background: #efefef;
+	float: left;
+	border-radius: 50%;
+}
+
+.Man:before, .Tue:before, .Wed:before, .Thu:before, .Fri:before, .Sut:before, .Sun:before{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 5px; left: 5px;
+	border: solid 5px #fff;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 20px;
+}
+
+.Man:before{content: '月'; background: #EE6557;}
+.Tue:before{content: '火'; background: #F27398;}
+.Wed:before{content: '水'; background: #0E7AC4;}
+.Thu:before{content: '木'; background: #008837;}
+.Fri:before{content: '金'; background: #58BE89;}
+.Sut:before{content: '土'; background: #E67E22;}
+.Sun:before{content: '日'; background: #F1C40F;}
+
+
+ul#purpose, ul#howto{
+	position: absolute;
+	list-style: none;
+	width: 75%;
+	background: #efefef;
+	border-radius: 20px;
+	margin-top: 180px;
+	margin-left: 5%;
+	font-size: 13px;
+	font-weight: 900;
+}
+
+ul#howto{margin-top: 350px;}
+
+ul#purpose > li, ul#howto > li{
+	width: 25%;
+	margin: 15px;
+	float: left;
+}
+
+ul#purpose > li:nth-of-type(3n+1), ul#howto > li:nth-of-type(3n+1){clear: both; margin-left: 5%;}
+ul#purpose > li:nth-of-type(1), ul#howto > li:nth-of-type(1){margin-left: 5%;}
+
+.pensile:before{
+	position: absolute;
+	content: '';
+	background: url(../images/pencil.png) no-repeat center center;
+	width: 26px; height: 27px;
+	margin-top: -5px;
+	margin-left: -27px;
+}
+
+.button{
+	position: absolute;
+	width: 200px; height: 70px;
+	bottom: 25px;
+	margin-left: -100px;
+	background: #5dade2;
+	border: none;
+	border-radius: 20px;
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+#intro1{width: 400px; left: 5%;}

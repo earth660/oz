@@ -1,0 +1,283 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+.link{
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	list-style: none;
+}
+
+.link > .mail{ position: absolute; width: 29px; height: 38px; background: url(../images/mail.png) no-repeat; top: 120px; left: 51.5%; z-index: 2; }
+.link > .icon{ position: absolute; width: 71px; height: 67px; background: url(../images/mailicon.png) no-repeat;top: 55px; left: 47%;
+			   -webkit-animation: anime1 10s infinite;}
+
+@-webkit-keyframes anime1{
+	0%{top: 55px;}
+	2%{top: 40px;}
+	4%{top: 55px;}
+	55%{left: 47%;}
+	56%{left: 46.5%;}
+	57%{left: 47.5%;}
+	58%{left: 46.5%;}
+	59%{left: 47.5%;}
+	60%{left: 47%;}
+}
+
+.link > .name, .link > .univ{
+	position: absolute;
+	width: 250px;
+	height: 70px;
+	background: #EFEFEF;
+	border-radius: 50px;
+	margin-top: 50px;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	float: left;
+	z-index: -1;
+}
+
+.link > .name{
+	right: 50%;
+	padding-right: 30px;
+	line-height: 70px;
+}
+
+.link > .image{
+	position: absolute;
+	width: 126.5px;
+	height: 128px;
+	background: #fff;
+	border: solid 5px #EFEFEF;
+	border-radius: 50%;
+	padding-top: 2px;
+	padding-left: 3.5px;
+	margin-top: 20px;
+	right: 50%;
+	margin-right: -65px;
+	float: left;
+}
+
+img{ position: relative; z-index: 1; }
+
+.link > .univ{
+	right: 30%;
+	height: 65px;
+	padding-left: 30px;
+	padding-top: 5px;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.link > .trans, .link > .money{
+	position: absolute;
+	width: 220px;
+	height: 170px;
+	background: #EFEFEF;
+	border-radius: 30px;
+	margin-top: 160px;
+	font-size: 20px;
+	font-weight: 900;
+	text-align: center;
+}
+
+.link > .trans{
+	right: 60%;
+	height: 130px;
+	padding-top: 40px;
+	margin-right: -85px;
+}
+
+.link > .trans:before, .link > .money:before{
+	position: absolute;
+	content: '';
+	width: 70px;
+	height: 70px;
+	background: #fff;
+	border: solid 5px #EFEFEF;
+	border-radius: 50%;
+	top: -10px;
+	left: -10px;
+}
+
+.link > .trans:after, .link > .money:after{
+	position: absolute;
+	content: '';
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	top: 0px;
+	left: 0px;
+}
+
+.link > .money{
+	right: 36.5%;
+	height: 130px;
+	padding-top: 40px;
+	margin-right: -85px;
+}
+
+.link > .trans:after{background: url(../images/trans.png) no-repeat center center #EB3C00; background-size: 75%;}
+
+.link > .money:after{background: url(../images/money2.png) no-repeat center center #FFD800; background-size: 75%;}
+
+.link > .message{
+	position: absolute;
+	width: 535px;
+	height: 200px;
+	background: #EFEFEF;
+	border-radius: 25px;
+	right: 46.5%;
+	overflow: hidden;
+	margin-top: 360px;
+	margin-right: -225px;
+}
+
+.link > .message > pre{
+	padding-left: 20px;
+	font-size: 15px;
+	font-weight: 900;
+}
+
+.link > .message > pre > h3{
+	text-align: center;
+	line-height: 20px;
+	font-size: 18px;
+	font-weight: 900;
+	color: #3F00FF;
+}
+
+.link > .icon-m{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border: solid 5px #EFEFEF;
+	background: #fff;
+	border-radius: 50%;
+	margin: 100px;
+	z-index: 100;
+	top: 250px;
+	left: 300px;
+}
+
+.link > .icon-m:before{
+	position: absolute;
+	content: '';
+	width: 60px;
+	height: 60px;
+	background: url(../images/message.png) no-repeat center center #6FC9D8;
+	background-size: 70%;
+	border-radius: 50%;
+	top: 5px;
+	left: 5px;
+}
+
+.link > .sche{
+	position: relative;
+	width: 540px;
+	height: 70px;
+	top: 570px;
+	left: 50%;
+	margin-left: -270px;
+}
+
+.link > .sche > .sche_week{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-left: 15px;
+	background: #fff;
+	border: solid 5px #EFEFEF;
+	border-radius: 50%;
+	float: left;
+}
+
+.link > .sche > .sche_week > .day{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
+.link > .sche > .sche_week > #Man{background: #EE6557; top: 3px; left: 3px;}
+.link > .sche > .sche_week > #Tue{background: #F27398; top: 0px; left: 3px;}
+.link > .sche > .sche_week > #Wed{background: #0E7AC4; top: -5px; left: 3px;}
+.link > .sche > .sche_week > #Thu{background: #008837; top: -9px; left: 3px;}
+.link > .sche > .sche_week > #Fri{background: #58BE89; top: -9px; left: 3px;}
+.link > .sche > .sche_week > #Sut{background: #E67E22; top: 3px; left: 3px;}
+.link > .sche > .sche_week > #San{background: #F1C40F; top: 0px; left: 3px;}
+
+.link > .sche > .sche_week > .day:before{
+	position: absolute;
+	top: 4px;
+	font-size: 13px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.link > .sche > .sche_week > #Man:before{content: 'Man';left: 8px;}
+.link > .sche > .sche_week > #Tue:before{content: 'Tue';left: 10px;}
+.link > .sche > .sche_week > #Wed:before{content: 'Wed';left: 7px;}
+.link > .sche > .sche_week > #Thu:before{content: 'Thu';left: 10px;}
+.link > .sche > .sche_week > #Fri:before{content: 'Fri';left: 13px;}
+.link > .sche > .sche_week > #Sut:before{content: 'Sut';left: 10px;}
+.link > .sche > .sche_week > #San:before{content: 'San';left: 10px;}
+
+.link > .sche > .sche_week > .day:after{
+	position: absolute;
+	left: 12px;
+	top: 15px;
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.link > .sche > .sche_week > #Man:after{content: '月';}
+.link > .sche > .sche_week > #Tue:after{content: '火';}
+.link > .sche > .sche_week > #Wed:after{content: '水';}
+.link > .sche > .sche_week > #Thu:after{content: '木';}
+.link > .sche > .sche_week > #Fri:after{content: '金';}
+.link > .sche > .sche_week > #Sut:after{content: '土';}
+.link > .sche > .sche_week > #San:after{content: '日';}
+
+.off{opacity: 0.15;}
+
+#return{
+	position: fixed;
+	width: 48px;
+	height: 48px;
+	background: url(../images/return.png) no-repeat center center;
+	top: 9.5%;
+	right: 67%;
+	z-index: 10;
+}
+
+#return:hover{cursor: pointer;}
+
+@media screen and (max-width:1024px) {
+#return{right: 72.5%;}
+.univ{left: 510px;}
+.link > .icon{left: 46%;}
+@-webkit-keyframes anime1{
+	0%{top: 55px;}
+	2%{top: 40px;}
+	4%{top: 55px;}
+	55%{left: 46%;}
+	56%{left: 47.5%;}
+	57%{left: 46.5%;}
+	58%{left: 47.5%;}
+	59%{left: 46.5%;}
+	60%{left: 46%;}
+}
+.trans, .money{top: 10px;}
+.trans{left: 240px;}
+.money{left: 560px;}
+.link >.icon-m{left: 125px;}
+
+}
