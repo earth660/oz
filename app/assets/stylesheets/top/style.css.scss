@@ -14,7 +14,6 @@ body{
     padding: 0;
     overflow: hidden;
 }
-
 .mt{
     margin-top: 100px;
 }
@@ -31,7 +30,6 @@ body{
     padding: 0;
     opacity: 0.8;
 }
-
 .clr{
     clear: both;
     padding: 0;
@@ -79,24 +77,20 @@ body{
     text-align: center;
     width: 100%;
 }
-
 .ch-grid:after,
 .ch-item:before {
     content: '';
     display: table;
 }
-
 .ch-grid:after {
     clear: both;
 }
-
 .ch-grid li {
     width: 220px;
     height: 220px;
     display: inline-block;
     margin: 20px;
 }
-
 .ch-item, .ch-item2, .ch-item3, .ch-item4, .ch-item5, .ch-item6, .ch-item7 {
     width: 305px;
     height: 305.5px;
@@ -110,7 +104,6 @@ body{
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-
 .ch-item2{
     left: -100px;
     top: -20px;
@@ -136,8 +129,6 @@ body{
     top: -125px;
     box-shadow: inset 0 0 0 28px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.1);
 }
-
-
 .ch-info, .ch-info2, .ch-info3, .ch-info4, .ch-info5, .ch-info6, /* →変更 */.ch-info7/* ←変更 */ {
     position: absolute;
     background: rgba(111,201,216,0.8);
@@ -196,7 +187,6 @@ body{
     inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
     opacity: 1;
 }
-
 .ch-info h3, .ch-info2 h3, .ch-info3 h3, .ch-info4 h3, .ch-info5 h3, .ch-info6 h3, .ch-info7 h3 {
     color: #fff;
     text-transform: uppercase;
@@ -210,7 +200,6 @@ body{
     0 0 1px #fff, 
     0 1px 2px rgba(0,0,0,0.3);
 }
-
 .ch-info2 h3{
     font-size: 35px;
 }
@@ -231,7 +220,6 @@ body{
     color: #000;
     margin-top: -60px;
 }
-
 .ch-info p, .ch-info2 p, .ch-info3 p, .ch-info4 p, .ch-info5 p, .ch-info6 p {
     color: #fff;
     font-style: italic;
@@ -253,15 +241,12 @@ body{
     transform: scale(1);
     opacity: 1;
 }
-
 .ch-item:hover .ch-info p, .ch-item2:hover .ch-info2 p, .ch-item3:hover .ch-info3 p, .ch-item4:hover .ch-info4 p, .ch-item5:hover .ch-info5 p, .ch-item6:hover .ch-info6 p {
     opacity: 1;
 }
-
 #pop-logo{
     position: absolute;
 }
-
 #logo-L, #logo-R{
     position: absolute;
     width: 210px;
@@ -269,17 +254,40 @@ body{
     float: left;
 }
 #logo-L{
-    background: image-url(../images/logo_L.png) no-repeat center center;
+    background: image-url("logo_L.png") no-repeat center center;
     top: 17px;
     left: -102px;
 }
-#logo-R{background: image-url(../images/logo_R.png) no-repeat center center; top: 21px; left: -12px;}
-
-.eye{position: relative;width: 27px; height: 27px; border-radius: 50%; background: #000; }
-.e-L{top: 128px; left: 70px;}
-.e-R{top: 122px; left: 110px;}
-
-#login{position: absolute; width: 30px;height: 280px; background: #fff; top: 17px; right: -65px; opacity: 0; font-size: 10px;}
+#logo-R{
+    background: image-url("logo_R.png") no-repeat center center;
+    top: 21px;
+    left: -12px;
+}
+.eye{
+    position: relative;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #000;
+}
+.e-L{
+    top: 128px;
+    left: 70px;
+}
+.e-R{
+    top: 122px;
+    left: 110px;
+}
+#login{
+    position: absolute;
+    width: 30px;
+    height: 280px;
+    background: #fff;
+    top: 17px;
+    right: -65px;
+    opacity: 0;
+    font-size: 10px;
+}
 #mail, #password, #newmail, #newpassword{
     border: #33729F solid 3px;
     border-radius: 10px;
@@ -288,9 +296,9 @@ body{
     text-align: center;
     font-size: 13px;
 }
-
-#password, #newpassword{margin-top: 10px;}
-
+#password, #newpassword{
+    margin-top: 10px;
+}
 #login-btn, #submit-btn, #new-btn{
     position: absolute;
     width: 100px; height: 30px;
@@ -300,17 +308,25 @@ body{
     border-radius: 10px;
     font-size: 20px;
 }
-
-#login-btn{margin: 35px 20px 20px -50px;}
-#submit-btn{margin: 75px 20px 20px -50px;}
-#new-btn{margin: 25px 20px 20px -50px;}
-
-input #show-ps, input #newshow-ps{vertical-align: 0;}
-
-.new{display: none;}
-
-#btn, #btn2, #btn3, #btn4, #btn5, #btn6{ display: block; position: absolute; }
-
+#login-btn{
+    margin: 35px 20px 20px -50px;
+}
+#submit-btn{
+    margin: 75px 20px 20px -50px;
+}
+#new-btn{
+    margin: 25px 20px 20px -50px;
+}
+input #show-ps, input #newshow-ps{
+    vertical-align: 0;
+}
+.new{
+    display: none;
+}
+#btn, #btn2, #btn3, #btn4, #btn5, #btn6{
+    display: block;
+    position: absolute;
+}
 #btn{
     width: 207px;
     height: 160px;
@@ -318,7 +334,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     left: -160px;
     background: image-url("btn6.png") no-repeat left top;
 }
-
 #btn2{
     background: image-url("btn5.png") no-repeat left top;
     width: 103px;
@@ -327,7 +342,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     top: 30px;
     z-index: 200;
 }
-
 #btn3{
     background: image-url("btn4.png") no-repeat left top;
     width: 206px;
@@ -336,7 +350,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     left: -60px;
     z-index: 300;
 }
-
 #btn4{
     background: image-url("btn1.png") no-repeat left top;
     width: 206px;
@@ -344,7 +357,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     top: -99px;
     left: 150px;
 }
-
 #btn5{
     background: image-url("btn2.png") no-repeat left top;
     width: 102px;
@@ -353,7 +365,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     top: 25px;
     z-index: 5;
 }
-
 #btn6{
     background: image-url("btn3.png") no-repeat left top;
     width: 205px;
@@ -362,7 +373,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
     left: 155px;
     z-index: 5;
 }
-
 #btn7{
     width: 305px;
     height: 305px;
@@ -373,7 +383,6 @@ input #show-ps, input #newshow-ps{vertical-align: 0;}
 
 /* タブレット向け */
 @media all and (max-width: 768px) {
-
 }
 
 /* スマホ向け */

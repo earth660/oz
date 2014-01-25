@@ -11,9 +11,9 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: 
+  database: oz-development
   pool: 5
-  username: 
+  username: root
   password:
   socket: /tmp/mysql.sock
 
@@ -23,17 +23,17 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: 
+  database: oz-test
   pool: 5
-  username:
+  username: root
   password:
   socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: 
+  database: oz-production
   pool: 5
-  username: 
+  username: root
   password:
   socket: /tmp/mysql.sock
