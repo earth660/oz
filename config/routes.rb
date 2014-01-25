@@ -12,7 +12,20 @@ Oz::Application.routes.draw do
   devise_for :teachers, path_names: {
     sign_in: "login",
     sign_out: "logout"
-  }
+  }, skip: :all
+  devise_scope :teacher do
+    # registrations
+    post "teachers" => "devise/registrations#create", as: :teacher_registration
+
+    # passwords
+    post "teachers/password" => "devise/passwords#create", as: :teacher_password
+    get "teachers/password" => "devise/passwords#new", as: :new_teacher_password
+ 
+    # sessions
+    get "teachers/login" => "devise/sessions#new", as: :new_teacher_session
+    post "teachers/login" => "devise/sessions#create", as: :teacher_session
+    get "teachers/logout" => "devise/sessions#destroy", as: :destroy_teacher_session
+  end
 
   #郵便番号検索
   get "searches/search"
