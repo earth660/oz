@@ -1,0 +1,196 @@
+<% content_for :title do %> Oz <% end %>
+<% content_for :css do %>
+  <%= stylesheet_link_tag "top/style.css" %>
+  <%= stylesheet_link_tag "top/knowledge.css" %>
+<% end %>
+<% content_for :javascript_header do %>
+  <%= javascript_include_tag "jquery/jquery-1.10.1.min.js" %>
+<% end %>
+<body style="text-align: center">
+  <div id="pop-cover"></div>
+  <div class="container">
+    <div class="mt"></div>
+    <!-- section start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item">
+            <div id="pop-logo">
+              <div id="login">
+                <%= render partial: "login" %>
+                <%= render partial: "signup" %>
+              </div>
+              <div id="logo-L"><div class="eye e-L"></div></div>
+              <div id="logo-R"><div class="eye e-R"></div></div>
+            </div>
+            <div class="ch-info">
+              <h3>教師検索</h3>
+              <p>ピッタリの先生を厳選出来ます</p>
+            </div>
+            <a href="html/seach.html"><div id="btn"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section -->
+
+    <!-- section2 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item2">
+            <div class="ch-info2">
+              <h3>学習サポート</h3>
+              <p>学習のサポートをします</p>
+            </div>
+            <a href="html/ozsche.html"><div id="btn2"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section2 -->
+
+    <!-- section3 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item3">
+            <div class="ch-info3">
+              <h3>OZについて</h3>
+              <p>OZの活動を簡単な動画で紹介します</p>
+            </div>
+            <a href="html/about.html"><div id="btn3"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section3 -->
+
+    <!-- section4 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item4">
+            <div class="ch-info4">
+              <h3>Myページ</h3>
+              <p>Myページはこちらから</p>
+            </div>
+            <a href="#"><div id="btn4"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section4 -->
+
+    <!-- section5 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item5">
+            <div class="ch-info5">
+              <h3>授業サポート</h3>
+              <p>オンラインでの学習サポート</p>
+            </div>
+            <a href="#"><div id="btn5"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section5 -->
+
+    <!-- section6 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item6">
+            <div class="ch-info6">
+              <h3>サポートセンター</h3>
+              <p>お問い合わせはこちらから</p>
+            </div>
+            <a href="#"><div id="btn6"></div></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section6 -->
+
+    <!-- section7 start -->
+    <nav class="main">
+      <ul class="ch-grid">
+        <li>
+          <div class="ch-item7">
+            <div class="ch-info7">
+              <%= image_tag "kagiana3.png", :alt => "kagiana", :style => "margin-top: 80px;"%>
+              <h3>LOGIN</h3>
+            </div>
+            <div id="btn7"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end section7 -->
+  </div> <!-- end container -->
+
+
+  <div class="S No1"></div>
+  <div class="M No2"></div>
+  <div class="L No3"></div>
+  <div class="M No4"></div>
+  <div class="S No5"></div>
+  <div class="M No6"></div>
+  <div class="L No7"></div>
+  <div class="M No8"></div>
+  <div class="S No9"></div>
+  <div class="S No10"></div>
+  <div class="M No11"></div>
+  <div class="L No12"></div>
+  <div class="M No13"></div>
+  <div class="S No14"></div>
+  <div class="M No15"></div>
+  <div class="L No16"></div>
+  <div class="M No17"></div>
+  <div class="S No18"></div>
+  <!--
+
+      <div class="s no1"></div>
+      <div class="m no2"></div>
+      <div class="l no3"></div>
+      <div class="m no4"></div>
+      <div class="s no5"></div>
+      <div class="m no6"></div>
+      <div class="l no7"></div>
+      <div class="m no8"></div>
+      <div class="s no9"></div>
+      <div class="s no10"></div>
+      <div class="m no11"></div>
+      <div class="l no12"></div>
+      <div class="m no13"></div>
+      <div class="s no14"></div>
+      <div class="m no15"></div>
+      <div class="l no16"></div>
+      <div class="m no17"></div>
+      <div class="s no18"></div>
+      -->
+  <% content_for :javascript_footer do %>
+    <%= javascript_include_tag "jquery/plugin/script.js" %>
+  <% end %>
+</body>
+
+<!--<h2>Sign in</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <div><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password %></div>
+
+    <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
+
+    <div><%= f.submit "Sign in" %></div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+    -->
