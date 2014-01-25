@@ -6,11 +6,10 @@
   <div class="field">
    <%= label :postal_code, :郵便番号 %>
   <input type="text" name="postal_code" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"
-  value="<%= Post.find(current_teacher.id).postal_code %>" ><br>
+   ><br>
     <%= label :address,:住所 %>
-  <input name="address" type="text" id="location_address" value="<%= Post.find(current_teacher.id).address %>" />
+  <input name="address" type="text" id="location_address" />
   </div>
-
 
   <%= label_tag "名前: " %>
   <%= text_field_tag :name, current_teacher.name %><br />

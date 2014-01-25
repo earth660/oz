@@ -1,11 +1,17 @@
 <h1>My page</h1>
 <ul>
-  <li><%= $post.postal_code %></li>
-  <li><%= $post.address %></li>
+  <% if $post then %>
+  	<li><%= $post.postal_code %></li>
+  	<li><%= $post.address %></li>
+  	<li><%= current_teacher.email %></li>
+  	<li><%= current_teacher.name %></li>
+  	<li><%= current_teacher.sex %></li>
+  <% else %>
+  	<li><%= current_teacher.email %></li>
+  	<li><%= current_teacher.name %></li>
+  	<li><%= current_teacher.sex %></li>
+  <% end %>
 
-  <li><%= current_teacher.email %></li>
-  <li><%= current_teacher.name %></li>
-  <li><%= current_teacher.sex %></li>
   		<%= current_teacher %>
 </ul>
 <br/>
