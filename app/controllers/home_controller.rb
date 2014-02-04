@@ -1,10 +1,14 @@
 class HomeController < ApplicationController
+
   def index
 #   	$teacher = "hoge"
  	$post = Post.find_by(:id => current_teacher[:id])
+	$money = Money.find_by(:id => current_teacher[:id])
+
   end
 
   def profile
+  	$post = Post.find_by(:id => current_teacher[:id])
   end
   
   def login
@@ -20,10 +24,11 @@ class HomeController < ApplicationController
     teacher.name = params[:name]
 #     teacher.email = params[:email]
     teacher.sex = params[:sex]
-
+	teacher.long_msg = params[:long_msg]
 #     if @post = Post.find_by(:id => current_teacher[:id])
 #     	post.address ="hoge"
 #     else
+
 
 	$post = Post.find_or_create_by(:id => current_teacher[:id])
 
@@ -31,6 +36,12 @@ class HomeController < ApplicationController
 	$post.address = params[:address]
 	$post.save
 	
+	@money = Money.find_or_create_by(:id => current_teacher[:id])
+	
+	@money.el = params[:el]
+	@money.jr = params[:jr]
+	@money.hi = params[:hi]
+	@money.save
 	
     if teacher.save
       redirect_to '/home/index'
@@ -39,9 +50,9 @@ class HomeController < ApplicationController
     end
   end
   
-    private
-  def profile_params
-    params.permit!# (:name, :email, :sex, :postal_code, :univ, :address)
-  end
+  private
+  	def profile_params
+    	params.permit!# (:name, :email, :sex, :postal_code, :univ, :address)
+	end
 
 end

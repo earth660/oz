@@ -1,39 +1,336 @@
-<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
-
-<h1>プロフィール編集するでな</h1>
-<%= form_tag "/home/create" do %>
-
-  <div class="field">
-   <%= label :postal_code, :郵便番号 %>
-  <input type="text" name="postal_code" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"
-   ><br>
-    <%= label :address,:住所 %>
-  <input name="address" type="text" id="location_address" />
-  </div>
-
-  <%= label_tag "名前: " %>
-  <%= text_field_tag :name, current_teacher.name %><br />
-  <%= label_tag "メールアドレス: " %>
-  <%= text_field_tag :email, current_teacher.email %><br />
-  <%= label_tag "性別 " %>
-  男:
-  <% if current_teacher.sex == "male" %>
-    <%= radio_button_tag :sex, "male", :checked %>
-  <% else %>
-    <%= radio_button_tag :sex, "male" %>
-  <% end %>
-  女:
-  <% if current_teacher.sex == "female" %>
-    <%= radio_button_tag :sex, "female", :checked %><br />
-  <% else %>
-    <%= radio_button_tag :sex, "female" %><br />
-  <% end %>
-
-  <div class="actions">
+<%= stylesheet_link_tag "prof/form", :media => "all" %>
+<%= stylesheet_link_tag "prof/teach_sche", :media => "all" %>
+<%= stylesheet_link_tag "prof/teach_set", :media => "all" %>
   
+  <%= javascript_include_tag "search/jquery.min" %>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
+
+	<a href="seach.html"><div id="return"></div></a>
+	<%= form_tag("/home/create", name: "fcset", class: "link") do %>
+			<input type="text" name="name" class="text name" title="山田 太郎"/>
+			<li id="upload" class="image">
+				<div id="kiban">
+					<a id="btnUpload" data-options="iconCls:'icon-save'">
+						<%= image_tag("user.png", :class => "1", :alt => "user", :width => "123", :style => "opacity: 0.8;") %>
+					</a>
+				</div>
+			</li>
+			<div id="plus">+</div>
+			<div id="minus">−</div>
+			<input type="file" name="userfile" id="file" style="display: none;">
+			
+			<div class="univ">
+				<input name="text" class="text univ-1" title="◯◯大学" />
+				<input type="text" class="text univ-2" title="◯◯学部◯◯学科" />
+			</div>
+			
+			<div class="trans">
+			   <%= label :postal_code , :〒 %>
+<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n4', value)"><br />
+
+    
+    
+    
+				
+				<p>免許</p>
+				<div class="onoffswitch">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+					<label class="onoffswitch-label" for="myonoffswitch">
+						<div class="onoffswitch-inner"></div>
+						<div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+
+				<p>車</p>
+				<div class="onoffswitch">
+					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+					<label class="onoffswitch-label" for="myonoffswitch2">
+						<div class="onoffswitch-inner"></div>
+						<div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+				
+				<div class="trans-before"></div>
+				<div class="trans-after"></div>
+			</div>
+			<div class="card"></div>
+			<input type="file" name="usercard" id="card" style="display: none;">			
+			<div class="money">
+				小学生: <input class="text" type="text" title="2,OOO円" /><br />
+				中学生: <input class="text" type="text" title="2,5OO円" /><br />
+				高校生: <input class="text" type="text" title="2,5OO円" /><br />
+				<div class="money-before"></div>
+				<div class="money-after"></div>
+			</div>
+			<div class="icon-m-before"></div>
+			<div class="icon-m"></div>
+			
+			<textarea class="text message" title="指導経歴：高２男子、高３女子 、塾講師経験有
+指導理念：子供に合わせた学習カリキュラムを組み、
+目標達成に向けて全力でサポートします。
+ 子供の自主性をのばす為、課題設定はこども主体で行い、
+課題がきちんと実行されるようにサポートし、
+達成できればその過程(頑張り)を褒めます。
+指導履歴: 小学４年生(数学・英語)　中学３年生(受験勉強)"></textarea>
+			<div style="clear: both;"></div>
+			<li class="sche">
+				<div class="sche_week">
+					<input type="checkbox" id="man" value="man"/>
+					<label for="man" id="Man" class="day"></label>
+				</div>
+
+				<div class="sche_week">
+					<input type="checkbox" id="tue" value="tue"/>
+					<label for="tue" id="Tue" class="day"></label>
+				</div>
+
+				<div class="sche_week">
+					<input type="checkbox" id="wed" value="wed"/>
+					<label for="wed" id="Wed" class="day"></label>
+				</div>
+				
+				<div class="sche_week">
+					<input type="checkbox" id="thu" value="thu"/>
+					<label for="thu" id="Thu" class="day"></label>
+				</div>
+				
+				<div class="sche_week">
+					<input type="checkbox" id="fri" value="fri"/>
+					<label for="fri" id="Fri" class="day"></label>
+				</div>
+				
+				<div class="sche_week">
+					<input type="checkbox" id="sut" value="sut"/>
+					<label for="sut" id="Sut" class="day"></label>
+				</div>
+				
+				<div class="sche_week">
+					<input type="checkbox" id="san" value="san"/>
+					<label for="san" id="San" class="day"></label>
+				</div>
+			</li>
+			<div id="setting">
+					<input type="checkbox" id="eng" value="eng"/>
+					<label for="eng" id="Eng" class="subject">
+						<span>English</span><p>英</p>
+					</label>
+					
+					<input type="checkbox" id="jpn" value="jpn"/>
+					<label for="jpn" id="Jpn" class="subject">
+						<span>Japanese</span><p>国</p>
+					</label>
+
+					<input type="checkbox" id="gen" value="gen"/>
+					<label for="gen" id="Gen" class="subject">
+						<span>Society</span><p>社</p>
+					</label>
+
+					<input type="checkbox" id="sci" value="sci"/>
+					<label for="sci" id="Sci" class="subject">
+						<span>Science</span><p>理</p>
+					</label>
+
+					<input type="checkbox" id="mat" value="mat"/>
+					<label for="mat" id="Mat" class="subject">
+					<span>Math</span><p>数</p>
+					</label>					
+
+					<input type="checkbox" id="ath" value="ath"/>
+					<label for="ath" id="Ath" class="subject">
+					<span>Other</span><p>他</p>
+					</label>					
+
+
+			</div>
+  <div class="actions" id="okbutton">  
     <%= submit_tag %>
   </div>
 
-
-
 <% end %>
+
+<!--
+		</form>
+				<div id="sign">下にもあるよ！</div>
+				<div id="okbutton">OK</div>
+-->
+<script>
+
+$(window).bind("scroll", function() {
+	scrollHeight = $(document).height();
+	scrollPosition = $(window).height() + $(window).scrollTop();
+	if ( (scrollHeight - scrollPosition) / scrollHeight <= 0.05) {
+		$("#sign").css({"opacity":0})
+	} else {
+		$("#sign").css({"opacity":1})
+	}
+});
+	$(function(){
+		setInterval(function(){
+			$("#sign").animate({"bottom":"7%"})
+			}, 1000)
+	});
+
+	$('#btnUpload').live('click',function(){
+　　			　$('#file').click();
+	});
+
+	$('.card').live('click',function(){
+　　			　$('#card').click();
+	});
+	
+	$('.card').hover(function(){
+		$('#sign').html("学生証の提示")
+	},
+	function(){
+		$('#sign').html("下にもあるよ！")
+	});
+	
+	$(function() {
+
+		// アップロードするファイルを選択
+		$('input[name=userfile]').change(function() {
+			var file = $(this).prop('files')[0];
+
+			// 画像以外は処理を停止
+			if (! file.type.match('image.*')) {
+				$('span').html('');
+				return;
+			}
+
+			// 画像表示
+			var reader = new FileReader();
+			reader.onload = function() {
+				var img_src = $('img.change').attr('src', reader.result);
+				var width = 123;
+				
+				$(img_src).each(function(){
+					var w = $(this).width();
+					var h = $(this).height();
+					if (w != width) {
+						$(this).width(width);
+					} 
+				});
+				
+				$('img.change').css({"opacity":1});
+			}
+			reader.readAsDataURL(file);
+		});
+	});
+
+$(function() {
+	$( "img" ).draggable();
+		var i = 1;
+	$('#plus').click(function(){
+		i += 0.1;
+		$('img').css({"zoom":i})
+	});
+	$('#minus').click(function(){
+		i -= 0.1;
+		$('img').css({"zoom":i})
+	})
+	
+});
+
+		function NextFocusMove(object, targetName, maxLength)
+		{
+			if(object.value.length >= maxLength)
+				object.form.elements[targetName].focus();
+		}
+		
+		function PrevFocusMove(object, targetName, str)
+		{
+			if( str.length == 0 ){
+				fc(4)
+			}
+		}
+
+		function fc(num){
+			document.fcset.elements[num].focus();
+		}
+
+$(document).ready(function(){
+  $('.text')
+    .blur(function(){
+      var $$=$(this);
+      if($$.val()=='' || $$.val()==$$.attr('title')){
+        $$.css({'color':'#c9c9c9'})
+          .val($$.attr('title'));
+      }
+    })
+    .focus(function(){
+      var $$=$(this);
+      if($$.val()==$$.attr('title')){
+        $(this).css('color', '#000')
+               .val('');
+      }
+    })
+    .parents('form:first').submit(function(){
+      var $$=$('.text');
+      if($$.val()==$$.attr('title')){
+        $$.triggerHandler('focus');
+      }
+    }).end()
+    .blur();
+  });
+
+$(function(){
+	$('.name').bind('keydown keyup keypress change',function(){
+		var namecount = $(this).val().length;
+		if(namecount < 5){
+			$(".name").css({"font-size":"30px"})	
+		}
+		if(namecount > 6 && namecount < 10){
+			$(".name").css({"font-size":"18px"})
+		}
+	});
+
+	$('.univ-1').bind('keydown keyup keypress change',function(){
+		var univ1count = $(this).val().length;
+		if(univ1count < 9){
+			$(".univ-1").css({"font-size":"18px"})
+		}
+		if(univ1count > 10 && univ1count < 15){
+			$(".univ-1").css({"font-size":"11px"})
+		}
+	});
+		
+
+	$('.univ-2').bind('keydown keyup keypress change',function(){
+		var univ2count = $(this).val().length;
+		
+		if(univ2count < 9){
+			$(".univ-2").css({"font-size":"18px"})
+		}
+		if(univ2count > 10 && univ2count < 15){
+			$(".univ-2").css({"font-size":"11px"})
+		}
+		if(univ2count > 16){
+			$(".univ-2").css({"font-size":"6px"})
+		}
+
+	});
+});
+
+$(".trans-after").click(function(){
+	$(this).animate({"width":"60px", "height":"60px", "top": "-8px","left":"-5px", "border-radius":"50%", "background-size":"75%"})
+	$(".trans-before").animate({"width":"70px", "height":"70px", "top": "-18px","left":"-15px", "border-radius":"50%"})
+	
+});
+
+$(".money-after").click(function(){
+	$(this).animate({"width":"60px", "height":"60px", "top": "-8px","left":"-5px", "border-radius":"50%", "background-size":"75%"})
+	$(".money-before").animate({"width":"70px", "height":"70px", "top": "-18px","left":"-15px", "border-radius":"50%"})
+	
+});
+
+$(".icon-m-before").click(function(){
+	$(".icon-m").animate({"width":"70px", "height":"70px", "top":"255px", "left":"300px", "border-radius":"50%"})
+	$(this).animate({"width":"60px", "height":"60px", "top":"365px", "left":"410px", "border-radius":"50%", "background-size":"70%"})
+});
+
+
+</script>
+
