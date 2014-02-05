@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "prof/form", :media => "all" %>
 <%= stylesheet_link_tag "prof/teach_sche", :media => "all" %>
 <%= stylesheet_link_tag "prof/teach_set", :media => "all" %>
-  
+
   <%= javascript_include_tag "search/jquery.min" %>
 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
@@ -28,10 +28,9 @@
 			</div>
 			
 			<div class="trans">
-			   <%= label :postal_code , :〒 %>
-<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n4', value)"><br />
+<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n2', value)"><br />
 
-    
+
     
     
 				
@@ -59,9 +58,18 @@
 			<div class="card"></div>
 			<input type="file" name="usercard" id="card" style="display: none;">			
 			<div class="money">
+  
+  <%= label_tag "小学生: " %>
+  <%= text_field_tag :el %><br />
+  <%= label_tag "中学生: " %>
+  <%= text_field_tag :jr %><br />
+  <%= label_tag "高校生: " %>
+  <%= text_field_tag :hi %><br />
+<!--
 				小学生: <input class="text" type="text" title="2,OOO円" /><br />
 				中学生: <input class="text" type="text" title="2,5OO円" /><br />
 				高校生: <input class="text" type="text" title="2,5OO円" /><br />
+-->
 				<div class="money-before"></div>
 				<div class="money-after"></div>
 			</div>
@@ -243,7 +251,7 @@ $(function() {
 		function PrevFocusMove(object, targetName, str)
 		{
 			if( str.length == 0 ){
-				fc(4)
+				fc(5)
 			}
 		}
 

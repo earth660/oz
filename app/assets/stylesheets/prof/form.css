@@ -359,7 +359,7 @@ img{ position: relative; z-index: 11; }
 	height: 50px;
 	background: #5dade2;
 	left: 50%;
-	margin-top: -100px;
+/* 	margin-bottom: 100px; */
 	margin-left: -100px;
 	border-radius: 25px;
 	font-size: 30px;
