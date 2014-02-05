@@ -25,14 +25,14 @@ class HomeController < ApplicationController
 #     teacher.email = params[:email]
     teacher.sex = params[:sex]
 	teacher.long_msg = params[:long_msg]
-#     if @post = Post.find_by(:id => current_teacher[:id])
+#     if @post = Post.find_by(:id => current_teacher[:id]) 
 #     	post.address ="hoge"
 #     else
 
 
 	$post = Post.find_or_create_by(:id => current_teacher[:id])
 
-	$post.postal_code = params[:postal_code]
+	$post.postal_code = params[:n2] + "-" + params[:n3]
 	$post.address = params[:address]
 	$post.save
 	
