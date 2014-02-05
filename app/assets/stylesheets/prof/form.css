@@ -1,3 +1,12 @@
+@font-face{
+	font: {
+		family:'MyFont';
+		weight: 'normal,bold';
+		style: 'normal';
+	}
+	src: asset-url('font.ttf', font) format('truetype');
+}
+html, body{font-family: 'MyFont';}
 html,body{
 	margin: 0;
 	padding: 0;
@@ -39,7 +48,7 @@ input{ background: #efefef;border: none; }
 }
 .onoffswitch-inner:before, .onoffswitch-inner:after {
     float: left; width: 50%; height: 25px; padding: 0; line-height: 25px;
-    font-size: 12px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    font-size: 12px; color: white; font-weight: bold;
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 .onoffswitch-inner:before {
@@ -262,22 +271,20 @@ img{ position: relative; z-index: 11; }
 	z-index: 30;
 }
 
-.link > .sche > .sche_week > input, .link > #setting input{display: none;}
-.link > .sche > .sche_week > label, .link > #setting label{
+.link > .sche > .sche_week > input, .link > li > #setting > .setting > input{display: none;}
+.link > .sche > .sche_week > label, .link > li > #setting > .setting > label{
     display: block;
     cursor: pointer;
     transition: .2s;
     opacity: 0.2
 }
 .link > .sche > .sche_week > input[type="checkbox"]:checked + label{opacity: 1; }
-.link > #setting input[type="checkbox"]:checked + label{opacity: 1; }
+.link > li > #setting > .setting > input[type="checkbox"]:checked + label{opacity: 1; }
 
-.link > .sche{
+.link > .sche, li > #setting{
 	position: relative;
 	width: 540px;
-	height: 70px;
-	top: 570px;
-	left: 50%;
+	top: 570px; left: 50%;
 	margin-left: -270px;
 }
 
@@ -297,7 +304,7 @@ img{ position: relative; z-index: 11; }
 	width: 45px;
 	height: 45px;
 	border-radius: 50%;
-/* 	cursor: pointer; */
+	cursor: pointer;
 }
 
 .link > .sche > .sche_week > #Man{background: #EE6557; top: 3px; left: 3px;}
@@ -355,24 +362,19 @@ img{ position: relative; z-index: 11; }
 #return:hover{cursor: pointer;}
 #okbutton{
 	position: absolute;
-	width: 200px;
-	height: 50px;
+	width: 200px; height: 50px;
 	background: #5dade2;
-	left: 50%;
-	margin-top: -100px;
-	margin-left: -100px;
-	border-radius: 25px;
-	font-size: 30px;
-	font-weight: 900;
-	color: #fff;
+	left: 50%; bottom: 20px;
+	margin-top: 30px; margin-left: -100px;
 	padding-top: 10px;
-	text-align: center;
+	border-radius: 25px; 
+	font-size: 30px; font-weight: 900; color: #fff; text-align: center;
 }
-.sche{margin-top: -30px;}
-
-#setting{bottom: -65%;}
-#setting > .subject > span {top: 0%;}
-#Eng{margin-left: 13%;}
+.sche{margin-top: -20px;}
+li.subject_li{ position: relative; margin-top: -20px; }
+li > #setting > .setting {width: 70px; height: 70px; float: left; margin-left: 15px;}
+li > #setting > .setting > .subject > span {top: 0%;}
+#Eng{margin-left: 3%;}
 
 #sign{
 	position: fixed;

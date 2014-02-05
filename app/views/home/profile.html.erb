@@ -29,12 +29,7 @@
 			
 			<div class="trans">
 			   <%= label :postal_code , :〒 %>
-<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n4', value)"><br />
-
-    
-    
-    
-				
+<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n2', value)"><br />
 				<p>免許</p>
 				<div class="onoffswitch">
 					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -112,40 +107,55 @@
 					<label for="san" id="San" class="day"></label>
 				</div>
 			</li>
-			<div id="setting">
-					<input type="checkbox" id="eng" value="eng"/>
-					<label for="eng" id="Eng" class="subject">
-						<span>English</span><p>英</p>
-					</label>
+			<li class="subject_li">
+				<div id="setting">
+					<div class="setting">
+						<input type="checkbox" id="eng" value="eng"/>
+						<label for="eng" id="Eng" class="subject">
+							<span>English</span><p>英</p>
+						</label>
+					</div>
+
+					<div class="setting">					
+						<input type="checkbox" id="jpn" value="jpn"/>
+						<label for="jpn" id="Jpn" class="subject">
+							<span>Japanese</span><p>国</p>
+						</label>
+					</div>
 					
-					<input type="checkbox" id="jpn" value="jpn"/>
-					<label for="jpn" id="Jpn" class="subject">
-						<span>Japanese</span><p>国</p>
-					</label>
-
-					<input type="checkbox" id="gen" value="gen"/>
-					<label for="gen" id="Gen" class="subject">
-						<span>Society</span><p>社</p>
-					</label>
-
-					<input type="checkbox" id="sci" value="sci"/>
-					<label for="sci" id="Sci" class="subject">
-						<span>Science</span><p>理</p>
-					</label>
-
-					<input type="checkbox" id="mat" value="mat"/>
-					<label for="mat" id="Mat" class="subject">
-					<span>Math</span><p>数</p>
-					</label>					
-
-					<input type="checkbox" id="ath" value="ath"/>
-					<label for="ath" id="Ath" class="subject">
-					<span>Other</span><p>他</p>
-					</label>					
-
-
-			</div>
-  <div class="actions" id="okbutton">  
+					<div class="setting">
+						<input type="checkbox" id="gen" value="gen"/>
+						<label for="gen" id="Gen" class="subject">
+							<span>Society</span><p>社</p>
+						</label>
+					</div>
+					
+					<div class="setting">
+						<input type="checkbox" id="sci" value="sci"/>
+						<label for="sci" id="Sci" class="subject">
+							<span>Science</span><p>理</p>
+						</label>
+					</div>
+					
+					<div class="setting">
+						<input type="checkbox" id="mat" value="mat"/>
+						<label for="mat" id="Mat" class="subject">
+							<span>Math</span><p>数</p>
+						</label>					
+					</div>
+					
+					<div class="setting">
+						<input type="checkbox" id="ath" value="ath"/>
+						<label for="ath" id="Ath" class="subject">
+							<span>Other</span><p>他</p>
+						</label>
+					</div>
+				</div>
+			</li>
+			<div style="clear: both;"></div>
+			<div id="okbutton">OK</div>
+			<div id="sign">下にもあるよ！</div>
+		</form>
     <%= submit_tag %>
   </div>
 
@@ -220,19 +230,19 @@ $(window).bind("scroll", function() {
 		});
 	});
 
-$(function() {
-	$( "img" ).draggable();
-		var i = 1;
-	$('#plus').click(function(){
-		i += 0.1;
-		$('img').css({"zoom":i})
-	});
-	$('#minus').click(function(){
-		i -= 0.1;
-		$('img').css({"zoom":i})
-	})
-	
-});
+		$(function() {
+			$( "img" ).draggable();
+				var i = 1;
+			$('#plus').click(function(){
+				i += 0.1;
+				$('img').css({"zoom":i})
+			});
+			$('#minus').click(function(){
+				i -= 0.1;
+				$('img').css({"zoom":i})
+			})
+			
+		});
 
 		function NextFocusMove(object, targetName, maxLength)
 		{
@@ -243,7 +253,7 @@ $(function() {
 		function PrevFocusMove(object, targetName, str)
 		{
 			if( str.length == 0 ){
-				fc(4)
+				fc(6)
 			}
 		}
 
