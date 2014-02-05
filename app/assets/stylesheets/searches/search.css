@@ -128,8 +128,8 @@ input{
 .icon_home{background-image: image-url(/assets/home.png) no-repeat;}
 .icon_suport{background:transparent url(asset_path('suport.png')) no-repeat;}
 .icon_money{background:transparent url(/assets/money.png) no-repeat;}
-.icon_teach{background:transparent url(../images/teach.png) no-repeat;}
-.icon_oz{background:transparent url(../images/oz.png) no-repeat;}
+.icon_teach{background:transparent url(/assets/teach.png) no-repeat;}
+.icon_oz{background:transparent url(/assets/oz.png) no-repeat;}
 
 .item_content{
     position:absolute;

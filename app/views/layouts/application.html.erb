@@ -12,13 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if teacher_signed_in? %>
-<ul>
-  <li><%= link_to "ログアウト", destroy_teacher_session_path, method: :delete %></li>
-</ul>
-<% end %>
-
   <%= yield %>
+  <% if teacher_signed_in? %>
+  <ul>
+    <li><%= link_to "ログアウト", destroy_teacher_session_path, method: :delete %></li>
+  </ul>
+  <% end %>
   <%= yield :javascript_footer %>
 </body>
 </html>
