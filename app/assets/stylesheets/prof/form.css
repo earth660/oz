@@ -364,18 +364,8 @@ img{ position: relative; z-index: 11; }
 	position: absolute;
 	width: 200px; height: 50px;
 	background: #5dade2;
-<<<<<<< HEAD
 	left: 50%; bottom: 20px;
 	margin-top: 30px; margin-left: -100px;
-=======
-	left: 50%;
-/* 	margin-bottom: 100px; */
-	margin-left: -100px;
-	border-radius: 25px;
-	font-size: 30px;
-	font-weight: 900;
-	color: #fff;
->>>>>>> 9ceea28c59e54543694fed3d6d5e8c10f1a22635
 	padding-top: 10px;
 	border-radius: 25px; 
 	font-size: 30px; font-weight: 900; color: #fff; text-align: center;
