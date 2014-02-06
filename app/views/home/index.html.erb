@@ -13,9 +13,18 @@
   	<li><%= current_teacher.sex %></li>
   <% end %>
 
-  		<%= current_teacher %>
+  		<%= current_teacher %><br />
+  		
+  	ID = 	<%= current_teacher[:id] %><br />
+  	Who? =  <%= current_teacher[:who] %><br />
+  	
+  		
 </ul>
 <br/>
 <%= link_to 'edit', :controller => "home", :action => "profile" %>
 <%= link_to 'postedit', :controller => "home", :action => "post" %>
 <%= link_to 'search', :controller => "searches", :action => "search" %>
+<%= link_to 'home', 'teachers/login' %><br /><br />
+
+ユーザー変更(確認用)<br /><%= link_to '先生', :controller => "home", :action => "teacher" %>
+<%= link_to '家庭', :controller => "home", :action => "home" %>

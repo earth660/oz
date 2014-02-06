@@ -5,7 +5,9 @@ Oz::Application.routes.draw do
   get "home/profile"
   get "home/post"
   get "edit/index"
-
+  get "home/teacher"
+  get "home/home"
+    
   post "edit/post"
   post "home/create"
 

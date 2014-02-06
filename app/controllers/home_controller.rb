@@ -14,6 +14,36 @@ class HomeController < ApplicationController
   def login
   end
   
+#↓  開発用ユーザーチェンジ
+  def teacher
+    profile_params
+    teacher = Teacher.find_by(:id => current_teacher[:id])
+
+	teacher.who = "teacher"
+
+   if teacher.save
+      redirect_to '/home/index'
+    else
+      render :action => "index"
+    end
+
+  end
+  
+  def home 
+    profile_params
+    teacher = Teacher.find_by(:id => current_teacher[:id])
+	teacher.who = "home"
+    if teacher.save
+      redirect_to '/home/index'
+    else
+      render :action => "index"
+    end
+
+
+  end
+#↑   開発用ユーザーチェンジ
+ 
+  
   def post
   end
   
@@ -25,7 +55,7 @@ class HomeController < ApplicationController
 #     teacher.email = params[:email]
     teacher.sex = params[:sex]
 	teacher.long_msg = params[:long_msg]
-#     if @post = Post.find_by(:id => current_teacher[:id]) 
+#     if @post = Post.find_by(:id => current_teacher[:id])
 #     	post.address ="hoge"
 #     else
 
