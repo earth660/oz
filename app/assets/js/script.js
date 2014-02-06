@@ -62,7 +62,7 @@
 			},
 			function(){
 				$(".ch-info6").css({"opacity":0}),
-				$(".ch-item7").css({"opacity":0});
+				$(".ch-item7").css({"opacity":1});
 			}
 		  );
 
@@ -70,11 +70,21 @@
 		$(this).css({"top":($(this).offset().top)})
 	});
 
+	$(".ch-item7").hover(function(){
+		$(".ch-info7").stop(true, false).animate({"opacity":1}, 0)
+		$(".ch-info7").stop(true, false).transition({scale:1.1})
+	},
+	function(){
+		$(".ch-info7").transition({scale:0}).animate({"opacity":0});
+	});
+
 	$(".ch-info7").click(function(){
+		$(".ch-item7").fadeOut(10)
 		$(".ch-logo").css({"opacity":0})
 		$("#pop-cover").css({"z-index": 500, "background": "#000"})
 		$("#pop-logo").css({"z-index": 700})
-		$("#logo-L").animate({ rotate: '-30deg', "top": "35px", "left": "-250px" })
+		$("#LOGO").css({"z-index": 100})
+		$("#logo-L").animate({ rotate: '-30deg', "top": "35px", "left": "-250px"})
 		$("#logo-R").animate({ rotate: '-30deg', "top": "20px", "left": "140px"})
 		$(".e-L").animate({"top":"150px", "left":"60px"})
 		$(".e-R").animate({"top":"85px", "left":"130px"})
@@ -87,12 +97,13 @@
 		$(".ch-logo").animate({"opacity":1},"slow")
 		$(this).css({"z-index": -500, "background": "#fff"})
 		$("#pop-logo").animate({"z-index": 0})
-		$("#logo-L").animate({ rotate: '0deg', "top": "17px", "left": "-102px" })
-		$("#logo-R").animate({ rotate: '0deg', "top": "21px", "left": "-12px"})
-		$(".e-L").animate({"top":"128px", "left":"70px"})
-		$(".e-R").animate({"top":"122px", "left":"110px"})
+		$("#logo-L").animate({ rotate: '0deg', "top": "21px", "left": "-100px" })
+		$("#logo-R").animate({ rotate: '0deg', "top": "25px", "left": "-10px"})
+		$(".e-L").animate({"top":"128px", "left":"72px"})
+		$(".e-R").animate({"top":"122px", "left":"112px"})
 		$("#login").animate({"opacity":0,"width": "30px", "right":"-65px"})
 		$(".new").css({"display":"none"})
+		$(".ch-item7").fadeIn()
 	});
 
 	function changeInputType(inputId, type) {
@@ -127,15 +138,15 @@
 
 	function newuser(){
 		$(".login").fadeOut()
-		$(".new").delay(500).fadeIn()
+		$(".new").delay(700).fadeIn()
 		$('#logo-L').animate({
-			rotate: '30deg',
-			rotateX: '180deg',
+			"rotate": '30deg',
+			"rotateX": '180deg',
 			"top": "20px"
 		});
 		$('#logo-R').animate({
-			rotate: '30deg',
-			rotateX: '-180deg',
+			"rotate": '30deg',
+			"rotateX": '-180deg',
 			"top": "35px"
 		});
 		
@@ -143,15 +154,15 @@
 		
 		$(".new-cover").click(function(){
 			$('#logo-L').animate({
-				rotateX: '0deg',
-				"top": "17px"
-			});
-			$('#logo-R').animate({
-				rotateX: '0deg',
+				"rotateX": '0deg',
 				"top": "21px"
 			});
+			$('#logo-R').animate({
+				"rotateX": '0deg',
+				"top": "25px"
+			});
 
-			$(".e-L").animate({"top":"128px", "left":"70px"})
-			$(".e-R").animate({"top":"122px", "left":"110px"})
+			$(".e-L").animate({"top":"128px", "left":"72px"})
+			$(".e-R").animate({"top":"122px", "left":"112px"})
 		});	
 	}
