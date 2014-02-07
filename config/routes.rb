@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 Oz::Application.routes.draw do
 
+
   get "home/index"
   get "home/profile"
   get "home/post"
@@ -9,23 +10,24 @@ Oz::Application.routes.draw do
   post "edit/post"
   post "home/create"
 
-  devise_for :teachers, path_names: {
+  devise_for :users, path_names: {
     sign_in: "login",
     sign_out: "logout"
   }, skip: :all
-  devise_scope :teacher do
+  devise_scope :user do
     # registrations
-    post "teachers" => "devise/registrations#create", as: :teacher_registration
+    post "users" => "devise/registrations#create", as: :user_registration
 
     # passwords
-    post "teachers/password" => "devise/passwords#create", as: :teacher_password
-    get "teachers/password" => "devise/passwords#new", as: :new_teacher_password
+    post "users/password" => "devise/passwords#create", as: :user_password
+    get "users/password" => "devise/passwords#new", as: :new_user_password
  
     # sessions
-    get "teachers/login" => "devise/sessions#new", as: :new_teacher_session
-    post "teachers/login" => "devise/sessions#create", as: :teacher_session
-    get "teachers/logout" => "devise/sessions#destroy", as: :destroy_teacher_session
+    get "users/login" => "devise/sessions#new", as: :new_user_session
+    post "users/login" => "devise/sessions#create", as: :user_session
+    get "users/logout" => "devise/sessions#destroy", as: :destroy_user_session
   end
+
 
   #郵便番号検索
   get "searches/search"

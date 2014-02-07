@@ -3,17 +3,15 @@
   <% if $post then %>
   	<li><%= $post.postal_code %></li>
   	<li><%= $post.address %></li>
-  	<li><%= current_teacher.email %></li>
-  	<li><%= current_teacher.name %></li>
-  	<li><%= current_teacher.sex %></li>
-  	<li><%= current_teacher.long_msg %></li>
+  	<li><%= current_user.email %></li>
+  	<li><%= current_user.name %></li>
+  	<li><%= current_user.sex %></li>
+  	<li><%= current_user.long_msg %></li>
   <% else %>
-  	<li><%= current_teacher.email %></li>
-  	<li><%= current_teacher.name %></li>
-  	<li><%= current_teacher.sex %></li>
+  	<li><%= current_user.email %></li>
   <% end %>
 
-  		<%= current_teacher %>
+  		<%= current_user %>
 </ul>
 <br/>
 <%= link_to 'edit', :controller => "home", :action => "profile" %>
