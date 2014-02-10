@@ -8,12 +8,15 @@
   	<li><%= current_user.sex %></li>
   	<li><%= current_user.long_msg %></li>
   <% else %>
+  	<li><%= current_user.id %></li>
   	<li><%= current_user.email %></li>
+  	<li><%= current_user.who %></li>
   <% end %>
 
+<br />
   		<%= current_user %>
 </ul>
 <br/>
-<%= link_to 'edit', :controller => "home", :action => "profile" %>
+<%= link_to 'edit', :controller => "home", :action => "teacher_form" %>
 <%= link_to 'postedit', :controller => "home", :action => "post" %>
 <%= link_to 'search', :controller => "searches", :action => "search" %>

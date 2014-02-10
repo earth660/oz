@@ -3,7 +3,7 @@ Oz::Application.routes.draw do
 
 
   get "home/index"
-  get "home/profile"
+  get "home/teacher_form"
   get "home/post"
   get "edit/index"
 
