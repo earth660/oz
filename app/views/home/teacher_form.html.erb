@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag "prof/form", :media => "all" %>
-<%= stylesheet_link_tag "prof/teach_sche", :media => "all" %>
-<%= stylesheet_link_tag "prof/teach_set", :media => "all" %>
+<%= stylesheet_link_tag "form/form", :media => "all" %>
+<%= stylesheet_link_tag "form/teach_sche", :media => "all" %>
+<%= stylesheet_link_tag "form/teach_set", :media => "all" %>
   
   <%= javascript_include_tag "search/jquery.min" %>
 
@@ -11,8 +11,9 @@
 	<a href="/"><div id="return"></div></a>
 	
 	
-	<%= form_tag("/home/create", name: "fcset", class: "link") do %>
-			<input type="text" name="name" class="text name" title="山田 太郎"/>
+	<%= form_tag("/home/teacher_create", name: "fcset", class: "link") do %>
+
+			<input type="text" name="name" class="text name" title="山田 太郎" value= "<%= $teacher.name %>" />
 			<li id="upload" class="image">
 				<div id="kiban">
 					<a id="btnUpload" data-options="iconCls:'icon-save'">
@@ -25,13 +26,13 @@
 			<input type="file" name="userfile" id="file" style="display: none;">
 			
 			<div class="univ">
-				<input name="text" class="text univ-1" title="◯◯大学" />
-				<input type="text" class="text univ-2" title="◯◯学部◯◯学科" />
+				<input name="univ" class="text univ-1" title="◯◯大学" value="<%= $teacher.univ %>" />
+				<input name="faculty" type="text" class="text univ-2" title="◯◯学部◯◯学科" value="<%= $teacher.faculty %>" />
 			</div>
 			
 			<div class="trans">
-			  
-<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)">‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n2', value)"><br />
+			 
+<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" value= "<%= $post.postal_code_1 %>" >‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n2', value)" value= "<%= $post.postal_code_2 %>" ><br />
 				<p>免許</p>
 				<div class="onoffswitch">
 					<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
@@ -57,24 +58,24 @@
 			<input type="file" name="usercard" id="card" style="display: none;">			
 			<div class="money">
 				<%= label_tag "小学生: " %>
-				<%= text_field_tag :el %><br />
+				<%= text_field_tag :el , $money.el %><br />
 				<%= label_tag "中学生: " %>
-				<%= text_field_tag :jr %><br />
+				<%= text_field_tag :jr , $money.jr %><br />
 				<%= label_tag "高校生: " %>
-				<%= text_field_tag :hi %><br />
+				<%= text_field_tag :hi, $money.hi %><br />
 				<div class="money-before"></div>
 				<div class="money-after"></div>
 			</div>
 			<div class="icon-m-before"></div>
 			<div class="icon-m"></div>
 			
-			<textarea class="text message" title="指導経歴：高２男子、高３女子 、塾講師経験有
+			<textarea  name="long_msg" class="text message" title="指導経歴：高２男子、高３女子 、塾講師経験有
 指導理念：子供に合わせた学習カリキュラムを組み、
 目標達成に向けて全力でサポートします。
  子供の自主性をのばす為、課題設定はこども主体で行い、
 課題がきちんと実行されるようにサポートし、
 達成できればその過程(頑張り)を褒めます。
-指導履歴: 小学４年生(数学・英語)　中学３年生(受験勉強)"></textarea>
+指導履歴: 小学４年生(数学・英語)　中学３年生(受験勉強)"><%= $teacher.long_msg %></textarea>
 			<div style="clear: both;"></div>
 			<li class="sche">
 				<div class="sche_week">

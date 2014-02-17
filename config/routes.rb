@@ -3,9 +3,16 @@ Oz::Application.routes.draw do
 
 
   get "home/index"
+  get "home/indexstu"
+
   get "home/teacher_form"
-  get "home/post"
+  get "home/student_form"
+  get "home/teacher_create"
+  get "home/change_who"
   get "edit/index"
+  
+  post "home/teacher_create"
+  post "home/student_create"
 
   post "edit/post"
   post "home/create"

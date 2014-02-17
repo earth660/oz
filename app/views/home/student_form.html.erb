@@ -1,0 +1,178 @@
+
+<%= stylesheet_link_tag "form/form-h", :media => "all" %>
+<%= stylesheet_link_tag "form/introjs", :media => "all" %>
+  
+  <%= javascript_include_tag "search/jquery.min" %>
+  <%= javascript_include_tag "home/easyselectbox" %>
+  <%= javascript_include_tag "home/intro" %>
+
+	<div id="content">
+	<%= form_tag("/home/student_create", name: "fcset", class: "link") do %>
+			<div id="post" class="weight center" data-intro="郵便番号を入力してください。" data-step="1">
+				<input type="text" class="center weight text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)"  value= "<%= $post.postal_code_1 %>" />
+				<input type="text" class="center weight text" title="O123" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n4', value)" value= "<%= $post.postal_code_2 %>" />
+			</div>
+			
+			<div id="nav">ナビゲーションを開始</div>	
+
+			<div id="parent-name">
+				<input type="text" class="weight text" title="城生 さゆり" name="name" data-intro="保護者の氏名を入力してください。" data-step="2" value= "<%= $student.name %>"/>
+			</div>
+			<div id="child-name">
+				<input type="text" class="weight text" title="城生 雄太" name="name_stu" data-intro="生徒の氏名を入力してください。" data-step="3" value= "<%= $student.name_stu %>"/>
+			</div>
+			
+			<div class="clr"></div>
+			
+			<div id="child-date">
+				<div id="sex" data-intro="生徒の性別を選択してください。" data-step="4">
+					<input type="radio" id="man" value="男" name="sex"/>
+					<label for="man" id="manradio"></label>
+					<input type="radio" id="woman" value="女" name="sex"/>
+					<label for="woman" id="womanradio"></label>
+				</div>
+
+				<div id="schooldata" data-intro="生徒の学校を選択してください。" data-step="5">
+					<select name="school" id="school">
+						<option value="el">小学生</option>
+						<option value="jr">中学生</option>
+						<option value="hi">高校生</option>
+					</select>
+				</div>
+				
+				<div id="gradedata" class="scrool_area" data-intro="生徒の学年を選択してください。" data-step="6">
+					<select name="grade" id="grade">
+						<option value="1">１年生</option>
+						<option value="2">２年生</option>
+						<option value="3">３年生</option>
+						<option value="4">４年生</option>
+						<option value="5">５年生</option>
+						<option value="6">６年生</option>
+					</select>
+				</div>
+			</div>
+			
+			<div id="subject" data-intro="授業希望科目を選択してください。(複数可能)" data-step="7">
+				<input type="checkbox" id="mat" name="subject" value="mat" />
+				<label for="mat" class="mat center weight" ></label>
+				<input type="checkbox" id="jap" name="subject" value="jap"/>
+				<label for="jap" class="jap center weight"></label>
+				<input type="checkbox" id="soc" name="subject" value="soc"/>
+				<label for="soc" class="soc center weight"></label>
+				<input type="checkbox" id="sci" name="subject" value="sci"/>
+				<label for="sci" class="sci center weight"></label>
+				<input type="checkbox" id="eng" name="subject" value="eng"/>
+				<label for="eng" class="eng center weight"></label>
+				<input type="checkbox" id="ath" name="subject" value="ath"/>
+				<label for="ath" class="ath center weight"></label>
+			</div>
+			
+			<div class="clr"></div>
+			
+			<div id="week" data-intro="授業希望曜日を選択してください。(複数可能)" data-step="8">
+				<input type="checkbox" id="Man" name="week" value="man"/>
+				<label for="Man" class="Man center weight"></label>
+				<input type="checkbox" id="Tue" name="week" value="tue"/>
+				<label for="Tue" class="Tue center weight"></label>
+				<input type="checkbox" id="Wed" name="week" value="wed"/>
+				<label for="Wed" class="Wed center weight"></label>
+				<input type="checkbox" id="Thu" name="week" value="thu"/>
+				<label for="Thu" class="Thu center weight"></label>
+				<input type="checkbox" id="Fri" name="week" value="fri"/>
+				<label for="Fri" class="Fri center weight"></label>
+				<input type="checkbox" id="Sut" name="week" value="sut"/>
+				<label for="Sut" class="Sut center weight"></label>
+				<input type="checkbox" id="Sun" name="week" value="sun"/>
+				<label for="Sun" class="Sun center weight"></label>
+			</div>
+			
+			<div class="clr"></div>
+			
+			<ul id="purpose" data-intro="希望の指導目的を選択してください。(複数可能)" data-step="9">
+				<li><input type="checkbox" name="purpose" id="record" value="recordUP"/><label for="record" class="pensile">成績アップ</label></li>
+				<li><input type="checkbox" name="purpose" id="pass" value="pass"/><label for="pass" class="pensile">受験合格</label></li>
+				<li><input type="checkbox" name="purpose" id="conquer" value="conquer"/><label for="conquer" class="pensile">苦手科目克服</label></li>
+				<li><input type="checkbox" name="purpose" id="level" value="levelUP"/><label for="level" class="pensile">実力レベルアップ</label></li>
+				<li><input type="checkbox" name="purpose" id="basic" value="basic"/><label for="basic" class="pensile">基礎学力養成</label></li>
+				<li><input type="checkbox" name="purpose" id="applied" value="applied"/><label for="applied" class="pensile">応用力養成</label></li>
+				<li><input type="checkbox" name="purpose" id="mygoal" value="mygoal"/><label for="mygoal" class="pensile">個人目標達成</label></li>
+				<li><input type="checkbox" name="purpose" id="refusal" value="refusal"/><label for="refusal" class="pensile">不登校サポート</label></li>
+				<li><input type="checkbox" name="purpose" id="capasity" value="capacity"/><label for="capasity" class="pensile">検定・資格サポート</label></li>
+			</ul>
+
+			<ul id="howto" data-intro="希望の指導方法を選択してください。(複数可能)" data-step="10">
+				<li><input type="checkbox" name="howto" id="1" value="howto1" /><label for="1" class="pensile">基礎からじっくり</label></li>
+				<li><input type="checkbox" name="howto" id="2" value="howto2" /><label for="2" class="pensile">ゆっくりわかりやすく</label></li>
+				<li><input type="checkbox" name="howto" id="3" value="howto3" /><label for="3" class="pensile">言葉を噛み砕いて説明</label></li>
+				<li><input type="checkbox" name="howto" id="4" value="howto4" /><label for="4" class="pensile">学校の授業並行指導</label></li>
+				<li><input type="checkbox" name="howto" id="5" value="howto5" /><label for="5" class="pensile">さかのぼり指導</label></li>
+				<li><input type="checkbox" name="howto" id="6" value="howto6" /><label for="6" class="pensile">学校の授業の先取り</label></li>
+				<li><input type="checkbox" name="howto" id="7" value="howto7" /><label for="7" class="pensile">効率よく弱点の強化</label></li>
+				<li><input type="checkbox" name="howto" id="8" value="howto8" /><label for="8" class="pensile">塾のフォロー</label></li>
+				<li><input type="checkbox" name="howto" id="9" value="howto9" /><label for="9" class="pensile">難関校受験指導</label></li>
+				<li><input type="checkbox" name="howto" id="10" value="howto10" /><label for="10" class="pensile">ハイレベル対応指導</label></li>
+				<li><input type="checkbox" name="howto" id="11" value="howto11" /><label for="11" class="pensile">やり方やコツを教えてほしい</label></li>
+				<li><input type="checkbox" name="howto" id="12" value="howto12" /><label for="12" class="pensile">部活との並行</label></li>
+			</ul>
+			
+
+			<input class="button" name="commit" type="submit" value="保存" data-intro="編集を終了します。" data-step="11" />
+	<% end %>
+
+	</div>
+	<script>
+	// navigation start set script
+	$(window).load(function(){
+		introJs().start();
+	});
+	
+	$('#nav').click(function(){
+		introJs().start();
+	});
+
+	/* 	next focus */
+	function NextFocusMove(object, targetName, maxLength){
+		if(object.value.length >= maxLength){object.form.elements[targetName].focus();}
+	}
+	/* 	prev focus */
+	function PrevFocusMove(object, targetName, str){
+		if( str.length == 0 ){fc(0)}
+	}
+	/*  focus setting */
+	function fc(num){
+		document.fcset.elements[num].focus();
+	}
+	/*  title setting */
+	$(document).ready(function(){
+	  $('.text')
+	    .blur(function(){
+	      var $$=$(this);
+	      if($$.val()=='' || $$.val()==$$.attr('title')){
+	        $$.css({'color':'#c9c9c9'})
+	          .val($$.attr('title'));
+	      }
+	    })
+	    .focus(function(){
+	      var $$=$(this);
+	      if($$.val()==$$.attr('title')){
+	        $(this).css('color', '#000')
+	               .val('');
+	      }
+	    })
+	    .parents('form:first').submit(function(){
+	      var $$=$('.text');
+	      if($$.val()==$$.attr('title')){
+	        $$.triggerHandler('focus');
+	      }
+	    }).end()
+	    .blur();
+	  });
+
+	  /*  Easy Select Box */
+	jQuery(function () {
+		jQuery('select#school').easySelectBox({speed:100})
+		jQuery('select#grade').easySelectBox({speed:100})
+	});
+	</script>
+</body>
+</html>

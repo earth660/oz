@@ -1,6 +1,6 @@
-class CreateSubjects < ActiveRecord::Migration
+class CreateSubjectstus < ActiveRecord::Migration
   def change
-    create_table :subjects do |t|
+    create_table :subjectstus do |t|
       t.integer :user_id
 	  t.string :math
 	  t.string :english
@@ -8,9 +8,9 @@ class CreateSubjects < ActiveRecord::Migration
 	  t.string :science
 	  t.string :japanese
 	  t.string :program
-	  t.string :art
+	  t.string :art 
 	  t.string :think
-	  t.string :other 
+	  t.string :other
       t.timestamps
     end
   end
