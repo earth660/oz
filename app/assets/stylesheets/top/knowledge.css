@@ -1,0 +1,802 @@
+#knowledge{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+}
+
+.L, .M, .S{
+    position: absolute;
+    bottom: 0;
+    animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+}
+
+.L{
+    width: 20px;height: 100px;
+    animation-name: animeL;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+
+    -moz-animation-name: animeL;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction:alternate;
+    
+    -webkit-animation-name: animeL;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction:alternate;
+    
+    -o-animation-name: animeL;
+    -o-animation-timing-function: ease;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction:alternate;
+    
+    -ms-animation-name: animeL;
+    -ms-animation-timing-function: ease;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction:alternate;
+}
+
+.M{
+    width: 30px;height: 50px;
+    animation-name: animeM;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+
+    -moz-animation-name: animeM;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction:alternate;
+    
+    -webkit-animation-name: animeM;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction:alternate;
+    
+    -o-animation-name: animeM;
+    -o-animation-timing-function: ease;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction:alternate;
+    
+    -ms-animation-name: animeM;
+    -ms-animation-timing-function: ease;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction:alternate;
+}
+
+.S{
+    width: 40px;height: 25px;
+    animation-name: animeS;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+
+    -moz-animation-name: animeS;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction:alternate;
+    
+    -webkit-animation-name: animeS;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction:alternate;
+    
+    -o-animation-name: animeS;
+    -o-animation-timing-function: ease;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction:alternate;
+    
+    -ms-animation-name: animeS;
+    -ms-animation-timing-function: ease;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction:alternate;
+}
+
+.L:hover, .M:hover, .S:hover{
+    animation: swing linear 0.2s;
+    -moz-animation: swing linear 0.2s;
+    -moz-transform-origin: center -20px 0;
+    -webkit-animation: swing linear 0.2s;
+    -webkit-transform-origin: center -20px 0;
+    -ms-animation: swing linear 0.2s;
+    -ms-transform-origin: center -20px 0;
+    -o-animation: swing linear 0.2s;
+    -o-transform-origin:center -20px 0;
+    animation: swing linear 0.2s;
+    transform-origin: center -20px 0;
+}
+
+
+.No1{
+    animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+
+    margin-left: 3%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #aaffa7),
+        color-stop(0.5, #aaffa7),
+        color-stop(0.5, #4a964a),
+        color-stop(1.0, #4a964a)
+    );
+}
+
+.No2{
+    animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+
+    margin-left: 8%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #e7a35c),
+        color-stop(0.5, #e7a35c),
+        color-stop(0.5, #f1f689),
+        color-stop(1.0, #f1f689)
+    );
+}
+.No3{
+    animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+
+    margin-left: 13%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #ffbaff),
+        color-stop(0.5, #ffbaff),
+        color-stop(0.5, #6fbbd5),
+        color-stop(1.0, #6fbbd5)
+    );
+}
+.No4{
+    animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+
+    margin-left: 18%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #c9258a),
+        color-stop(0.5, #c9258a),
+        color-stop(0.5, #5b4dae),
+        color-stop(1.0, #5b4dae)
+    );
+}
+.No5{
+    animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+
+    margin-left: 23%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #a1c161),
+        color-stop(0.5, #a1c161),
+        color-stop(0.5, #955617),
+        color-stop(1.0, #955617)
+    );
+}
+.No6{
+    animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+
+    margin-left: 28%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #4042c0),
+        color-stop(0.5, #4042c0),
+        color-stop(0.5, #f8ee29),
+        color-stop(1.0, #f8ee29)
+    );
+}
+.No7{
+    animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+
+    margin-left: 33%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #fbf697),
+        color-stop(0.5, #fbf697),
+        color-stop(0.5, #ff5776),
+        color-stop(1.0, #ff5776)
+    );
+}
+.No8{
+    animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
+    -ms-animation-delay: 1.4s;
+
+    margin-left: 38%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #6fbbd5),
+        color-stop(0.5, #6fbbd5),
+        color-stop(0.5, #b9b9b9),
+        color-stop(1.0, #b9b9b9)
+    );
+}
+.No9{
+    animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    -ms-animation-delay: 1.6s;
+
+    margin-left: 43%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #ff3c3c),
+        color-stop(0.5, #ff3c3c),
+        color-stop(0.5, #f8ee29),
+        color-stop(1.0, #f8ee29)
+    );
+
+}
+.No10{
+    animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+
+    margin-left: 55%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #9730b6),
+        color-stop(0.5, #9730b6),
+        color-stop(0.5, #757575),
+        color-stop(1.0, #757575)
+    );
+}
+.No11{
+    animation-delay: 2.2s;
+    -moz-animation-delay: 2.2s;
+    -webkit-animation-delay: 2.2s;
+    -o-animation-delay: 2.2s;
+    -ms-animation-delay: 2.2s;
+
+    margin-left: 60%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #ff7dd3),
+        color-stop(0.5, #ff7dd3),
+        color-stop(0.5, #fa994f),
+        color-stop(1.0, #fa994f)
+    );
+}
+.No12{
+    animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    -ms-animation-delay: 2.4s;
+
+    margin-left: 65%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #0b5380),
+        color-stop(0.5, #0b5380),
+        color-stop(0.5, #39a9f8),
+        color-stop(1.0, #39a9f8)
+    );
+}
+.No13{
+    animation-delay: 2.6s;
+    -moz-animation-delay: 2.6s;
+    -webkit-animation-delay: 2.6s;
+    -o-animation-delay: 2.6s;
+    -ms-animation-delay: 2.6s;
+
+    margin-left: 70%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #ff5776),
+        color-stop(0.5, #ff5776),
+        color-stop(0.5, #fbf697),
+        color-stop(1.0, #fbf697)
+    );
+
+}
+.No14{
+    animation-delay: 2.8s;
+    -moz-animation-delay: 2.8s;
+    -webkit-animation-delay: 2.8s;
+    -o-animation-delay: 2.8s;
+    -ms-animation-delay: 2.8s;
+
+    margin-left: 75%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #955617),
+        color-stop(0.5, #955617),
+        color-stop(0.5, #a1c161),
+        color-stop(1.0, #a1c161)
+    );
+}
+.No15{
+    animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+
+    margin-left: 80%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #ebc088),
+        color-stop(0.5, #ebc088),
+        color-stop(0.5, rgba(250,251,179,0.95)),
+        color-stop(1.0, rgba(250,251,179,0.95))
+    );
+}
+.No16{
+    animation-delay: 3.2s;
+    -moz-animation-delay: 3.2s;
+    -webkit-animation-delay: 3.2s;
+    -o-animation-delay: 3.2s;
+    -ms-animation-delay: 3.2s;
+
+    margin-left: 85%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #F26964),
+        color-stop(0.5, #F26964),
+        color-stop(0.5, #F4F4F2),
+        color-stop(1.0, #F4F4F2)
+    );
+}
+.No17{
+    animation-delay: 3.4s;
+    -moz-animation-delay: 3.4s;
+    -webkit-animation-delay: 3.4s;
+    -o-animation-delay: 3.4s;
+    -ms-animation-delay: 3.4s;
+
+    margin-left: 90%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #FFD464),
+        color-stop(0.5, #FFD464),
+        color-stop(0.5, #F6A615),
+        color-stop(1.0, #F6A615)
+    );
+}
+.No18{
+    animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    -webkit-animation-delay: 3.6s;
+    -o-animation-delay: 3.6s;
+    -ms-animation-delay: 3.6s;
+
+    margin-left: 95%;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(  0, #33BFDB),
+        color-stop(0.5, #33BFDB),
+        color-stop(0.5, #737373),
+        color-stop(1.0, #737373)
+    );
+}
+
+@-webkit-keyframes swing { 
+    0% { left: 5px; }
+    25% { left: -5px; }
+    50% { left: 10px; }
+    75% { left: -10px; }
+    100% { left: 0px; }
+}
+
+@keyframes animeL{
+    0%{height: 100px;}
+    100%{height: 130px;}
+}
+@-moz-keyframes animeL{
+    0%{height: 100px;}
+    100%{height: 130px;}
+}
+@-webkit-keyframes animeL{
+    0%{height: 100px;}
+    100%{height: 130px;}
+}
+@-o-keyframes animeL{
+    0%{height: 100px;}
+    100%{height: 130px;}
+}
+@-ms-keyframes animeL{
+    0%{height: 100px;}
+    100%{height: 130px;}
+}
+
+@keyframes animeM{
+    0%{height: 50px;}
+    100%{height: 80px;}
+}
+@-moz-keyframes animeM{
+    0%{height: 50px;}
+    100%{height: 80px;}
+}
+@-webkit-keyframes animeM{
+    0%{height: 50px;}
+    100%{height: 80px;}
+}
+@-o-keyframes animeM{
+    0%{height: 50px;}
+    100%{height: 80px;}
+}
+@-ms-keyframes animeM{
+    0%{height: 50px;}
+    100%{height: 80px;}
+}
+
+@keyframes animeS{
+    0%{height: 25px;}
+    100%{height: 55px;}
+}
+@-moz-keyframes animeS{
+    0%{height: 25px;}
+    100%{height: 55px;}
+}
+@-webkit-keyframes animeS{
+    0%{height: 25px;}
+    100%{height: 55px;}
+}
+@-o-keyframes animeS{
+    0%{height: 25px;}
+    100%{height: 55px;}
+}
+@-ms-keyframes animeS{
+    0%{height: 25px;}
+    100%{height: 55px;}
+}
+
+.l, .m, .s{
+    position: absolute;
+    animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+
+    animation-name: jump;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+
+    -moz-animation-name: jump;
+    -moz-animation-timing-function: ease;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction:alternate;
+    
+    -webkit-animation-name: jump;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction:alternate;
+    
+    -o-animation-name: jump;
+    -o-animation-timing-function: ease;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction:alternate;
+    
+    -ms-animation-name: jump;
+    -ms-animation-timing-function: ease;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction:alternate;
+}
+
+.l{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 75%;
+}
+
+.m{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 80%;
+}
+
+.s{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 85%;
+}
+
+.l:hover, .m:hover, .s:hover{
+    animation: swing linear 0.2s;
+    -moz-animation: swing linear 0.2s;
+    -moz-transform-origin: center -20px 0;
+    -webkit-animation: swing linear 0.2s;
+    -webkit-transform-origin: center -20px 0;
+    -ms-animation: swing linear 0.2s;
+    -ms-transform-origin: center -20px 0;
+    -o-animation: swing linear 0.2s;
+    -o-transform-origin:center -20px 0;
+    animation: swing linear 0.2s;
+    transform-origin: center -20px 0;
+}
+
+.no1{
+    margin-left: 3%;
+    border: solid 5px #aaffa7;
+
+    animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+}
+
+.no2{
+    margin-left: 8%;
+    border: solid 5px #e7a35c;
+
+    animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+}
+
+.no3{
+    margin-left: 13%;
+    border: solid 5px #ffbaff;
+
+    animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+}
+
+.no4{
+    margin-left: 18%;
+    border: solid 5px#c9258a;
+
+    animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+}
+
+.no5{
+    margin-left: 23%;
+    border: solid 5px #a1c161;
+
+    animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+}
+
+.no6{
+    margin-left: 28%;
+    border: solid 5px #4042c0;
+
+    animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+}
+
+.no7{
+    margin-left: 33%;
+    border: solid 5px #fbf697;
+
+    animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+}
+
+.no8{
+    margin-left: 38%;
+    border: solid 5px #6fbbd5;
+
+    animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    -webkit-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
+    -ms-animation-delay: 1.4s;
+}
+
+.no9{
+    margin-left: 43%;
+    border: solid 5px #ff3c3c;
+
+    animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+    -o-animation-delay: 1.6s;
+    -ms-animation-delay: 1.6s;
+}
+
+.no10{
+    margin-left: 55%;
+    border: solid 5px #9730b6;
+
+    animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+}
+
+.no11{
+    margin-left: 60%;
+    border: solid 5px #ff7dd3;
+
+    animation-delay: 2.2s;
+    -moz-animation-delay: 2.2s;
+    -webkit-animation-delay: 2.2s;
+    -o-animation-delay: 2.2s;
+    -ms-animation-delay: 2.2s;
+}
+
+.no12{
+    margin-left: 65%;
+    border: solid 5px #0b5380;
+
+    animation-delay: 2.4s;
+    -moz-animation-delay: 2.4s;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    -ms-animation-delay: 2.4s;
+}
+
+.no13{
+    margin-left: 70%;
+    border: solid 5px #ff5776;
+
+    animation-delay: 2.6s;
+    -moz-animation-delay: 2.6s;
+    -webkit-animation-delay: 2.6s;
+    -o-animation-delay: 2.6s;
+    -ms-animation-delay: 2.6s;
+}
+
+.no14{
+    margin-left: 75%;
+    border: solid 5px #955617;
+
+    animation-delay: 2.8s;
+    -moz-animation-delay: 2.8s;
+    -webkit-animation-delay: 2.8s;
+    -o-animation-delay: 2.8s;
+    -ms-animation-delay: 2.8s;
+}
+
+.no15{
+    margin-left: 80%;
+    border: solid 5px #ebc088;
+
+    animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+}
+
+.no16{
+    margin-left: 85%;
+    border: solid 5px #F26964;
+
+    animation-delay: 3.2s;
+    -moz-animation-delay: 3.2s;
+    -webkit-animation-delay: 3.2s;
+    -o-animation-delay: 3.2s;
+    -ms-animation-delay: 3.2s;
+}
+
+.no17{
+    margin-left: 90%;
+    border: solid 5px #FFD464;
+
+    animation-delay: 3.4s;
+    -moz-animation-delay: 3.4s;
+    -webkit-animation-delay: 3.4s;
+    -o-animation-delay: 3.4s;
+    -ms-animation-delay: 3.4s;
+}
+
+.no18{
+    margin-left: 95%;
+    border: solid 5px #33BFDB;
+
+    animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    -webkit-animation-delay: 3.6s;
+    -o-animation-delay: 3.6s;
+    -ms-animation-delay: 3.6s;
+}
+
+@keyframes jump{
+    0%{margin-top: 0px;}
+    100%{margin-top: -20px;}
+}
+@-moz-keyframes jump{
+    0%{margin-top: 0px;}
+    100%{margin-top: -20px;}
+}
+@-webkit-keyframes jump{
+    0%{margin-top: 0px;}
+    100%{margin-top: -20px;}
+}
+@-o-keyframes jump{
+    0%{margin-top: 0px;}
+    100%{margin-top: -20px;}
+}
+@-ms-keyframes jump{
+    0%{margin-top: 0px;}
+    100%{margin-top: -20px;}
+}

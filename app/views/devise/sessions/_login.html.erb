@@ -1,0 +1,7 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "login"}) do |f| %>
+  <%= f.email_field :email, :autofocus => true, :id => "mail", placeholder: "メールアドレス" %>
+  <%= f.password_field :password, :id => "password", placeholder: "パスワード" %><br />
+  <%= f.submit "LOGIN", :id => "login-btn" %>
+  <input id="submit-btn" type="button" value="NEW" onclick="newuser()" />
+  <br />
+<% end %>

@@ -1,14 +1,40 @@
+# -*- coding: utf-8 -*-
 Oz::Application.routes.draw do
 
+
   get "home/index"
-  get "home/profile"
-  get "home/post"
+  get "home/indexstu"
+
+  get "home/teacher_form"
+  get "home/student_form"
+  get "home/teacher_create"
+  get "home/change_who"
   get "edit/index"
+  
+  post "home/teacher_create"
+  post "home/student_create"
 
   post "edit/post"
   post "home/create"
 
-  devise_for :teachers, path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :users, path_names: {
+    sign_in: "login",
+    sign_out: "logout"
+  }, skip: :all
+  devise_scope :user do
+    # registrations
+    post "users" => "devise/registrations#create", as: :user_registration
+
+    # passwords
+    post "users/password" => "devise/passwords#create", as: :user_password
+    get "users/password" => "devise/passwords#new", as: :new_user_password
+ 
+    # sessions
+    get "users/login" => "devise/sessions#new", as: :new_user_session
+    post "users/login" => "devise/sessions#create", as: :user_session
+    get "users/logout" => "devise/sessions#destroy", as: :destroy_user_session
+  end
+
 
   #郵便番号検索
   get "searches/search"
@@ -25,7 +51,7 @@ Oz::Application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  root 'home#index'
+  root "home#index"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

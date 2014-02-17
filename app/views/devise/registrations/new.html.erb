@@ -1,16 +1,18 @@
-<h2>Sign up</h2>
+<h2>devise registrations new だよ</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+生徒か先生かのチェックもお忘れなく！<br />
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <%= label_tag(:ozuser_who, "先生") %>
+<%= f.radio_button :who, 'teacher', {} %>
+  <%= label_tag(:ozuser_who, "生徒") %>
+<%= f.radio_button :who, 'student', {} %><br />
+  <%= f.email_field :email, :autofocus => true, id: "newmail", placeholder: "メールアドレス" %>
+  <%= f.password_field :password, id: "newpassword", placeholder: "パスワード" %>
+  <%= f.password_field :password_confirmation, id: "newpassword", placeholder: "パスワード(確認)" %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

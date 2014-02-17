@@ -1,0 +1,429 @@
+@font-face{
+	font: {
+		family:'MyFont';
+		weight: 'normal,bold';
+		style: 'normal';
+	}
+	src: asset-url('font.ttf', font) format('truetype');
+}
+html, body{font-family: 'MyFont';}
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 130%;
+	overflow: scroll;
+}
+.link{
+	position: relative;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	list-style: none;
+}
+input{ background: #efefef;border: none; }
+.money > input{width: 70px;height: 25px; }
+.trans > input{
+	width: 150px;
+	height: 40px;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+.onoffswitch {
+    position: relative; width: 60px;
+    margin-top: -25px; right: -130px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {display: none;}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+}
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; height: 25px; padding: 0; line-height: 25px;
+    font-size: 12px; color: white; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "有";
+    padding-left: 10px;
+    text-align: left;
+    background-color: #5DADE2; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "無";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    width: 14px; margin: 5.5px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 32px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {margin-left: 0;}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {right: 0px;}
+textarea{border: none;}
+.link > .mail{ position: absolute; width: 29px; height: 38px; background: url(/assets/mail.png) no-repeat;top: 120px; left: 51.5%; z-index: 2; }
+.link > .name, .link > .univ{
+	position: absolute;
+	width: 250px;
+	height: 70px;
+	background: #EFEFEF;
+	border-radius: 50px;
+	margin-top: 50px;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	float: left;
+}
+.link > .name{
+	right: 50%;
+	padding-right: 30px;
+	line-height: 70px;
+}
+.link > .image{
+	position: absolute;
+	width: 126.5px;
+	height: 128px;
+	background: #fff;
+	border: solid 5px #EFEFEF;
+	border-radius: 50%;
+	padding-top: 2px;
+	padding-left: 3.5px;
+	margin-top: 20px;
+	right: 50%;
+	margin-right: -65px;
+	float: left;
+	z-index: 10;
+}
+
+.link > .card{
+	position: fixed;
+	width: 70px; height: 70px;
+	bottom: 15%; right: 20.5%; 
+	margin-top: 125px;
+	background: #fff;
+	border: #efefef 5px solid;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.link > .card:before{
+	position: absolute;
+	content: '';
+	width: 60px; height: 60px;
+	top: 5px; left: 5px;
+	background: url(/assets/menkyo.png) no-repeat center center #7fe35e;
+	background-size: 60%;
+	border-radius: 50%;
+}
+
+img{ position: relative; z-index: 11; }
+
+#kiban{
+	position: relative;
+	width: 123px;
+	height: 126px;
+	background: #efefef;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#plus, #minus{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+	top: 130px;
+	left: 40%;
+	background: #efefef;
+	margin-left: 70px;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 900;
+	float: left;
+	z-index: 10;
+}
+
+.link > .univ{
+	left: 50%;
+	height: 70px;
+	padding-left: 30px;
+	font-size: 20px;
+	z-index: 0;
+}
+
+.link > .univ > input{
+	font-size: 18px;
+	width: 170px;
+	height: 32px;
+	margin-top: 2px;
+	text-align: center;
+	font-weight: 900;
+}
+
+.link > .trans, .link > .money{
+	position: absolute;
+	width: 220px;
+	height: 170px;
+	background: #EFEFEF;
+	border-radius: 30px;
+	margin-top: 180px;
+	font-size: 20px;
+	font-weight: 900;
+	text-align: center;
+}
+
+.link > .trans{
+	right: 60%;
+	height: 130px;
+	padding-top: 40px;
+	margin-right: -85px;
+}
+
+.link > .trans > input {
+	width: 70px;
+}
+
+.link > .trans > p{font-size: 13px; text-align: left; margin-top: 10px; padding-left: 30px;}
+
+.link > .trans > .trans-before, .link > .money > .money-before{
+	position: absolute;
+	width: 210px;
+	height: 160px;
+	background: #fff;
+	border-radius: 30px;
+	border: solid 5px #EFEFEF;
+	top: 0px;
+	left: 0px;
+}
+
+.link > .trans > .trans-after, .link > .money > .money-after{
+	position: absolute;
+	width: 200px;
+	height: 150px;
+	opacity: 0.7;
+	border-radius: 30px;
+	top: 10px;
+	left: 10px;
+}
+
+.link > .money{
+	right: 36.5%;
+	width: 180px;
+	height: 130px;
+	padding-top: 40px;
+	padding-left: 40px;
+	margin-right: -85px;
+}
+
+.link > .trans > .trans-after{background: url(/assets/trans.png) no-repeat center center #EB3C00;}
+.link > .money > .money-after{background: url(/assets/money2.png) no-repeat center center #FFD800;}
+
+.link > .message{
+	position: absolute;
+	width: 465px;
+	height: 180px;
+	background: #EFEFEF;
+	border-radius: 25px;
+	right: 46.5%;
+	overflow: hidden;
+	margin-top: 365px;
+	margin-right: -225px;
+	font-weight: 900;
+	padding-top: 20px;
+	padding-left: 70px;
+}
+
+.link > .icon-m{
+	position: absolute;
+	width: 515px;
+	height: 180px;
+	border: solid 5px #EFEFEF;
+	background: #fff;
+	border-radius: 25px;
+	margin: 100px;
+	top: 270px;
+	left: 325px;
+	z-index: 20;
+}
+
+.link > .icon-m-before{
+	position: absolute;
+	width: 505px;
+	height: 170px;
+	background: url(/assets/message.png) no-repeat center center #6FC9D8;
+	border-radius: 25px;
+	top: 380px;
+	left: 435px;
+	z-index: 30;
+}
+
+.link > .sche > .sche_week > input, .link > li > #setting > .setting > input{display: none;}
+.link > .sche > .sche_week > label, .link > li > #setting > .setting > label{
+    display: block;
+    cursor: pointer;
+    transition: .2s;
+    opacity: 0.2
+}
+.link > .sche > .sche_week > input[type="checkbox"]:checked + label{opacity: 1; }
+.link > li > #setting > .setting > input[type="checkbox"]:checked + label{opacity: 1; }
+
+.link > .sche, li > #setting{
+	position: relative;
+	width: 540px;
+	top: 570px; left: 50%;
+	margin-left: -270px;
+}
+
+.link > .sche > .sche_week{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-left: 15px;
+	background: #fff;
+	border: solid 5px #EFEFEF;
+	border-radius: 50%;
+	float: left;
+}
+
+.link > .sche > .sche_week > .day{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.link > .sche > .sche_week > #Man{background: #EE6557; top: 3px; left: 3px;}
+.link > .sche > .sche_week > #Tue{background: #F27398; top: 0px; left: 3px;}
+.link > .sche > .sche_week > #Wed{background: #0E7AC4; top: -5px; left: 3px;}
+.link > .sche > .sche_week > #Thu{background: #008837; top: -9px; left: 3px;}
+.link > .sche > .sche_week > #Fri{background: #58BE89; top: -9px; left: 3px;}
+.link > .sche > .sche_week > #Sut{background: #E67E22; top: 3px; left: 3px;}
+.link > .sche > .sche_week > #San{background: #F1C40F; top: 0px; left: 3px;}
+
+.link > .sche > .sche_week > .day:before{
+	position: absolute;
+	top: 4px;
+	font-size: 13px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.link > .sche > .sche_week > #Man:before{content: 'Man';left: 8px;}
+.link > .sche > .sche_week > #Tue:before{content: 'Tue';left: 10px;}
+.link > .sche > .sche_week > #Wed:before{content: 'Wed';left: 7px;}
+.link > .sche > .sche_week > #Thu:before{content: 'Thu';left: 10px;}
+.link > .sche > .sche_week > #Fri:before{content: 'Fri';left: 13px;}
+.link > .sche > .sche_week > #Sut:before{content: 'Sut';left: 10px;}
+.link > .sche > .sche_week > #San:before{content: 'San';left: 10px;}
+
+.link > .sche > .sche_week > .day:after{
+	position: absolute;
+	left: 12px;
+	top: 15px;
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+}
+
+.link > .sche > .sche_week > #Man:after{content: '月';}
+.link > .sche > .sche_week > #Tue:after{content: '火';}
+.link > .sche > .sche_week > #Wed:after{content: '水';}
+.link > .sche > .sche_week > #Thu:after{content: '木';}
+.link > .sche > .sche_week > #Fri:after{content: '金';}
+.link > .sche > .sche_week > #Sut:after{content: '土';}
+.link > .sche > .sche_week > #San:after{content: '日';}
+
+.off{opacity: 0.15;}
+
+#return{
+	position: fixed;
+	width: 48px;
+	height: 48px;
+	background: url(/assets/return.png) no-repeat center center;
+	bottom: 5%;
+	left: 75%;
+	z-index: 10;
+}
+#return:hover{cursor: pointer;}
+#okbutton{
+	position: absolute;
+	width: 200px; height: 50px;
+	background: #5dade2;
+	left: 50%; bottom: 20px;
+	margin-top: 30px; margin-left: -100px;
+	padding-top: 10px;
+	border-radius: 25px; 
+	font-size: 30px; font-weight: 900; color: #fff; text-align: center;
+}
+input[type="submit"]{
+	background: #5dade2;
+	font-size: 30px; font-weight: 900; color: #fff; text-align: center;
+}
+.sche{margin-top: -20px;}
+li.subject_li{ position: relative; margin-top: -20px; }
+li > #setting > .setting {width: 70px; height: 70px; float: left; margin-left: 15px;}
+li > #setting > .setting > .subject > span {top: 0%;}
+#Eng{margin-left: 3%;}
+
+#sign{
+	position: fixed;
+	width: 200px;
+	height: 200px;
+	right: 5%;	bottom: -33%;
+	background: #efefef;
+	border-radius: 50%;
+	font-weight: 900;
+	font-size: 20px;
+	text-align: center;
+	line-height: 200px;
+}
+
+#sign:after{
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 190px;
+	left: 70px;
+	border: 30px solid transparent;
+	border-top: 30px solid #efefef;
+}
+
+/* ----------8<----------8<---------- ----------8<----------8<---------- ----------8<----------8<---------- */
+
+@media screen and (max-width:1024px) {
+#return{right: 72.5%;}
+.univ{left: 510px;}
+.link > .icon{left: 46%;}
+@-webkit-keyframes anime1{
+	0%{top: 55px;}
+	2%{top: 40px;}
+	4%{top: 55px;}
+	55%{left: 46%;}
+	56%{left: 47.5%;}
+	57%{left: 46.5%;}
+	58%{left: 47.5%;}
+	59%{left: 46.5%;}
+	60%{left: 46%;}
+}
+.trans, .money{top: 10px;}
+.trans{left: 240px;}
+.money{left: 560px;}
+.link >.icon-m{left: 125px;}
+
+}

@@ -7,7 +7,7 @@ body{width: auto; height: 1000px;}
 
 .button{
 	position: relative;
-	background: image-url("button.png") no-repeat left top;
+	background: url(/assets/button.png) no-repeat left top;
 	width: 65px;
 	height: 65px;
 	border: none;
@@ -125,11 +125,11 @@ input{
     height:48px;
 }
 
-.icon_home{background:transparent image-url("home.png") no-repeat;}
-.icon_suport{background:transparent image-url("suport.png") no-repeat;}
-.icon_money{background:transparent image-url("money.png") no-repeat;}
-.icon_teach{background:transparent image-url("teach.png") no-repeat;}
-.icon_oz{background:transparent image-url("oz.png") no-repeat;}
+.icon_home{background-image: image-url(/assets/home.png) no-repeat;}
+.icon_suport{background:transparent url(asset_path('suport.png')) no-repeat;}
+.icon_money{background:transparent url(/assets/money.png) no-repeat;}
+.icon_teach{background:transparent url(/assets/teach.png) no-repeat;}
+.icon_oz{background:transparent url(/assets/oz.png) no-repeat;}
 
 .item_content{
     position:absolute;
@@ -175,7 +175,7 @@ input{
 	position: relative;
 	width: 125px;
 	height: 125px;
-	background: image-url("con.png") no-repeat left top;
+	background: url(../images/con.png) no-repeat left top;
 	-webkit-transition:  0.5s;
 	-moz-transition:  0.5s;
 	-o-transition:  0.5s;
@@ -187,16 +187,16 @@ input{
 /* ↓変更 */
 
 .man, .woman{position: relative; width: 62px; height: 125px; opacity: 0; float: left; background: #000; }
-.man{background: image-url("man.png") no-repeat center center; top: -30px; left: 130px;}
-.woman{background: image-url("woman.png") no-repeat center center; top: -30px; left: 130px;}
+.man{background: url(/assets/man.png) no-repeat center center; top: -30px; left: 130px;}
+.woman{background: url(../images/woman.png) no-repeat center center; top: -30px; left: 130px;}
 
-.con-2{ background: image-url("con-2.png") top left no-repeat;
+.con-2{ background:url("../images/con-2.png") top left no-repeat;
 	position: relative;
 	-webkit-transition:  0.5s;
 	-moz-transition:  0.5s;
 	-o-transition:  0.5s;
 	-ms-transition:  0.5s;
-	transition:  0.5s;
+	transition:  0.5s;	
 	opacity:0;
 }
 
@@ -260,7 +260,7 @@ ul#prof{
 
 ul#prof > li{position: absolute;border-radius: 0;font-weight: 900;}
 ul#prof > li.img{top: 30px; left: 50px;}
-ul#prof > li.mail{ width: 29px; height: 38px; background: image-url("mail.png") no-repeat;top: 93px; left: 125px;}
+ul#prof > li.mail{ width: 29px; height: 38px; background: url(../images/mail.png) no-repeat;top: 93px; left: 125px;}
 ul#prof > li.name{
 	font-size: 40px;
 	width: 300px;
@@ -345,7 +345,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate1:after{
-	background: image-url("pen.png") no-repeat center center;
+	background: url(../images/pen.png) no-repeat center center;
 	top: 0px;
 	left: 5px;
 }
@@ -359,7 +359,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate2:after{
-	background: image-url("goal.png") no-repeat center center;
+	background: url(/assets/goal.png) no-repeat center center;
 	top: 0px;
 	left: 3px;
 }
@@ -373,7 +373,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate3:after{
-	background: image-url("people.png") no-repeat center center;
+	background: url(../images/people.png) no-repeat center center;
 	top: 0px;
 	left: 2px;
 }

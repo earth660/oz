@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Oz</title>
+  <title><%= yield :title %></title>
   <meta charset="UTF-8" />
-  <%= stylesheet_link_tag "search" %>
 
+  <%= favicon_link_tag "favicon.ico" %>
+  <%= yield :css %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  
-  
+  <!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+  <%= yield :javascript_header %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% if teacher_signed_in? %>
-<ul>
-  <li><%= link_to "ログアウト", destroy_teacher_session_path, method: :delete %></li>
-</ul>
-<% else %>
-  <%= link_to "Sign up", new_teacher_registration_path %> or 
-  <%= link_to "Sign in", new_teacher_session_path %>
-<% end %>
-
-<br /><br />
-<%= yield %>
-
+  <%= yield %>
+  <% if user_signed_in? %>
+  <ul>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  </ul>
+  <% end %>
+  <%= yield :javascript_footer %>
 </body>
 </html>

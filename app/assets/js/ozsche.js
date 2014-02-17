@@ -1,3 +1,4 @@
+
 $(function(){
 		$(".quelist").toggle(function(){
 			$(this).not(":animated").animate({
@@ -21,14 +22,6 @@ $(function(){
 $(function(){
 	var i = 128; //
 	var n = 2;
-
-	$(".coin").click(function(){
-		$("span").text( i++ ).addClass("magictime puffIn")
-		setTimeout(function(){
-			$("span").removeClass("magictime puffIn")
-		}, 700);
-	});
-	
 	
 	$(".coin2").click(function(){
 		$(".list1").stop().animate({"opacity":0.3},"slow"),

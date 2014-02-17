@@ -1,19 +1,10 @@
-
-*{
-	margin: 0;
-	padding: 0;
+@font-face{
+	font-family:'MyFont';
+	src: url('../font/font.otf') format('opentype');
 }
-
-body{
-	width: 100%;
-	height: 100%;
-}
-
-li{
-	list-style: none;
-}
-
-
+*{ margin: 0; padding: 0; }
+body{ width: 100%; height: 100%; font-family: MyFont;}
+li{ list-style: none; }
 #quest{
 	position: relative;
 	width: 50%;
@@ -21,27 +12,20 @@ li{
 	color:#4CAEE8;
 	font-weight: bold;	
 }
+.menu{ left: 50%; margin-left: 30px; }
 
-.menu{
-	left: 50%;
-	margin-left: 30px;
-}
 /* 今日のクエストタイトル */
 #quest ul.title{
 	position: relative;
-	top: -100px;
-	width: 100%;
-	font-size: 18px;
-	font-weight: bold;
-	height: 50px;
-	float: left;
-	list-style: none;
-	text-align: center;
+	width: 100%; height: 50px;
+	top: -110px;
+	font-size: 28px; font-weight: 900;
+	text-align: center; line-height: 2;
 	vertical-align: middle;
-	line-height: 2;
+	float: left;
 }
 
-#quest li div#line-top{
+#line-top, #line2-top, #line-btm, #line2-btm{
 	position:absolute;
 	border: solid 2px;
 	border-color:  gray;
@@ -49,27 +33,9 @@ li{
 	top: 40%;
 	opacity: 0.5;
 }
-
-#quest li div#line-btm{
-	position: absolute;
-	border: solid 2px;
-	border-color:  gray;
-	width: 20%;
-	top: 60%;
-	opacity: 0.5;
-}
-
-#quest li div#line2-top{
-	position: absolute;
-	border: solid 2px;
-	border-color:  gray;
-	width: 20%;
-	top: 40%;
-	right: 0px;
-	opacity: 0.5;
-}
-
-#quest li div#line2-btm{
+#line2-top, #line2-btm{right: 0;}
+#line-btm, #line2-btm{ top: 60%; }
+#line2-btm{
 	position: absolute;
 	border: solid 2px;
 	border-color:  gray;
@@ -77,35 +43,41 @@ li{
 	top: 60%;
 	right: 0px;
 	opacity: 0.5;		
-}		
-
+}
 #quest ul.text{
+	position: absolute;
+	width: 100%; margin-top: 20px;
+	font-size: 20px; text-align: center;
+}
+
+.havecoin{
 	position: relative;
-	width: 100%;
-	top:-30px;
-	font-size: 28px;
-	text-align: center;
-	list-style: none;
-	overflow: hidden;
+	width: 20%; height: 80px;
+	top: -100px; left: 40%; bottom: 15px;
+	font-size: 20px; text-align: center;
 }
 
-#liststyle{
-	width: 900px;
-	margin-left: 225px;
+.havecoin span{ position: relative; font-size: 30px; }
+
+.quelist{
+	position: relative;
+	width:40%; height: 80px;
+	margin-top: 50px; margin-bottom: 30px; margin-left: 30%;
+	background: #eee; overflow: hidden;
+	border-radius: 15px;
+	cursor: pointer;
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
 }
 
-ul#listbox li{
-	float: left;
+#liststyle{ width: 900px; margin-left: 225px; }
+#listbox{
+	width: 100%; height: 60px;
+	list-style: none; float: left; z-index: 1;
 }
+#listbox li{ float: left; }
 
-.quelist>ul#listbox{
-	list-style: none;
-	width: 100%;
-	height: 60px;
-	float: left;	
-}
-
-/* 白丸 */
 .listbox{
 	width: 200px;
 	height: 200px;
@@ -121,28 +93,56 @@ ul#listbox li{
 
 .listbox:hover{background: #ccc;}
 
-.siromaru{
-	background-color: #fff;
-	position: relative;
-	width: 55px;
-	height: 55px;
-	border-radius: 50%;
-	border: solid #eee 5px;
-	margin-left: -30px;
-	top: -20px;
-	z-index: 120;
-}
-
-.siromaru>#maru{
+#siromaru{
 	position: absolute;
-	top: -8px;
-	left: -7px;
-	font-size: 20px;
-	text-align: center;
-	line-height: 20px;
+	width: 60px; height: 60px;
+	margin-top: 5px; margin-left: 5px;
+	border-radius: 45px;
+	background: #fff;
 }
 
-p#maru.mai{line-height: 50px;}
+#maru{
+	position: absolute;
+	width: 50px; height: 50px;
+	margin-top: 10px; margin-left: 10px;
+	background: #4CAEE8; border-radius: 45px;
+	color: #fff; font-size: 35px; text-align: center; vertical-align: middle; line-height: 60px;
+}
+
+#time{
+	position: relative;
+	left: 30%;
+	margin-top: 15px; margin-bottom: 15px;
+	text-align: center; font-size: 30px; line-height: 60px;
+	float: left;
+}
+
+pre{
+	position: relative;
+	margin-bottom: 30px; 
+	text-align: center; font-size: 25px;
+	clear: both;
+}
+
+.coin, .coin1, .coin2, .coin3, .coin4, .coin5{ position: absolute; z-index: 10; width: 67px; height: 67px; top: 5%; right: 5%; }
+
+.coin{ background: url('../images/coin.png') no-repeat;}
+.coin1{ background: url('../images/coin1.png') no-repeat; }
+.coin2{ background: url('../images/coin2.png') no-repeat; }
+.coin3{ background: url('../images/coin3.png') no-repeat; }
+.coin4{ background: url('../images/coin4.png') no-repeat; }
+.coin5{ background: url('../images/coin5.png') no-repeat; }
+
+.viewcoin{position: relative; top: 45px; margin-left: 40px;}
+.cancel{
+	position: absolute;
+	width: 57px; height: 57px;
+	right: 5%; 
+	border-radius: 50%;
+	color: #000; text-align: center; font-size: 40px; line-height: 90px;
+	opacity: 0;
+	z-index: 5;
+}
 
 .chara{
 	position: fixed;
@@ -237,3 +237,5 @@ p#maru.mai{line-height: 50px;}
 	left: 50%;
 	margin-left: -16px;
 }
+
+#listck>img{ position: absolute; right: 0; margin-top: 5px; margin-right: 5px;}

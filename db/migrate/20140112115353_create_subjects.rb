@@ -1,6 +1,7 @@
 class CreateSubjects < ActiveRecord::Migration
   def change
     create_table :subjects do |t|
+      t.integer :user_id
 	  t.string :math
 	  t.string :english
 	  t.string :society
