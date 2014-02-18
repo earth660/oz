@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218070657) do
+ActiveRecord::Schema.define(version: 20140218161825) do
+
+  create_table "howtos", force: true do |t|
+    t.integer  "user_id"
+    t.boolean  "howto1"
+    t.boolean  "howto2"
+    t.boolean  "howto3"
+    t.boolean  "howto4"
+    t.boolean  "howto5"
+    t.boolean  "howto6"
+    t.boolean  "howto7"
+    t.boolean  "howto8"
+    t.boolean  "howto9"
+    t.boolean  "howto10"
+    t.boolean  "howto11"
+    t.boolean  "howto12"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "money", force: true do |t|
     t.integer  "user_id"
@@ -42,6 +60,21 @@ ActiveRecord::Schema.define(version: 20140218070657) do
     t.string   "postal_code"
     t.string   "postal_code_1"
     t.string   "postal_code_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "purposes", force: true do |t|
+    t.integer  "user_id"
+    t.boolean  "record"
+    t.boolean  "pass"
+    t.boolean  "conquer"
+    t.boolean  "level"
+    t.boolean  "basic"
+    t.boolean  "applied"
+    t.boolean  "mygoal"
+    t.boolean  "refusal"
+    t.boolean  "capacity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

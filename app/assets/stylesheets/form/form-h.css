@@ -179,7 +179,7 @@ html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
 
 #subject{position: absolute; right: 15%; margin-top: 2%;}
 
-.eng, .jap, .soc, .sci, .mat, .ath{
+.eng, .jap, .soc, .sci, .mat, .etc{
 	position: relative;
 	width: 60px;
 	height: 60px;
@@ -188,7 +188,7 @@ html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
 	border-radius: 50%;
 }
 
-.eng:before, .jap:before, .soc:before, .sci:before, .mat:before, .ath:before{
+.eng:before, .jap:before, .soc:before, .sci:before, .mat:before, .etc:before{
 	position: absolute;
 	width: 40px;
 	height: 40px;
@@ -205,11 +205,11 @@ html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
 .sci:before{content: '理'; background: #7fe35e;}
 .mat:before{content: '数'; background: #6fc9d8;}
 .eng:before{content: '英'; background: #ff6fcf;}
-.ath:before{content: '他'; background: #a35ecd;}
+.etc:before{content: '他'; background: #a35ecd;}
 
 #week{position: absolute; right: 15.5%; margin-top: 10%; }
 
-.Man, .Tue, .Wed, .Thu, .Fri, .Sut, .Sun{
+.Mon, .Tue, .Wed, .Thu, .Fri, .Sat, .Sun{
 	position: relative;
 	width: 50px;
 	height: 50px;
@@ -218,7 +218,7 @@ html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
 	border-radius: 50%;
 }
 
-.Man:before, .Tue:before, .Wed:before, .Thu:before, .Fri:before, .Sut:before, .Sun:before{
+.Mon:before, .Tue:before, .Wed:before, .Thu:before, .Fri:before, .Sat:before, .Sun:before{
 	position: absolute;
 	width: 30px;
 	height: 30px;
@@ -229,12 +229,12 @@ html, body{ width: 100%; height: 100%; margin: 0; padding: 0; }
 	font-size: 20px;
 }
 
-.Man:before{content: '月'; background: #EE6557;}
+.Mon:before{content: '月'; background: #EE6557;}
 .Tue:before{content: '火'; background: #F27398;}
 .Wed:before{content: '水'; background: #0E7AC4;}
 .Thu:before{content: '木'; background: #008837;}
 .Fri:before{content: '金'; background: #58BE89;}
-.Sut:before{content: '土'; background: #E67E22;}
+.Sat:before{content: '土'; background: #E67E22;}
 .Sun:before{content: '日'; background: #F1C40F;}
 
 
