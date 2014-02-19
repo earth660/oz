@@ -30,11 +30,16 @@ class HomeController < ApplicationController
   	 f.jr = '2000'
   	 f.hi = '2000'
   	end
+  	Week.where(:user_id => current_user.id).first_or_create
+  	Subject.where(:user_id => current_user.id).first_or_create  	
   	
   	$teacher = Teacher.find_by(:user_id => current_user.id)
   	$post = Post.find_by(:user_id => current_user.id)
   	$money = Money.find_by(:user_id => current_user.id)  	
- 		
+ 	$week = Week.find_by(:user_id => current_user.id)
+ 	$subject = Subject.find_by(:user_id => current_user.id)
+
+
   end
   
   def student_form
@@ -66,6 +71,8 @@ class HomeController < ApplicationController
   	$teacher.univ = params[:univ]
   	$teacher.faculty = params[:faculty]
   	$teacher.long_msg = params[:long_msg]
+  	$teacher.car = params[:car]
+  	$teacher.car_license = params[:car_license]
 
   	$post.postal_code_1 = params[:n2]
   	$post.postal_code_2 = params[:n3]
@@ -75,9 +82,26 @@ class HomeController < ApplicationController
 	$money.jr = params[:jr]
 	$money.hi = params[:hi]
 	
+	$subject.math = params[:mat]
+  	$subject.english = params[:eng]
+  	$subject.society = params[:soc]
+  	$subject.science = params[:sci]
+  	$subject.japanese = params[:jap]
+  	$subject.other = params[:etc]
+ 	
+ 	$week.mon = params[:mon]
+ 	$week.tue = params[:tue]
+ 	$week.wed = params[:wed]
+ 	$week.thu = params[:thu]
+ 	$week.fri = params[:fri]
+ 	$week.sat = params[:sat]
+ 	$week.sun = params[:sun]
+ 	
   	if $teacher.save
   		$post.save
   		$money.save
+  		$subject.save
+  		$week.save
 
   		redirect_to '/home/index'
   	else

@@ -1,7 +1,7 @@
 class CreateWeeks < ActiveRecord::Migration
   def change
     create_table :weeks do |t|
-	  t.integer :teacher_id
+	  t.integer :user_id
 	  t.boolean :mon
 	  t.boolean :tue
 	  t.boolean :wed
