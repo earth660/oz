@@ -104,32 +104,19 @@ body{
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
-.ch-item2{
-    left: -100px;
-    top: -20px;
+.ch-item2{left: -100px; top: -20px;}
+.ch-item3{left: -100px; top: -40px;}
+.ch-item4{left: -100px; top: -58px;}
+.ch-item5{left: -100px; top: -80px;}
+.ch-item6{left: -100px; top: -100px;}
+.ch-item7{left: -105px; top: -121px;
+	box-shadow: 
+		inset 0 0 0 28px rgba(255,255,255,0.6),
+		0 1px 2px rgba(0,0,0,0.1);
+	z-index: 999;
 }
-.ch-item3{
-    left: -100px;
-    top: -40px;
-}
-.ch-item4{
-    left: -100px;
-    top: -58px;
-}
-.ch-item5{
-    left: -100px;
-    top: -80px;
-}
-.ch-item6{
-    left: -100px;
-    top: -100px;
-}
-.ch-item7{
-    left: -105px;
-    top: -125px;
-    box-shadow: inset 0 0 0 28px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.1);
-}
-.ch-info, .ch-info2, .ch-info3, .ch-info4, .ch-info5, .ch-info6, /* →変更 */.ch-info7/* ←変更 */ {
+
+.ch-info, .ch-info2, .ch-info3, .ch-info4, .ch-info5, .ch-info6, .ch-info7 {
     position: absolute;
     background: rgba(111,201,216,0.8);
     left: -105px;
@@ -151,87 +138,45 @@ body{
 
     -webkit-backface-visibility: hidden;
 }
-.ch-info2{
-    background: rgba(147,216,124,0.8);
-    left: -5px;
-    top: -3px;
-}
-.ch-info3{
-    background: rgba(255,216,0,0.8);
-    left: -5px; top: -5px;
-}
-.ch-info4{
-    background: rgba(255,111,207,0.8);
-    left: -5px;
-    top: -5px;
-}
-.ch-info5{
-    background: rgba(205,125,196,0.8);
-    left: -5px;
-    top: -5px;
-}
-.ch-info6{
-    background: rgba(235,60,0,0.8);
-    left: -5px;
-    top: -5px;
-}
-.ch-info7{
-    background: rgba(255,255,255,1);
-    left: -1px;
-    top: -1px;
-    width: 307px;
-    height: 307px;
-}
+.ch-info2{	background: rgba(147,216,124,0.8); left: -5px; top: -3px;}
+.ch-info3{	background: rgba(255,216,0,0.8); left: -5px; top: -5px;}
+.ch-info4{	background: rgba(255,111,207,0.8); left: -5px; top: -5px;}
+.ch-info5{	background: rgba(205,125,196,0.8); left: -5px; top: -5px;}
+.ch-info6{	background: rgba(235,60,0,0.8); left: -5px; top: -5px;}
+.ch-info7{  background: rgba(255,255,255,1); left: -1px; top: -1px; width: 307px; height: 307px;}
+
 .ch-item7:hover {
     box-shadow:
     inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
     opacity: 1;
 }
 .ch-info h3, .ch-info2 h3, .ch-info3 h3, .ch-info4 h3, .ch-info5 h3, .ch-info6 h3, .ch-info7 h3 {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 45px;
-    margin: 0 30px;
-    padding: 80px 0 0 0;
-    height: 140px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    text-shadow: 
-    0 0 1px #fff, 
-    0 1px 2px rgba(0,0,0,0.3);
+	height: 140px;
+	margin: 0 30px; padding: 80px 0 0 0;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px; font-size: 45px;
+	line-height: 150px;
 }
-.ch-info2 h3{
-    font-size: 35px;
-}
-.ch-info3 h3{
-    font-size: 40px;
-}
-.ch-info4 h3{
-    font-size: 45px;
-}
-.ch-info5 h3{
-    font-size: 32px;
-}
-.ch-info6 h3{
-    font-size: 28px;
-}
-.ch-info7 h3{
-    font-size: 40px;
-    color: #000;
-    margin-top: -60px;
-}
-.ch-info p, .ch-info2 p, .ch-info3 p, .ch-info4 p, .ch-info5 p, .ch-info6 p {
-    color: #fff;
-    font-style: italic;
-    font-size: 15px;
 
-    opacity: 0;
-    -webkit-transition: all 1s ease-in-out 0.4s;
-    -moz-transition: all 1s ease-in-out 0.4s;
-    -o-transition: all 1s ease-in-out 0.4s;
-    -ms-transition: all 1s ease-in-out 0.4s;
-    transition: all 1s ease-in-out 0.4s;
+.ch-info2 h3{ font-size: 35px; }
+.ch-info3 h3{ font-size: 40px; }
+.ch-info4 h3{ font-size: 45px; }
+.ch-info5 h3{ font-size: 35px; }
+.ch-info6 h3{ font-size: 27px; }
+.ch-info7 h3{ font-size: 40px; color: #000; line-height: 0px; margin-top: -30px;}
+
+.ch-info p, .ch-info2 p, .ch-info3 p, .ch-info4 p, .ch-info5 p, .ch-info6 p {
+	margin-top: -20px;
+	color: #fff; font-style: italic; font-size: 15px;
+	opacity: 0;
+	-webkit-transition: all 1s ease-in-out 0.4s;
+	-moz-transition: all 1s ease-in-out 0.4s;
+	-o-transition: all 1s ease-in-out 0.4s;
+	-ms-transition: all 1s ease-in-out 0.4s;
+	transition: all 1s ease-in-out 0.4s;
 }
+
 
 .ch-item:hover .ch-info, .ch-item2:hover .ch-info2, .ch-item3:hover .ch-info3, .ch-item4:hover .ch-info4, .ch-item5:hover .ch-info5, .ch-item6:hover .ch-info6, .ch-item7:hover .ch-info7 {
     -webkit-transform: scale(1);
@@ -244,40 +189,21 @@ body{
 .ch-item:hover .ch-info p, .ch-item2:hover .ch-info2 p, .ch-item3:hover .ch-info3 p, .ch-item4:hover .ch-info4 p, .ch-item5:hover .ch-info5 p, .ch-item6:hover .ch-info6 p {
     opacity: 1;
 }
-#pop-logo{
-    position: absolute;
-}
-#logo-L, #logo-R{
-    position: absolute;
-    width: 210px;
-    height: 260px;
-    float: left;
-}
+#pop-logo{ position: absolute; }
+#LOGO{position: absolute; z-index: -100;}
+#logo-L, #logo-R{ position: absolute; display: block; width: 210px; height: 260px; float: left; z-index: 600; }
 #logo-L{
     background: image-url("logo_L.png") no-repeat center center;
-    top: 17px;
-    left: -102px;
+    top: 21px; left: -100px;
 }
 #logo-R{
     background: image-url("logo_R.png") no-repeat center center;
-    top: 21px;
-    left: -12px;
+	top: 25px; left: -10px;
 }
-.eye{
-    position: relative;
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    background: #000;
-}
-.e-L{
-    top: 128px;
-    left: 70px;
-}
-.e-R{
-    top: 122px;
-    left: 110px;
-}
+.eye{position: relative;width: 27px; height: 27px; border-radius: 50%; background: #000; }
+.e-L{top: 128px; left: 72px;}
+.e-R{top: 122px; left: 112px;}
+
 #login{
     position: absolute;
     width: 30px;
@@ -287,18 +213,21 @@ body{
     right: -65px;
     opacity: 0;
     font-size: 10px;
+    z-index: 999;
 }
 #mail, #password, #newmail, #newpassword{
     border: #33729F solid 3px;
     border-radius: 10px;
-    width: 180px; height: 40px;
+    width: 180px; height: 25px;
     margin-top: 40px;
     text-align: center;
     font-size: 13px;
 }
-#password, #newpassword{
-    margin-top: 10px;
-}
+
+#mail{margin-top: 55px;}
+#newmail{margin-top: 10px;}
+
+#password, #newpassword{ margin-top: 10px; }
 #login-btn, #submit-btn, #new-btn{
     position: absolute;
     width: 100px; height: 30px;
@@ -308,78 +237,64 @@ body{
     border-radius: 10px;
     font-size: 20px;
 }
-#login-btn{
-    margin: 35px 20px 20px -50px;
+#login-btn{margin: 35px 20px 20px -50px;}
+#submit-btn{margin: 75px 20px 20px -50px;}
+#new-btn{margin: 10px 20px 20px -50px;}
+
+input #show-ps, input #newshow-ps{ vertical-align: 0; }
+.new{display: none;}
+
+.new input[type="radio"]{display: none;}
+.new label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin: 0;
+    transition: .2s;
+    opacity: 0.5;
 }
-#submit-btn{
-    margin: 75px 20px 20px -50px;
-}
-#new-btn{
-    margin: 25px 20px 20px -50px;
-}
-input #show-ps, input #newshow-ps{
-    vertical-align: 0;
-}
-.new{
-    display: none;
-}
+
+input[type="radio"]:checked + label {opacity: 1;}
+label {position: relative; z-index: 999999999999; margin-top: 15px;}
+#User_Student{width: 70px; height: 70px; background: #fff; border: solid 5px #efefef; border-radius: 50%; margin-left: 25px; margin-top: 10px;}
+#User_Teacher{width: 70px; height: 70px; background: #fff; border: solid 5px #efefef; border-radius: 50%; margin-left: 75px; margin-top: 10px;}
+#User_Student:after{position: absolute; content: ''; background: #5DADE2; width: 60px; height: 60px; border-radius: 50%; top: 5px; left: 5px; }
+#User_Teacher:after{position: absolute; content: ''; background: #2980B9; width: 60px; height: 60px; border-radius: 50%; top: 5px; left: 5px; }
+
 #btn, #btn2, #btn3, #btn4, #btn5, #btn6{
     display: block;
     position: absolute;
 }
+
+#btn, #btn2, #btn3, #btn4, #btn5, #btn6{ display: block; position: absolute; }
+#btn, #btn3, #btn4, #btn6 {width: 210px; height: 165px;}
+#btn2, #btn5 {width: 110px; height: 250px;}
+
 #btn{
-    width: 207px;
-    height: 160px;
-    top: -90px;
-    left: -162px;
     background: image-url("btn-search.png") no-repeat left top;
+	top: -100px; left: -160px;
 }
 #btn2{
     background: image-url("btn-stu.png") no-repeat left top;
-    width: 103px;
-    height: 237px;
-    left: -90px;
-    top: 29px;
-    z-index: 200;
+    top: 28px; left: -100px; z-index: 200;
 }
 #btn3{
     background: image-url("btn-oz.png") no-repeat left top;
-    width: 206px;
-    height: 160px;
-    top: 233px;
-    left: -60px;
-    z-index: 300;
+	top: 240px; left: -65px; z-index: 300;
 }
 #btn4{
     background: image-url("btn-me.png") no-repeat left top;
-    width: 206px;
-    height: 159px;
-    top: -99px;
-    left: 150px;
+	top: -100px; left: 155px;
 }
 #btn5{
     background: image-url("btn-tea.png") no-repeat left top;
-    width: 102px;
-    height: 237px;
-    left: 292px;
-    top: 25px;
-    z-index: 5;
+    top: 28px; left: 292px; z-index: 5;
 }
 #btn6{
     background: image-url("btn-sup.png") no-repeat left top;
-    width: 205px;
-    height: 160px;
-    top: 230px;
-    left: 155px;
-    z-index: 5;
+    top: 240px; left: 155px; z-index: 5;
 }
-#btn7{
-    width: 305px;
-    height: 305px;
-    border-radius: 50%;
-    top: 100px;
-    left: 100px;
-}
+#btn7{ width: 305px; height: 305px; top: 100px; left: 100px; border-radius: 50%; }
 
 /* タブレット向け */
 @media all and (max-width: 768px) {

@@ -1,10 +1,14 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {class: "new"}) do |f| %>
   <%= devise_error_messages! %>
 
-  <%= label_tag(:ozuser_who, "先生") %>
 <%= f.radio_button :who, 'teacher', {} %>
-  <%= label_tag(:ozuser_who, "生徒") %>
-<%= f.radio_button :who, 'student', {} %><br />
+  <%= label_tag(:user_who_teacher, "先生", :id => "User_Teacher") %>	
+
+<%= f.radio_button :who, 'student', {} %>
+  <%= label_tag(:user_who_student, "生徒", :id => "User_Student") %>
+
+
+<br />
   <%= f.email_field :email, :autofocus => true, id: "newmail", placeholder: "メールアドレス" %>
   <%= f.password_field :password, id: "newpassword", placeholder: "パスワード" %>
   <%= f.password_field :password_confirmation, id: "newpassword", placeholder: "パスワード(確認)" %>
