@@ -1,13 +1,13 @@
 <h1>My page</h1>
 <ul>
-  <% if $post then %>
+  <% if $student then %>
   	<li><%= $post.postal_code %></li>
   	<li><%= $post.address %></li>
    	<li><%= $student.name %></li>
    	<li><%= $student.name_stu %></li>
    	<li><%= $student.sex %></li>
-   	<li><%= $student.grade %></li>   	
-   	<li><%= $student.grade_num %></li>   	
+   	<li><%= $student.grade %></li>
+   	<li><%= $student.grade_num %></li>	
 
     <li><%= current_user.id %></li>
   	<li><%= current_user.email %></li>

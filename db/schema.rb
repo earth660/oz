@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218161825) do
+ActiveRecord::Schema.define(version: 20140219115353) do
 
   create_table "howtos", force: true do |t|
     t.integer  "user_id"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20140218161825) do
   end
 
   create_table "subjects", force: true do |t|
+    t.integer  "user_id"
     t.string   "math"
     t.string   "english"
     t.string   "society"
@@ -183,7 +184,7 @@ ActiveRecord::Schema.define(version: 20140218161825) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "weeks", force: true do |t|
-    t.integer  "teacher_id"
+    t.integer  "user_id"
     t.boolean  "mon"
     t.boolean  "tue"
     t.boolean  "wed"
