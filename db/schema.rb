@@ -41,15 +41,15 @@ ActiveRecord::Schema.define(version: 20140219115353) do
   end
 
   create_table "posts", force: true do |t|
+    t.integer  "user_id"
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "postal_code"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
     t.string   "postal_code_1"
     t.string   "postal_code_2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "poststus", force: true do |t|
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20140219115353) do
   end
 
   create_table "reviews", force: true do |t|
+    t.integer  "user_id"
     t.float    "a"
     t.float    "b"
     t.float    "c"
@@ -88,7 +89,7 @@ ActiveRecord::Schema.define(version: 20140219115353) do
   end
 
   create_table "sta", force: true do |t|
-    t.integer  "teacher_id"
+    t.integer  "user_id"
     t.string   "first"
     t.string   "second"
     t.string   "third"
@@ -98,7 +99,7 @@ ActiveRecord::Schema.define(version: 20140219115353) do
   end
 
   create_table "students", force: true do |t|
-    t.string   "user_id"
+    t.integer  "user_id"
     t.string   "email"
     t.string   "pw"
     t.string   "name"
@@ -167,7 +168,7 @@ ActiveRecord::Schema.define(version: 20140219115353) do
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "who",                                 null: false
+    t.string   "who"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
