@@ -190,6 +190,7 @@ body{
     opacity: 1;
 }
 #pop-logo{ position: absolute; }
+#LOGO{position: absolute; z-index: -100;}
 #logo-L, #logo-R{ position: absolute; display: block; width: 210px; height: 260px; float: left; z-index: 600; }
 #logo-L{
     background: image-url("logo_L.png") no-repeat center center;
@@ -275,7 +276,7 @@ label {position: relative; z-index: 999999999999; margin-top: 15px;}
 }
 #btn2{
     background: image-url("btn-stu.png") no-repeat left top;
-    top: 28px; left: -100px;
+    top: 28px; left: -100px; z-index: 200;
 }
 #btn3{
     background: image-url("btn-oz.png") no-repeat left top;
