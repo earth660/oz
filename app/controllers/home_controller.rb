@@ -7,6 +7,13 @@ class HomeController < ApplicationController
 
   end
   
+  def teacher_mypage
+  end
+  
+  def studnet_mypage
+  end
+  
+  
   def change_who
     
     if current_user.who == "teacher"

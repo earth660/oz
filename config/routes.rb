@@ -7,9 +7,13 @@ Oz::Application.routes.draw do
 
   get "home/teacher_form"
   get "home/student_form"
+  get "home/teacher_mypage"
+  get "home/student_mypage"
   get "home/teacher_create"
   get "home/change_who"
   get "edit/index"
+  
+  get "top/teacher_top"
   
   post "home/teacher_create"
   post "home/student_create"

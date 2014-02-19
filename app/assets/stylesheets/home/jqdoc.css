@@ -1,0 +1,30 @@
+#map-menu{
+	position: relative;
+	width: 700px;
+	left: 50%; margin-left: -200px;
+	text-align: center;
+	border: solid 1px #fff;
+	z-index: 999;
+}
+
+.menu-item{
+	position: relative;
+	text-decoration: none;
+	width: 100px;
+	margin: 0 -5px;
+	float: left;
+}
+
+.menu-item img{
+	position: relative;
+	width: 70px;
+	margin-top: 30px;
+}
+
+.menu-item span{
+	position: relative;
+	display: block;
+	top: -15px;
+	color: #000; font-size: 20px;
+	opacity: 0;
+}
