@@ -1,0 +1,29 @@
+
+<%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
+<%= stylesheet_link_tag "home/mypage", :media => "all" %>
+
+<%= javascript_include_tag "search/jquery.min" %>
+<%= javascript_include_tag "home/mypage" %>
+
+	<!--       menu        -->
+	<div id="map-menu" style="left: 83%;">
+		<a class="menu-item" href="/top/teacher_top"><%= image_tag("home.png") %><span>HOME</span></a>
+		<a class="menu-item" href="#"><%= image_tag("money.png") %><span>料金</span></a>
+		<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
+	</div>
+	<div id="menu">
+		<ul>
+			<a href="suport.html"><li id="peramon"><div class="text">授業サポート</div><%= image_tag("pera.png", :alt => "pera", :width => "100") %></li></a>
+			<a href="teach_sche.html"><li id="work"><div class="text">宿題サポート</div><%= image_tag("work.png", :alt => "work", :width => "100") %></li></a>
+			<a href="teach_set.html"><li id="sche"><div class="text">スケジュール編集</div><%= image_tag("sche.png", :alt => "sche", :width => "100") %></li></a>
+			<a href="#"><li id="leading"><div class="text">指導報告書</div><%= image_tag("leading.png", :alt => "leading", :width => "120") %></li></a>
+			<a href="chat-t.html"><li id="chat"><div class="text">メッセージボックス</div><%= image_tag("mes.png", :alt => "mes", :width => "100") %></li></a>
+			<a href="/home/teacher_form"><li id="form"><div class="text">プロフィール<br />編集</div><%= image_tag("prof.png", :alt => "prof", :width => "100") %></li></a>
+		</ul>
+		
+	</div>
+	<div id="goal">
+		<h1>目標</h1>
+		<div id="word"></div>
+	</div>
+<%= javascript_include_tag "home/jqdoc" %>

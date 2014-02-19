@@ -23,6 +23,8 @@
 
 <% if current_user.who == "teacher" %>
 <%= link_to 'edit-t', :controller => "home", :action => "teacher_form" %>
+<%= link_to 'top-t', :controller => "top", :action => "teacher_top" %>
+<%= link_to 'mypage-t', :controller => "home", :action => "teacher_mypage" %>
 <% else %>
 <%= link_to 'edit-h', :controller => "home", :action => "student_form" %>
 <% end %>
