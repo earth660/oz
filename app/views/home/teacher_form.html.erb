@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag "form/teach_set", :media => "all" %>
 <%= stylesheet_link_tag "form/form", :media => "all" %>
 <%= stylesheet_link_tag "form/teach_sche", :media => "all" %>
+<%= stylesheet_link_tag "form/teach_set", :media => "all" %>
 
   
   <%= javascript_include_tag "search/jquery.min" %>
@@ -83,157 +83,80 @@
 			<div class="icon-m-before"></div>
 			<div class="icon-m"></div>
 			
-			<textarea  name="long_msg" class="text message" title="指導経歴：高２男子、高３女子 、塾講師経験有
+			<textarea name="long_msg" class="text message" title="指導経歴：高２男子、高３女子 、塾講師経験有
 指導理念：子供に合わせた学習カリキュラムを組み、
 目標達成に向けて全力でサポートします。
  子供の自主性をのばす為、課題設定はこども主体で行い、
 課題がきちんと実行されるようにサポートし、
 達成できればその過程(頑張り)を褒めます。
 指導履歴: 小学４年生(数学・英語)　中学３年生(受験勉強)"><%= $teacher.long_msg %></textarea>
-			<div style="clear: both;"></div>
-			
-			<div class="sche">
-			
-			<%= check_box_tag(:mon,"1",$week.mon) %>
-			<%= label_tag(:mon,"",{:class => "Mon center weight sche_week"}) %>
-			<%= check_box_tag(:tue,"1",$week.tue) %>
-			<%= label_tag(:tue,"",{:class => "Tue center weight sche_week"}) %>
-			<%= check_box_tag(:wed,"1",$week.wed) %>
-			<%= label_tag(:wed,"",{:class => "Wed center weight sche_week"}) %>
-			<%= check_box_tag(:thu,"1",$week.thu) %>
-			<%= label_tag(:thu,"",{:class => "Thu center weight sche_week"}) %>
-			<%= check_box_tag(:fri,"1",$week.fri) %>
-			<%= label_tag(:fri,"",{:class => "Fri center weight sche_week"}) %>
-			<%= check_box_tag(:sat,"1",$week.sat) %>
-			<%= label_tag(:sat,"",{:class => "Sat center weight sche_week"}) %>
-			<%= check_box_tag(:sun,"1",$week.sun) %>
-			<%= label_tag(:sun,"",{:class => "Sun center weight sche_week"}) %>
-
-
-			</div>
-			
-			<div class="clr"></div>
-<!--
 
 			
 			<li class="sche">
 				<div class="sche_week">
-					<input type="checkbox" id="man" value="man"/>
-					<label for="man" id="Man" class="day"></label>
+					<%= check_box_tag(:mon,"1",$week.mon, :id => "mon") %>
+					<%= label_tag(:mon,"",{:id => "Mon", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:tue,"1",$week.tue, :id => "tue") %>
+					<%= label_tag(:tue,"",{:id => "Tue", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:wed,"1",$week.wed, :id => "wed") %>
+					<%= label_tag(:wed,"",{:id => "Wed", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:thu,"1",$week.thu, :id => "thu") %>
+					<%= label_tag(:thu,"",{:id => "Thu", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:fri,"1",$week.fri, :id => "fri") %>
+					<%= label_tag(:fri,"",{:id => "Fri", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:sat,"1",$week.sat, :id => "sat") %>
+					<%= label_tag(:sat,"",{:id => "Sut", :class => "day"}) %>
+				</div>
+				<div class="sche_week">
+					<%= check_box_tag(:sun,"1",$week.sun, :id => "sun") %>
+					<%= label_tag(:sun,"",{:id => "San", :class => "day"}) %>
 				</div>
 
-				<div class="sche_week">
-					<input type="checkbox" id="tue" value="tue"/>
-					<label for="tue" id="Tue" class="day"></label>
-				</div>
-
-				<div class="sche_week">
-					<input type="checkbox" id="wed" value="wed"/>
-					<label for="wed" id="Wed" class="day"></label>
-				</div>
-				
-				<div class="sche_week">
-					<input type="checkbox" id="thu" value="thu"/>
-					<label for="thu" id="Thu" class="day"></label>
-				</div>
-				
-				<div class="sche_week">
-					<input type="checkbox" id="fri" value="fri"/>
-					<label for="fri" id="Fri" class="day"></label>
-				</div>
-				
-				<div class="sche_week">
-					<input type="checkbox" id="sut" value="sut"/>
-					<label for="sut" id="Sut" class="day"></label>
-				</div>
-				
-				<div class="sche_week">
-					<input type="checkbox" id="san" value="san"/>
-					<label for="san" id="San" class="day"></label>
-				</div>
 			</li>
-			
--->
-			
-
-			
-									
-			<div id="setting" class="subject">
-
-			<%= check_box_tag(:mat,"1",$subject.math) %>
-			<%= label_tag(:mat,"",{:class => "mat center weight setting"}) %>
-			<%= check_box_tag(:jap,"1",$subject.japanese) %>
-			<%= label_tag(:jap,"",{:class => "jap center weight setting"}) %>
-			<%= check_box_tag(:soc,"1",$subject.society) %>
-			<%= label_tag(:soc,"",{:class => "soc center weight setting"}) %>
-			<%= check_box_tag(:sci,"1",$subject.science) %>
-			<%= label_tag(:sci,"",{:class => "sci center weight setting"}) %>
-			<%= check_box_tag(:eng,"1",$subject.english) %>
-			<%= label_tag(:eng,"",{:class => "eng center weight setting"}) %>
-			<%= check_box_tag(:etc,"1",$subject.other) %>
-			<%= label_tag(:etc,"",{:class => "etc center weight setting"}) %>
-			</div>	
-			
-<!--
-			
 			
 			<li class="subject_li">
 				<div id="setting">
 					<div class="setting">
-						<input type="checkbox" id="eng" value="eng"/>
-						<label for="eng" id="Eng" class="subject">
-							<span>English</span><p>英</p>
-						</label>
-					</div>
+						<%= check_box_tag(:eng,"english",$subject.english) %>
+						<%= label_tag(:eng,'',{:class => "subject", :id => "Eng"}) %>
 
-					<div class="setting">					
-						<input type="checkbox" id="jpn" value="jpn"/>
-						<label for="jpn" id="Jpn" class="subject">
-							<span>Japanese</span><p>国</p>
-						</label>
 					</div>
-					
 					<div class="setting">
-						<input type="checkbox" id="gen" value="gen"/>
-						<label for="gen" id="Gen" class="subject">
-							<span>Society</span><p>社</p>
-						</label>
+						<%= check_box_tag(:jpn,"japanese",$subject.japanese) %>
+						<%= label_tag(:jpn,'',{:class => "subject", :id => "Jpn"} ) %>					
 					</div>
-					
 					<div class="setting">
-						<input type="checkbox" id="sci" value="sci"/>
-						<label for="sci" id="Sci" class="subject">
-							<span>Science</span><p>理</p>
-						</label>
+						<%= check_box_tag(:gen,"society",$subject.society) %>
+						<%= label_tag(:gen,'',{:class => "subject", :id => "Gen"}) %>
 					</div>
-					
 					<div class="setting">
-						<input type="checkbox" id="mat" value="mat"/>
-						<label for="mat" id="Mat" class="subject">
-							<span>Math</span><p>数</p>
-						</label>					
+						<%= check_box_tag(:sci,"science",$subject.science) %>
+						<%= label_tag(:sci,'',{:class => "subject", :id => "Sci"}) %>					
 					</div>
-					
 					<div class="setting">
-						<input type="checkbox" id="ath" value="ath"/>
-						<label for="ath" id="Ath" class="subject">
-							<span>Other</span><p>他</p>
-						</label>
+						<%= check_box_tag(:mat,"math",$subject.math) %>
+						<%= label_tag(:mat,'',{:class => "subject", :id => "Mat"}) %>					
 					</div>
+					<div class="setting">
+						<%= check_box_tag(:ath,"etc",$subject.other) %>
+						<%= label_tag(:ath,'',{:class => "subject", :id => "Ath"}) %>
+					</div>	
 				</div>
 			</li>
--->
 			<div id="sign">下にもあるよ！</div>
-			<div class="action" id="okbutton">
-				<%= submit_tag( "OK" ) %>
-			</div>
+			<%= submit_tag( "OK", :class => "action", :id => "okbutton") %>
 	<% end %>
 
-<!--
-		</form>
-				<div id="sign">下にもあるよ！</div>
-				<div id="okbutton">OK</div>
--->
 <script>
 
 $(window).bind("scroll", function() {

@@ -1,19 +1,9 @@
 @font-face{
-	font: {
-		family:'MyFont';
-		weight: 'normal,bold';
-		style: 'normal';
-	}
-	src: asset-url('font.ttf', font) format('truetype');
+	font-family:'MyFont';
+	src: url('../font/font.otf') format('opentype');
 }
-html, body{font-family: 'MyFont';}
-html,body{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 130%;
-	overflow: scroll;
-}
+html, body{font-family: MyFont;}
+html,body{ margin: 0; padding: 0; width: 100%; height: 130%; overflow: scroll; }
 .link{
 	position: relative;
 	top: 0;
@@ -31,13 +21,13 @@ input{ background: #efefef;border: none; }
 	margin-top: 10px;
 	margin-left: 15px;
 }
-.car {
+.onoffswitch {
     position: relative; width: 60px;
     margin-top: -25px; right: -130px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {display: none;}
-.car_license {
+.onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
     border: 2px solid #FFFFFF; border-radius: 20px;
 }
@@ -142,17 +132,13 @@ img{ position: relative; z-index: 11; }
 
 #plus, #minus{
 	position: relative;
-	width: 30px;
-	height: 30px;
+	width: 30px; height: 30px;
 	border-radius: 50%;
 	cursor: pointer;
-	top: 130px;
-	left: 40%;
+	top: 130px; left: 40%;
 	background: #efefef;
 	margin-left: 70px;
-	font-size: 20px;
-	text-align: center;
-	font-weight: 900;
+	font-size: 20px; text-align: center; font-weight: 900;
 	float: left;
 	z-index: 10;
 }
@@ -233,18 +219,14 @@ img{ position: relative; z-index: 11; }
 .link > .money > .money-after{background: url(/assets/money2.png) no-repeat center center #FFD800;}
 
 .link > .message{
-	position: absolute;
-	width: 465px;
-	height: 180px;
-	background: #EFEFEF;
-	border-radius: 25px;
-	right: 46.5%;
+	position: relative;
+	width: 465px; height: 180px;
+	left: 50%;
+	background: #EFEFEF; border-radius: 25px;
 	overflow: hidden;
-	margin-top: 365px;
-	margin-right: -225px;
+	margin-top: 365px; margin-left: -465px;
+	padding-top: 20px; padding-left: 70px;
 	font-weight: 900;
-	padding-top: 20px;
-	padding-left: 70px;
 }
 
 .link > .icon-m{
@@ -270,29 +252,24 @@ img{ position: relative; z-index: 11; }
 	left: 435px;
 	z-index: 30;
 }
-/* 2/19 da1
 
-.link > .sche > .sche_week > input, .link > li > #setting > .setting > input{display: none;}
-.link > .sche > .sche_week > label, .link > li > #setting > .setting > label{
+.setting input, .sche input{display: none;}
+.setting label, .sche label{
     display: block;
     cursor: pointer;
     transition: .2s;
-    opacity: 0.4
+    opacity: 0.2
 }
-*/
-.link > .sche > .sche_week > input[type="checkbox"]:checked + label{opacity: 1; }
-.link > li > #setting > .setting > input[type="checkbox"]:checked + label{opacity: 1; }
+.sche_week > input[type="checkbox"]:checked + label{opacity: 1; }
+.setting > input[type="checkbox"]:checked + label{opacity: 1; }
 
-/* 2/19 da1
-.link > .sche, li > #setting{
+#setting{
 	position: relative;
 	width: 540px;
-	top: 570px; left: 50%;
-	margin-left: -270px;
+	
 }
 
-
-.link > .sche > .sche_week{
+.sche .sche_week{
 	position: relative;
 	width: 50px;
 	height: 50px;
@@ -303,27 +280,7 @@ img{ position: relative; z-index: 11; }
 	float: left;
 }
 
-*/
-
-.sche, #setting{
-	position: relative;
-	width: 540px;
-	top: 570px; left: 50%;
-	margin-left: -220px;
-}
-
-.sche_week{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	margin-left: 35px;
-	background: #fff;
-	border: solid 5px #EFEFEF;
-	border-radius: 50%;
-	float: left;
-}
-
-.link > .sche > .sche_week > .day{
+.sche .sche_week > .day{
 	position: absolute;
 	width: 45px;
 	height: 45px;
@@ -331,13 +288,13 @@ img{ position: relative; z-index: 11; }
 	cursor: pointer;
 }
 
-.link > .sche > .sche_week > #Man{background: #EE6557; top: 3px; left: 3px;}
-.link > .sche > .sche_week > #Tue{background: #F27398; top: 0px; left: 3px;}
-.link > .sche > .sche_week > #Wed{background: #0E7AC4; top: -5px; left: 3px;}
-.link > .sche > .sche_week > #Thu{background: #008837; top: -9px; left: 3px;}
-.link > .sche > .sche_week > #Fri{background: #58BE89; top: -9px; left: 3px;}
-.link > .sche > .sche_week > #Sut{background: #E67E22; top: 3px; left: 3px;}
-.link > .sche > .sche_week > #San{background: #F1C40F; top: 0px; left: 3px;}
+.sche > .sche_week > #Mon{background: #EE6557; top: 3px; left: 3px;}
+.sche > .sche_week > #Tue{background: #F27398; top: 0px; left: 3px;}
+.sche > .sche_week > #Wed{background: #0E7AC4; top: -5px; left: 3px;}
+.sche > .sche_week > #Thu{background: #008837; top: -9px; left: 3px;}
+.sche > .sche_week > #Fri{background: #58BE89; top: -9px; left: 3px;}
+.sche > .sche_week > #Sut{background: #E67E22; top: 3px; left: 3px;}
+.sche > .sche_week > #San{background: #F1C40F; top: 0px; left: 3px;}
 
 .link > .sche > .sche_week > .day:before{
 	position: absolute;
@@ -347,15 +304,15 @@ img{ position: relative; z-index: 11; }
 	color: #fff;
 }
 
-.link > .sche > .sche_week > #Man:before{content: 'Man';left: 8px;}
-.link > .sche > .sche_week > #Tue:before{content: 'Tue';left: 10px;}
-.link > .sche > .sche_week > #Wed:before{content: 'Wed';left: 7px;}
-.link > .sche > .sche_week > #Thu:before{content: 'Thu';left: 10px;}
-.link > .sche > .sche_week > #Fri:before{content: 'Fri';left: 13px;}
-.link > .sche > .sche_week > #Sut:before{content: 'Sut';left: 10px;}
-.link > .sche > .sche_week > #San:before{content: 'San';left: 10px;}
+.sche > .sche_week > #Mon:before{content: 'Mon';left: 8px;}
+.sche > .sche_week > #Tue:before{content: 'Tue';left: 10px;}
+.sche > .sche_week > #Wed:before{content: 'Wed';left: 7px;}
+.sche > .sche_week > #Thu:before{content: 'Thu';left: 10px;}
+.sche > .sche_week > #Fri:before{content: 'Fri';left: 13px;}
+.sche > .sche_week > #Sut:before{content: 'Sut';left: 10px;}
+.sche > .sche_week > #San:before{content: 'San';left: 10px;}
 
-.link > .sche > .sche_week > .day:after{
+.sche_week > .day:after{
 	position: absolute;
 	left: 12px;
 	top: 15px;
@@ -364,107 +321,15 @@ img{ position: relative; z-index: 11; }
 	color: #fff;
 }
 
-.link > .sche > .sche_week > #Man:after{content: '月';}
-.link > .sche > .sche_week > #Tue:after{content: '火';}
-.link > .sche > .sche_week > #Wed:after{content: '水';}
-.link > .sche > .sche_week > #Thu:after{content: '木';}
-.link > .sche > .sche_week > #Fri:after{content: '金';}
-.link > .sche > .sche_week > #Sut:after{content: '土';}
-.link > .sche > .sche_week > #San:after{content: '日';}
+.sche > .sche_week > #Mon:after{content: '月';}
+.sche > .sche_week > #Tue:after{content: '火';}
+.sche > .sche_week > #Wed:after{content: '水';}
+.sche > .sche_week > #Thu:after{content: '木';}
+.sche > .sche_week > #Fri:after{content: '金';}
+.sche > .sche_week > #Sut:after{content: '土';}
+.sche > .sche_week > #San:after{content: '日';}
 
-/* .off{opacity: 0.35;} */
-
-
-/* 2/19 da1 追加 名前の規則などはそのまま
-*/
-.weight{font-weight: 900;}
-.center{text-align: center;}
-
-.subject input, .sche input{display: none;}
-.subject label, .sche label{
-    display: block;
-    float: left;
-    cursor: pointer;
-    margin: 0;
-    transition: .2s;
-    opacity: 0.3;
-}
-
-.subject input[type="checkbox"]:checked + label, 
-.sche input[type="checkbox"]:checked + label
-{opacity: 1; }
- 
-
-.sche{position: absolute; right: 15.5%; margin-top: 10%; }
-
-.Mon, .Tue, .Wed, .Thu, .Fri, .Sat, .Sun{
-	position: relative;
-	width: 50px;
-	height: 50px;
-	background: #efefef;
-	float: left;
-	border-radius: 50%;
-}
-
-.Mon:before, .Tue:before, .Wed:before, .Thu:before, .Fri:before, .Sat:before, .Sun:before{
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: 5px; left: 5px;
-	border: solid 5px #fff;
-	border-radius: 50%;
-	color: #fff;
-	font-size: 23px;
-}
-
-.Mon:before{content: '月'; background: #EE6557;}
-.Tue:before{content: '火'; background: #F27398;}
-.Wed:before{content: '水'; background: #0E7AC4;}
-.Thu:before{content: '木'; background: #008837;}
-.Fri:before{content: '金'; background: #58BE89;}
-.Sat:before{content: '土'; background: #E67E22;}
-.Sun:before{content: '日'; background: #F1C40F;}
-
-
-
-
-
-/* .subject{position: absolute; right: 15%; margin-top: 2%;} */
-
-.eng, .jap, .soc, .sci, .mat, .etc{
-	position: relative;
-	width: 60px;
-	height: 60px;
-	background: #efefef;
-	float: left;
-	border-radius: 50%;
-}
-
-.eng:before, .jap:before, .soc:before, .sci:before, .mat:before, .etc:before{
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: 5px; left: 5px;
-	border: solid 5px #fff;
-	border-radius: 50%;
-	color: #fff;
-	line-height: 40px;
-	font-size: 25px;
-}
-
-.jap:before{content: '国'; background: #ff5c57;}
-.soc:before{content: '社'; background: #f9c732;}
-.sci:before{content: '理'; background: #7fe35e;}
-.mat:before{content: '数'; background: #6fc9d8;}
-.eng:before{content: '英'; background: #ff6fcf;}
-.etc:before{content: '他'; background: #a35ecd;}
-
-
-
-/* add */
-
-
-
+.off{opacity: 0.15;}
 
 #return{
 	position: fixed;
@@ -490,20 +355,33 @@ input[type="submit"]{
 	background: #5dade2;
 	font-size: 30px; font-weight: 900; color: #fff; text-align: center;
 }
-.sche{margin-top: -20px;}
-/* li.subject_li{ position: relative; margin-top: -20px; }  2/19 da1*/ 
-li.subject{ position: relative; margin-top: 10px; }
+.sche{position: relative; width: 100%; left: 50%; margin-top: 20px; margin-left: -19%; }
+.subject_li{ position: relative; left: 50%; margin-top: -20px; margin-left: -59%; }
+#setting > .setting {width: 70px; height: 70px; float: left; margin-left: 15px;}
 
+#Eng {background: #FF6FCF;}
+#Jpn {background: #EB3C00;}
+#Gen {background: #FFD800;}
+#Sci {background: #93D87C;}
+#Mat {background: #6FC9D8;}
+#Ath {background: #a35ecd;}
 
-/* 2/19 da1
-li > #setting > .setting {width: 70px; height: 70px; float: left; margin-left: 15px;}
-li > #setting > .setting > .subject > span {top: 0%;}
-#Eng{margin-left: 3%;}
-*/
+.subject:before{ position: relative; top: 5px; color: #fff; font-size: 10px; font-weight: 900; }
+.subject:after{ color: #fff; font-size: 30px; font-weight: 900; display: block;}
 
-.setting {width: 70px; height: 70px; float: left; margin-left: 25px;}
-li > #setting > .setting > .subject > span {top: 0%;}
-#Eng{margin-left: 3%;}
+#Eng:before { content: 'English'; }
+#Jpn:before { content: 'Japanese'; }
+#Gen:before { content: "Society"; }
+#Sci:before { content: 'Science'; }
+#Mat:before { content: 'Math'; }
+#Ath:before { content: 'Etc'; }
+
+#Eng:after { content: '英'; }
+#Jpn:after { content: '国'; }
+#Gen:after { content: "社"; }
+#Sci:after { content: '理'; }
+#Mat:after { content: '数'; }
+#Ath:after { content: '他'; }
 
 #sign{
 	position: fixed;
