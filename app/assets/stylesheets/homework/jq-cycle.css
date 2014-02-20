@@ -1,0 +1,26 @@
+#jquery-cycle {
+	position: absolute;
+    width: 300px; height: 90px;
+    background: #ebebeb;
+    border-radius: 25px;
+    top: 18%; left: 50%;
+    margin-left: -150px;
+    color: #81817A;
+}
+
+#jquery-cycle h1{ margin-top: 5px; font-size: 30px;}
+#jquery-cycle h2{font-size: 20px;}
+#jquery-cycle-prev{ position: absolute; top: 22%; right: 62%;}
+#jquery-cycle-next{ position: absolute; top: 22%; right: 35.5%;}
+
+#prev{
+	border-top: 20px solid transparent;
+	border-right: 30px solid #ADB0D3;
+	border-bottom: 20px solid transparent;
+}
+
+#next{
+	border-top: 20px solid transparent;
+	border-left: 30px solid #ADB0D3;
+	border-bottom: 20px solid transparent;	
+}
