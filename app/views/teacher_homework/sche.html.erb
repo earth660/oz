@@ -1,0 +1,117 @@
+
+
+<%= javascript_include_tag "search/jquery.min" %>
+<%= javascript_include_tag "jquery/plugin/plugin-cycle" %>
+<%= javascript_include_tag "jquery/plugin/jquery.todate" %>
+
+<%= stylesheet_link_tag "homework/teach_sche", :media => "all" %>
+<%= stylesheet_link_tag "homework/jq-cycle", :media => "all" %>
+<%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
+ 
+ 
+	<!--       menu        -->
+	<div id="map-menu">
+		<a class="menu-item" href="/top/teacher_top"><%= image_tag("home.png") %><span>HOME</span></a>
+		<a class="menu-item" href="#"><%= image_tag("door.png") %><span>戻る</span></a>
+		<a class="menu-item" href="#"><%= image_tag("cyellow.png") %><span>Myページ</span></a>
+	</div>
+	
+<!--       /menu       -->
+
+<% today = Time.now %>
+<%= week = Date.new(today.year,today.month,today.day).cweek; %><br />
+<% wkBegin = Date.commercial(2014, week, 1) %>
+<% wkEnd = Date.commercial(2014, week, 7) %>
+<%= wkBegin.month %> / <%= wkBegin.day %> 〜 <%= wkEnd.month %> / <%= wkEnd.day %>
+
+	<div id="jquery-cycle">
+		<nav class="year weeks1">
+			<h1>Week 33</h1>
+			<div id="date"></div>
+		</nav>
+		<nav class="year weeks2">
+			<h1>Week 34</h1>
+			<div id="tomorrow"></div>
+		</nav>
+		<nav class="year weeks3">
+			<h1>Week 35</h1>
+			<h2>08/26 ~ 09/01</h2>
+		</nav>
+		<nav class="year weeks4">
+			<h1>Week 36</h1>
+			<h2>09/02 ~ 09/08</h2>
+		</nav>
+		<nav class="year weeks5">
+			<h1>Week 37</h1>
+			<h2>09/09 ~ 09/15</h2>
+		</nav>
+		<nav class="year weeks6">
+			<h1>Week 38</h1>
+			<h2>09/16 ~ 09/22</h2>
+		</nav>
+		<nav class="year weeks7">
+			<h1>Week 39</h1>
+			<h2>09/23 ~ 09/29</h2>
+		</nav>
+	</div>
+	
+	<div id="jquery-cycle-nav">
+		<a id="jquery-cycle-prev" href="#"><div id="prev"></div></a>
+		<a id="jquery-cycle-next" href="#"><div id="next"></div></a>
+	</div>
+	
+	<div class="clr"></div>
+	<div id="cycle">
+		<a href="teach_day.html"><nav id="Mon" class="week"><span>Mon</span><p>月</p></nav></a>
+		<a href="teach_day.html"><nav id="Tue" class="week"><span>Tue</span><p>火</p></nav></a>
+		<a href="teach_day.html"><nav id="Wed" class="week"><span>Wed</span><p>水</p></nav></a>
+		<a href="teach_day.html"><nav id="Thu" class="week"><span>Thu</span><p>木</p></nav></a>
+		<a href="teach_day.html"><nav id="Fri" class="week"><span>Fri</span><p>金</p></nav></a>
+		<a href="teach_day.html"><nav id="Sat" class="week"><span>Sat</span><p>土</p></nav></a>
+		<a href="teach_day.html"><nav id="San" class="week"><span>San</span><p>日</p></nav></a>
+	</div>
+
+	<div class="clr" style="margin-bottom:-20px;"></div>
+	
+<!-- ここからJS -->
+
+<script>
+/*
+$(document).ready(function(){
+	$('#date').toDate({
+		format : 'Y年m月d日（W）'
+	});
+	$('#tomorrow').toDate({
+		format : 'Y年m月d+1日（W）'
+	});
+
+});
+*/
+
+Date.prototype.getDayOfYear = function() {
+  var onejan = new Date(this.getFullYear(), 0, 1);
+  return Math.ceil((this - onejan) / 86400000);
+};
+
+Date.prototype.getWeekOfYear = function() {
+  var onejan = new Date(this.getFullYear(), 0, 1);
+  var offset = onejan.getDay() - 1;
+  var weeks = Math.floor((this.getDayOfYear() + offset) / 7);
+  return (onejan.getDay() == 0) ? weeks + 1 : weeks;
+};
+
+var time = Date.now();
+var today = new Date(time); // Fri Mar 02 2012 16:49:11 GMT+0900 (JST)
+today.getDayOfYear(); // => 62
+today.getWeekOfYear(); // => 9
+
+
+$(".week").hover(function(){
+	$(this).css({"transform": "scale(1.5)"});
+},
+function(){
+	$(this).css({"transform": "scale(1)"});
+});
+</script>
+<%= javascript_include_tag "home/jqdoc" %>
+<%= javascript_include_tag "home/jq-cycle" %>

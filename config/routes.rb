@@ -14,12 +14,16 @@ Oz::Application.routes.draw do
   get "edit/index"
   
   get "top/teacher_top"
+  get "teacher_homework/sche"
+  
   
   post "home/teacher_create"
   post "home/student_create"
 
   post "edit/post"
   post "home/create"
+  
+  
 
   devise_for :users, path_names: {
     sign_in: "login",

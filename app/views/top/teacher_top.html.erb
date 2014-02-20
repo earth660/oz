@@ -1,7 +1,7 @@
 <% content_for :title do %> Oz <% end %>
 <% content_for :css do %>
-  <%= stylesheet_link_tag "top/style.css" %>
-  <%= stylesheet_link_tag "top/knowledge.css" %>
+  <%= stylesheet_link_tag "top/style.css" , :media => "all"%>
+  <%= stylesheet_link_tag "top/knowledge.css", :media => "all" %>
 <% end %>
 <% content_for :javascript_header do %>
   <%= javascript_include_tag "jquery/jquery-1.10.1.min.js" %>
