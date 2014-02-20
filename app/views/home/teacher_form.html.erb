@@ -15,7 +15,7 @@
 	<%= form_tag("/home/teacher_create", name: "fcset", class: "link") do %>
 	
 	
-<input type="hidden" name="address" size="60"><!--  隠しデータ 住所自動入力 -->
+<input type="hidden" name="address" size="60" value="<%= $post.address %>"><!--  隠しデータ 住所自動入力 -->
 <br />
 
 			<input type="text" name="name" class="text name" title="山田 太郎" value= "<%= $teacher.name %>" />
