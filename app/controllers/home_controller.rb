@@ -84,6 +84,7 @@ class HomeController < ApplicationController
   	$post.postal_code_1 = params[:n2]
   	$post.postal_code_2 = params[:n3]
   	$post.postal_code = params[:n2] + "-" + params[:n3]
+  	$post.address = params[:address]
   	
 	$money.el = params[:el]
 	$money.jr = params[:jr]
