@@ -1,5 +1,26 @@
 <%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
+<%= stylesheet_link_tag "searches/howuse", :media => "all" %>
 <%= javascript_include_tag "search/jquery" %>
-
+<%= javascript_include_tag "jquery/plugin/plugin-cycle" %>
+<!-- メニューバー -->
+<div id="map-menu">
+	<a class="menu-item" href="/top/teacher_top"><%= image_tag("home.png") %><span>HOME</span></a>
+	<a class="menu-item" href="search.html"><%= image_tag("searchicon.png") %><span>検索</span></a>
+	<a class="menu-item" href="#"><%= image_tag("money.png") %><span>料金</span></a>
+	<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
+</div> <!-- /メニューバー -->
+<div id="content">
+	<div id="jquery-cycle">
+		<nav>
+			
+		</nav>
+	</div>
+	
+	<div id="jquery-cycle-nav">
+		<a id="jquery-cycle-prev" href="#"><div id="prev"></div></a>
+		<a id="jquery-cycle-next" href="#"><div id="next"></div></a>
+	</div>
+</div>
 
 <%= javascript_include_tag "home/jqdoc" %>
+<%= javascript_include_tag "jquery/plugin/jq-cycle" %>

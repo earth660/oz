@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "searches/introjs", :media => "all" %>
+<%= stylesheet_link_tag "searches/search", :media => "all" %>
 <%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
   <%= javascript_include_tag "search/jquery" %>
   <%= javascript_include_tag "search/intro" %>
@@ -16,19 +17,19 @@
 <form id="form" method="get" action="" name="fcset">
 <div class="button"></div>
 <div class="zip">
-	<INPUT TYPE="TEXT" NAME="n2" SIZE="5" MAXLENGTH="3" style="left:-15px;" onKeyUp="NextFocusMove(this, 'n3', 3)">
+<input type="text" name="zipcode1" size="5" maxlength="3" style="left:-15px;" onKeyUp="NextFocusMove(this, 'zipcode2', 3)">
 <div class="hi">-</div>
-	<INPUT TYPE="TEXT" NAME="n3" SIZE="5" MAXLENGTH="4" style="margin-left:1.5px;" onkeyup="PrevFocusMove(this, 'n4', value)">
+<input type="text" name="zipcode2" size="5" maxlength="4" style="margin-left:1.5px;" onkeyup="PrevFocusMove(this, 'zipcode1', value);AjaxZip3.zip2addr('zipcode1','zipcode2','address','address');">
+</div>
+
 </div>
 
 
 
-<div class="button"></div>
-
-<input class="text"  maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" >‐<input class="text"  maxlength="4" name="n3" onkeyup="AjaxZip3.zip2addr('n2','n3','address','address'); PrevFocusMove(this, 'n2', value)" ><br />
+<!-- AjaxZip3.zip2addr('n2','n3','address','address'); -->
 
 
-	
+<div class="button"></div>	
 <input type="text" name="address" size="60" ><!--  隠しデータ 住所自動入力 -->
 <br />
 
@@ -55,22 +56,21 @@
 
 </div> <!-- .content -->
 <%= javascript_include_tag "home/jqdoc" %>
-
 <script>
-			function NextFocusMove(object, targetName, maxLength)
-		{
-			if(object.value.length >= maxLength)
-				object.form.elements[targetName].focus();
-		}
-		
-		function PrevFocusMove(object, targetName, str)
-		{
-			if( str.length == 0 ){
-				fc(7)
-			}
-		}
 
-		function fc(num){
-			document.fcset.elements[num].focus();
-		}
+function NextFocusMove(object, targetName, maxLength)
+{
+	if(object.value.length >= maxLength)
+		object.form.elements[targetName].focus();
+}
+
+function PrevFocusMove(object, targetName, str)
+{
+	if( str.length == 0 ){
+		fc(0)
+	}
+}
+
+function fc(num){ document.fcset.elements[num].focus(); }
+
 </script>
