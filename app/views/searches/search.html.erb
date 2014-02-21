@@ -30,7 +30,9 @@
 
 <input type="text" name="address" size="60"><br />
 
-<%= Geocoder.coordinates("兵庫県三田市西山") %>
+<%= Geocoder.coordinates("兵庫県三田市西山") %><br />
+
+
 
 <div class="border"></div>
 <div class="man"></div><div class="woman"></div>
@@ -50,6 +52,23 @@
 
 
 
+<!-- 実験エリア -->
+
+<br />
+<%= @location %>
+
+
+<h3>10 マイル以内</h3>
+<ul>
+<% for location in @location.nearbys(30) %>
+  <li>(<%= location.distance.round(2) %> miles)</li>
+    <li><%=  %></li>
+<% end %>
+</ul>
+
+
+
+<!-- ↑実験エリア -->
 
 
 </div> <!-- .content -->
