@@ -1,45 +1,18 @@
 <%= stylesheet_link_tag "searches/introjs", :media => "all" %>
-  
-  <%= javascript_include_tag "search/jquery.min" %>
-  <%= javascript_include_tag "search/jquery-1.10.1.min" %>
-  <%= javascript_include_tag "search/jquery-1.9.0b1" %>
-  <%= javascript_include_tag "search/jquery-migrate-1.0.0b1" %>
-  <%= javascript_include_tag "search/jquery.transit" %><!-- くるくるメニュー -->
+<%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
   <%= javascript_include_tag "search/jquery" %>
   <%= javascript_include_tag "search/intro" %>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 <!--     なんか下から書かれてる     -->
-<div class="menu">
-<%= link_to("/searches/howto_use", :class => "item") do %>
-        <div class="link icon_suport"></div>
-        <div class="item_content">
-            <h2>使い方</h2>
-        </div>
-<% end %>
-    <div class="item">
-        <div class="link icon_money"></div>
-        <div class="item_content">
-            <h2>料金について</h2>
-        </div>
-    </div>
-    <div class="item">
-        <div class="link icon_teach"></div>
-        <div class="item_content">
-            <h2>先生を検索</h2>
-        </div>
-    </div>
-<%= link_to("/top/teacher_top", :class => "item") do %>
-        <div class="link icon_home"></div>
-        <div class="item_content">
-            <h2>トップページ</h2>
-        </div>
-<% end %>
-</div><!--  class= menu -->
-
-
+<div id="map-menu">
+	<a class="menu-item" href="/top/teacher_top"><%= image_tag("home.png") %><span>HOME</span></a>
+	<a class="menu-item" href="search.html"><%= image_tag("searchicon.png") %><span>検索</span></a>
+	<a class="menu-item" href="#"><%= image_tag("money.png") %><span>料金</span></a>
+	<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
+</div>
 
 <!-- ↓郵便番号UI -->
+<div class="content">
 <form id="form" method="get" action="" name="fcset">
 <div class="button"></div>
 <div class="zip">
@@ -80,10 +53,8 @@
 
 
 
-
-<%=  javascript_include_tag "search/jquery-css-transform" %>
-<%=  javascript_include_tag "search/jquery-animate-css-rotate-scale" %>
-
+</div> <!-- .content -->
+<%= javascript_include_tag "home/jqdoc" %>
 
 <script>
 			function NextFocusMove(object, targetName, maxLength)
