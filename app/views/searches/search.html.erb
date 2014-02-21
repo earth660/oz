@@ -2,6 +2,10 @@
 <%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
   <%= javascript_include_tag "search/jquery" %>
   <%= javascript_include_tag "search/intro" %>
+  <%= javascript_include_tag "search/jquery.min" %>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
+
 
 <!--     なんか下から書かれてる     -->
 <div id="map-menu">
@@ -11,27 +15,22 @@
 	<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
 </div>
 
+
+
 <!-- ↓郵便番号UI -->
 <div class="content">
 <form id="form" method="get" action="" name="fcset">
 <div class="button"></div>
-<div class="zip">
-	<INPUT TYPE="TEXT" NAME="n2" SIZE="5" MAXLENGTH="3" style="left:-15px;" onKeyUp="NextFocusMove(this, 'n3', 3)">
-<div class="hi">-</div>
-	<INPUT TYPE="TEXT" NAME="n3" SIZE="5" MAXLENGTH="4" style="margin-left:1.5px;" onkeyup="PrevFocusMove(this, 'n4', value)">
-</div>
 
+<form action="" method="post">
 
+<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" value= "<%= $post.postal_code_1 %>" >‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="AjaxZip3.zip2addr('n2','n3','address','address'); PrevFocusMove(this, 'n2', value)" value= "<%= $post.postal_code_2 %>" ><br />
 
 <div class="button"></div>
 
-<input class="text"  maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" >‐<input class="text"  maxlength="4" name="n3" onkeyup="AjaxZip3.zip2addr('n2','n3','address','address'); PrevFocusMove(this, 'n2', value)" ><br />
+<input type="text" name="address" size="60"><br />
 
-
-	
-<input type="text" name="address" size="60" ><!--  隠しデータ 住所自動入力 -->
-<br />
-
+<%= Geocoder.coordinates("兵庫県三田市西山") %>
 
 <div class="border"></div>
 <div class="man"></div><div class="woman"></div>
@@ -57,20 +56,22 @@
 <%= javascript_include_tag "home/jqdoc" %>
 
 <script>
-			function NextFocusMove(object, targetName, maxLength)
+
+	function NextFocusMove(object, targetName, maxLength)
 		{
 			if(object.value.length >= maxLength)
 				object.form.elements[targetName].focus();
 		}
 		
-		function PrevFocusMove(object, targetName, str)
+	function PrevFocusMove(object, targetName, str)
 		{
 			if( str.length == 0 ){
-				fc(7)
+				fc(0)
 			}
 		}
 
-		function fc(num){
+	function fc(num){
 			document.fcset.elements[num].focus();
 		}
+	
 </script>
