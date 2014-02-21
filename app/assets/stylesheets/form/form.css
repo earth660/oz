@@ -21,11 +21,12 @@ input{ background: #efefef;border: none; }
 	margin-top: 10px;
 	margin-left: 15px;
 }
-.onoffswitch {
-    position: relative; width: 60px;
-    margin-top: -25px; right: -130px;
+.onoffswitch, .onoffswitch2 {
+	position: relative; width: 60px;
+    margin-top: -55px; right: -130px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
+.onoffswitch{z-index: 5;}
 .onoffswitch-checkbox {display: none;}
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
@@ -54,7 +55,7 @@ input{ background: #efefef;border: none; }
     text-align: right;
 }
 .onoffswitch-switch {
-    width: 14px; margin: 5.5px;
+    width: 14px; height: 12px; margin: 35.5px 5.5px 5.5px 5.5px;
     background: #FFFFFF;
     border: 2px solid #FFFFFF; border-radius: 20px;
     position: absolute; top: 0; bottom: 0; right: 32px;
@@ -63,6 +64,7 @@ input{ background: #efefef;border: none; }
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {margin-left: 0;}
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {right: 0px;}
+
 textarea{border: none;}
 .link > .mail{ position: absolute; width: 29px; height: 38px; background: url(/assets/mail.png) no-repeat;top: 120px; left: 51.5%; z-index: 2; }
 .link > .name, .link > .univ{
@@ -194,16 +196,16 @@ img{ position: relative; z-index: 11; }
 	border: solid 5px #EFEFEF;
 	top: 0px;
 	left: 0px;
+	z-index: 10;
 }
 
 .link > .trans > .trans-after, .link > .money > .money-after{
 	position: absolute;
-	width: 200px;
-	height: 150px;
+	width: 200px; height: 150px;
 	opacity: 0.7;
 	border-radius: 30px;
-	top: 10px;
-	left: 10px;
+	top: 10px; left: 10px;
+	z-index: 10;
 }
 
 .link > .money{
@@ -215,7 +217,7 @@ img{ position: relative; z-index: 11; }
 	margin-right: -85px;
 }
 
-.link > .trans > .trans-after{background: url(/assets/trans.png) no-repeat center center #EB3C00;}
+.link > .trans > .trans-after{background: url(/assets/trans.png) no-repeat center center #EB3C00; z-index: 10;}
 .link > .money > .money-after{background: url(/assets/money2.png) no-repeat center center #FFD800;}
 
 .link > .message{

@@ -49,6 +49,8 @@ Oz::Application.routes.draw do
   get "searches/new"
   post "searches/create"
   get "searches/show"
+  get "searches/test1"
+  get "searches/howto_use"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
