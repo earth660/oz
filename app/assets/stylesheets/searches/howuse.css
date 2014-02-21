@@ -14,8 +14,8 @@ html, body{width: 100%; height: 100%; margin: 0; padding: 0;}
 
 #jquery-cycle nav{ width: 100%; }
 
-#jquery-cycle-prev{ position: absolute; top: 22%; right: 62%;}
-#jquery-cycle-next{ position: absolute; top: 22%; right: 35.5%;}
+#jquery-cycle-prev{ position: absolute; top: 55%; left: 10%;}
+#jquery-cycle-next{ position: absolute; top: 55%; right: 10%;}
 
 #prev{
 	border-top: 20px solid transparent;
