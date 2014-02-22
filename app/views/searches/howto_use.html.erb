@@ -10,18 +10,40 @@
 	<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
 </div> <!-- /メニューバー -->
 <div id="content">
-	<div id="jquery-cycle">
+	<div id="plugin-slide">
 		<nav>
-			<p class="page1"></p>
-			<p class="page2"></p>
-			<p class="page3"></p>
-			<p class="page4"></p>
-			<p class="page5"></p>
-			<p class="page6"></p>
+			<div class="page"></div>
 		</nav>
 		<nav>
-			
+			1
 		</nav>
+
+		<nav> 
+		<!-- 教科男女検索 -->
+			2
+		</nav>
+
+		<nav> 
+		<!-- 評価軸 -->
+			3
+		</nav>
+
+		<nav> 
+		<!-- アイコンについて -->
+			4
+		</nav>
+
+		<nav> 
+		<!-- メッセージの送り方 -->
+			5
+		</nav>
+
+		<nav> 
+		<!-- 時給は交渉可能 -->
+			6
+		</nav>
+
+
 	</div>
 	
 	<div id="jquery-cycle-nav">
@@ -31,4 +53,26 @@
 </div>
 
 <%= javascript_include_tag "home/jqdoc" %>
-<%= javascript_include_tag "jquery/plugin/jq-cycle" %>
+
+<script>
+jQuery( function() {
+    jQuery( '#plugin-slide' ) . cycle( {
+        fx: 'scrollHorz',
+        speed: 1000, 
+        timeout: 0,
+        sync: 1,
+        next: '#jquery-cycle-next',
+        prev: '#jquery-cycle-prev',
+        pager: ".page"
+    } );
+} );
+
+$("p").hover(function(){
+	$(this).children("img").stop(true, false).animate({"opacity":0})
+	$(this).children("span").stop(true, false).animate({"opacity":1})
+},
+function(){
+	$(this).children("img").stop(true, false).animate({"opacity":1})
+	$(this).children("span").stop(true, false).animate({"opacity":0})
+});
+</script>
