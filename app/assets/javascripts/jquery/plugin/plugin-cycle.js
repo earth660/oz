@@ -846,7 +846,7 @@ $.fn.cycle.createPagerAnchor = function(i, el, $p, els, opts) {
 		debug('pagerAnchorBuilder('+i+', el) returned: ' + a);
 	}
 	else
-		a = '<a href="#">'+(i+1)+'</a>';
+		a = '<a href="#" class="pager'+i+'">'+'<span></span>'+'</a>';
 		
 	if (!a)
 		return;

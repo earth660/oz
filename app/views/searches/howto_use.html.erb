@@ -14,32 +14,38 @@
 		<nav>
 			<div class="page"></div>
 		</nav>
-		<nav>
+		<nav class="pagecontents">
+			<div class="page"></div>
 			1
 		</nav>
 
-		<nav> 
-		<!-- 教科男女検索 -->
+		<nav class="pagecontents"> 
+			<!-- 教科男女検索 -->
+			<div class="page"></div>
 			2
 		</nav>
 
-		<nav> 
-		<!-- 評価軸 -->
+		<nav class="pagecontents"> 
+			<!-- 評価軸 -->
+			<div class="page"></div>
 			3
 		</nav>
 
-		<nav> 
-		<!-- アイコンについて -->
+		<nav class="pagecontents"> 
+			<!-- アイコンについて -->
+			<div class="page"></div>
 			4
 		</nav>
 
-		<nav> 
-		<!-- メッセージの送り方 -->
+		<nav class="pagecontents"> 
+			<!-- メッセージの送り方 -->
+			<div class="page"></div>
 			5
 		</nav>
 
-		<nav> 
-		<!-- 時給は交渉可能 -->
+		<nav class="pagecontents"> 
+			<!-- 時給は交渉可能 -->
+			<div class="page"></div>
 			6
 		</nav>
 
@@ -67,12 +73,4 @@ jQuery( function() {
     } );
 } );
 
-$("p").hover(function(){
-	$(this).children("img").stop(true, false).animate({"opacity":0})
-	$(this).children("span").stop(true, false).animate({"opacity":1})
-},
-function(){
-	$(this).children("img").stop(true, false).animate({"opacity":1})
-	$(this).children("span").stop(true, false).animate({"opacity":0})
-});
 </script>
