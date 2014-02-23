@@ -23,6 +23,7 @@ Oz::Application.routes.draw do
   post "edit/post"
   post "home/create"
   
+  get "report/teacher_report"
   
 
   devise_for :users, path_names: {
@@ -51,6 +52,7 @@ Oz::Application.routes.draw do
   get "searches/show"
   get "searches/test1"
   get "searches/howto_use"
+  post "searches/posttest"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
