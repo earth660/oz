@@ -14,7 +14,7 @@
 <body>
   <%= yield %>
   <% if user_signed_in? %>
-  <ul>
+  <ul style="opacity: 0;">
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   </ul>
   <% end %>
