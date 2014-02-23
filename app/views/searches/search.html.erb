@@ -19,18 +19,13 @@
 
 <!-- ↓郵便番号UI -->
 <div class="content">
-<form id="form" method="get" action="" name="fcset">
-<div class="button"></div>
 
-<form action="" method="post">
+<%= form_tag("/searches/posttest", name: "fcset", class: "link") do %>
 
-<input class="text" title="O12" maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" value= "<%= $post.postal_code_1 %>" >‐<input class="text" title="O123" maxlength="4" name="n3" onkeyup="AjaxZip3.zip2addr('n2','n3','address','address'); PrevFocusMove(this, 'n2', value)" value= "<%= $post.postal_code_2 %>" ><br />
+<input class="text"  maxlength="3" name="n2" onKeyUp="NextFocusMove(this, 'n3', 3)" >‐<input class="text" maxlength="4" name="n3" onkeyup="PrevFocusMove(this, 'n2', value); valck1(this,4)" ><br />
 
-<div class="button"></div>
 
-<input type="text" name="address" size="60"><br />
-
-<%= Geocoder.coordinates("兵庫県三田市西山") %><br />
+<input type="text" name="address" id="hoge" class="huge" size="60"><br />
 
 
 
@@ -45,36 +40,41 @@
 	<div class="con-2 y icon"></div>
 	<div class="con-2 p icon"></div>
 </div>
-</form>
+
 <div class="clr"></div>
+
+
+			<%= submit_tag( "OK", :class => "action", :id => "okbutton") %>
+
+<% end %>
 
 <!-- ↑郵便番号UI -->
 
-
-
-<!-- 実験エリア -->
+<!-- 検索結果リスト表示 -->
 
 <br />
-<%= @location %>
-
-
-<h3>10 マイル以内</h3>
+<% @locations.each do |f| %>
 <ul>
-<% for location in @location.nearbys(30) %>
-  <li>(<%= location.distance.round(2) %> miles)</li>
-    <li><%=  %></li>
-<% end %>
+	<li> <%= f.id %></li>
 </ul>
+<% end %>
 
 
 
-<!-- ↑実験エリア -->
+<!-- ↑検索結果リスト表示 -->
+
 
 
 </div> <!-- .content -->
+<br />
+js 発火チェックボタン
+<input type="checkbox" onClick="getval2();">
+
 <%= javascript_include_tag "home/jqdoc" %>
 
 <script>
+
+
 
 	function NextFocusMove(object, targetName, maxLength)
 		{
@@ -92,5 +92,30 @@
 	function fc(num){
 			document.fcset.elements[num].focus();
 		}
+
+/*　↓ 自動判定で使用予定 */	
+/* 	郵便番号上が3文字以上の時に、 address フォームの値を old に代入 */
+
+	function valck1(object, maxLength)
+		{
+			
+			AjaxZip3.zip2addr('n2','n3','address','address')
+
+				if(object.value.length >= maxLength){
+					var zip1 = $('[name=address]').val();
+					console.log(zip1);
+				}
+			
+		}
+		
+	function valck2()
+		{
+			AjaxZip3.zip2addr('n2','n3','address','address')
+			var zip2  = $('[name=address]').val();
+			console.log(zip2);
+		}
+		
+/*　↑ 自動判定で使用予定 */	
+
 	
 </script>

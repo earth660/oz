@@ -1,18 +1,29 @@
+
 class SearchesController < ApplicationController
  before_action :set_location
+
 	def search
+
+	@location = Post.all	
+	  if User.find(current_user[:id])
+		  @user = User.find(current_user[:id])
+		  @locations = Post.near($posttest, 10)#  距離検索　緯度経度 , 距離
+	 end
+
+	end
 	
-	@location = Post.all
-	
+	def posttest
+		@address = params[:address]
+		$posttest =  Geocoder.coordinates(@address)
+		
+		redirect_to "/searches/search"
 	end
 	
 	def test1
-	end	
+	end
 	
 	def howto_use
 	end
-	
-	
 	
 	
 	private
