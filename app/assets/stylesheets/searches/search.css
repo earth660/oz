@@ -1,9 +1,4 @@
 @charset "utf-8";
-@font-face{
-	font-family:'MyFont';
-	src: url('../font/font.otf') format('opentype');
-}
-html, body{font-family: MyFont;}
 html, body{width: auto; height: 1000px; overflow-x: hidden;}
 .clr{clear: both;}
 .content{position: relative; width: 100%;}
@@ -11,42 +6,33 @@ html, body{width: auto; height: 1000px; overflow-x: hidden;}
 
 .button{
 	position: relative;
-	image-url("button.png")
-	background: url(../images/button.png) no-repeat left top;
-	width: 65px;
-	height: 65px;
+	background: url("/assets/button.png") no-repeat left top;
+	width: 65px; height: 65px;
 	border: none;
 	float: left;
 }
 
 .zip{
-	width: 230px;
-	height: 1px;
+	width: 230px; height: 1px;
 	border: #33729F solid 5px;
 	border-radius: 20px;
 	float: left;
-	color: #33729F;
-	font-size: 30px;
+	color: #33729F; font-size: 30px; font-weight: bold;
 	padding: 30px;
-	font-weight: bold;
 }
 
 input{
 	position: relative;
 	top: -20px;
-	text-align: center;
+	text-align: center; font-size: 25px; color: #33729F; font-weight: bold;
 	border: none;
-	font-size: 25px;
-	color: #33729F;
-	font-weight: bold;
 	float: left;
 }
 
 .hi{
 	position: relative;
 	float: left;
-	left: -5px;
-	top: -20px;
+	left: -5px; top: -20px;
 }
 
 #zip{width: 365px; height: 70px;}
@@ -56,7 +42,7 @@ input{
 	content: '';
 	top: 50px; left: 50%;
 	margin-left: -30px;
-	background: url(../images/cyellow.png) no-repeat;
+	background: url("/assets/cyellow.png") no-repeat;
 	width: 62px; height: 79px;
 }
 .introjs-tooltip:after{
@@ -89,13 +75,11 @@ input{
 	border: #33729F solid 5px;
 	border-radius: 50%;
 	float: left;
-	margin-left: -100px;
+	margin-left: -130px;
 	opacity: 0;
 	z-index: -100;
-	margin-top: -35px;
+	margin-top: -80px;
 }
-
-/* top */
 
 #holder {
     height: 480px;
@@ -115,12 +99,24 @@ input{
 	z-index: 10;
 }
 
-/* menu */
+.maru input{display: none;}
+.maru label{
+    display: block;
+    float: left;
+    cursor: pointer;
+    margin: 0;
+    transition: .2s;
+    opacity: 0.2;
+}
+
+.maru input[type="checkbox"]:checked + label {opacity: 1; }
+
+
 .con{
 	position: relative;
 	width: 125px;
 	height: 125px;
-	background: url(../images/con.png) no-repeat left top;
+	background: url("/assets/con.png") no-repeat left top;
 	-webkit-transition:  0.5s;
 	-moz-transition:  0.5s;
 	-o-transition:  0.5s;
@@ -129,13 +125,11 @@ input{
 	z-index: 100;
 }
 
-/* ↓変更 */
-
 .man, .woman{position: relative; width: 62px; height: 125px; opacity: 0; float: left; background: #000; }
-.man{background: url(../images/man.png) no-repeat center center; top: -30px; left: 130px;}
-.woman{background: url(../images/woman.png) no-repeat center center; top: -30px; left: 130px;}
+.man{background: url("/assets/man.png") no-repeat center center; top: -75px; left: 130px;}
+.woman{background: url("/assets/woman.png") no-repeat center center; top: -75px; left: 130px;}
 
-.con-2{ background:url("../images/con-2.png") top left no-repeat;
+.con-2{ background:url("/assets/con-2.png") top left no-repeat;
 	position: absolute;
 	-webkit-transition:  0.5s;
 	-moz-transition:  0.5s;
@@ -152,35 +146,20 @@ input{
 .g{ width:44px; height:97px; background-position:-10px -393px; top: 15px; left: -45px; }
 .b{ width:86px; height:69px; background-position:-10px -500px; top: -45px; left: -30px; }
 
-
-/* ↑変更 */
-
-/* /3 */
-
-#cover{
-	margin-top: -150px;
-	margin-left: 300px;
-	width: 765px;
-	height: 50%;
-	opacity: 0;
-	transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	-ms-transition-duration: 0.5s;
-}
-
-#cover > a > img{
+.user-wrap{position: relative; width: 100%; left: 50%; margin: 0 0 0 -25%;}
+.line{ position: relative; width: 720px; height: 150p margin-bottom: 20px;}
+.line:nth-of-type(1){margin-top: 170px;}
+.teacher{
 	position: relative;
-	width: 150px;
-	height: 150px;
-	float: left;
+	width: 150px; height: 150px; 
+	margin: 0 20px 20px 20px;
 	border-radius: 50%;
-	margin-top: 30px;
-	margin-left: 40px;
-	cursor: pointer;
-	z-index: 100;
+	float: left; cursor: pointer;
 }
+
+.teacher:nth-of-type(1), .teacher:nth-of-type(4n+1){margin-left: 0px;}
+.teacher:nth-of-type(4n+1){ clear: both; }
+.teacher:nth-of-type(4n){margin-right: 0px;}
 
 .cover{
 	position: absolute;
@@ -205,7 +184,7 @@ ul#prof{
 
 ul#prof > li{position: absolute;border-radius: 0;font-weight: 900;}
 ul#prof > li.img{top: 30px; left: 50px;}
-ul#prof > li.mail{ width: 29px; height: 38px; background: url(../images/mail.png) no-repeat;top: 93px; left: 125px;}
+ul#prof > li.mail{ width: 29px; height: 38px; background: url("/assets/mail.png") no-repeat;top: 93px; left: 125px;}
 ul#prof > li.name{
 	font-size: 40px;
 	width: 300px;
@@ -280,7 +259,6 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 	height: 68px;	
 	
 }
-
 .rate1{
 	background: #7fe35e;
 	left: 425px;
@@ -290,7 +268,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate1:after{
-	background: url(../images/pencil.png) no-repeat center center;
+	background: url("/assets/pencil.png") no-repeat center center;
 	top: 0px; left: 5px;
 	background-size: 60%;
 }
@@ -304,7 +282,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate2:after{
-	background: url(../images/goal.png) no-repeat center center;
+	background: url("/assets/goal.png") no-repeat center center;
 	top: 0px; left: 0px;
 	background-size: 60%;
 }
@@ -318,7 +296,7 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 }
 
 .rate3:after{
-	background: url(../images/user.png) no-repeat center center;
+	background: url("/assets/user.png") no-repeat center center;
 	top: 0px; left: 2px;
 	background-size: 60%;
 }
@@ -389,18 +367,4 @@ ul#prof > li.sub > .mathematica:after{content: '数学';}
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: ease;	
-}
-
-@media screen and (max-width:1024px) {
-html, body{overflow-x: hidden;}
-.menu{left: 50px; margin-left: -150px;}
-#form{ margin-top: 200px; margin-left: 200px;}
-.button{ margin-left: 5px; margin-right: 15px; margin-top: 3px;}
-.introjs-tooltip{margin-top: -30px;}
-.zip{margin-left: -20px; margin-top: 0px;width: 230px; }
-input{width: 80px; height: 40px; top: -30px; margin-left: 0px;}
-.man, .woman{left: 150px;}
-.maru{top: 0px; left: 20px; margin-bottom: 0px;}
-#cover{width: 780px; margin-top: -150px; margin-left: 120px;}
-#cover > a > img{margin-left: 40px;}
 }

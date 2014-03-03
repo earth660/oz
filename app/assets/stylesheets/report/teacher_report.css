@@ -1,0 +1,117 @@
+*{margin: 0; padding: 0;}
+body{width: 100%; height: 100%; overflow: scroll;}
+.clr{clear: both;}
+
+/* ----------8<----------8<--------------------8<----------8<---------- */
+
+/* ↓編集ポップアップの設定 */
+
+.popup{
+	position: fixed;
+	width: 690px; height: 450px;
+	top: 130px; left: 300px;
+	padding: 1em;
+	background: #fff;
+	overflow: hidden; z-index: 99;
+	
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) ;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) ;
+	-ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) ;
+	-o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) ;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) ;
+}
+
+.minimize, .close{
+	position: relative;
+	width: 25px; height: 25px;
+	top: -5px; right: -5px;
+	margin-right: 6px;
+	border-radius: 50%;
+	color: #fff; font-weight: 900; text-align: center; line-height: 28px;
+	cursor: pointer; float: right;
+}
+
+.close{ background: #2980B9; }
+.minimize{ background: #5DADE2; }
+
+#Daydata{
+	position: relative;
+	width: 100px; height: 100px;
+	top: 25px; left: 50px;
+	background: #fff;
+	border: 1px solid #eee; border-radius: 25px;
+	font-weight: 900; text-align: center;
+	cursor: pointer; z-index: 999;
+}
+
+.month{
+	position: relative;
+	width: 100px; height: 35px;
+	background: #5DADE2;
+	border-radius: 25px 25px 0px 0px;
+	color: #fff; font-size: 20px; 
+	line-height: 35px;
+}
+
+.month span{ position: relative; font-size: 15px; }
+
+.day{
+	position: relative;
+	font-size: 35px;
+	line-height: 65px;
+}
+
+.p1d, .m1d, .p7d, .m7d{
+	position: absolute;
+	width: 40px; height: 40px;
+	top: 100px; left: 98px;
+	background: #2980B9;
+	border-radius: 50%;
+	color: #fff; font-weight: 900; text-align: center; line-height: 40px;
+	cursor: pointer; opacity: 0.3;
+}
+
+#subject { position: absolute; width: 440px; top: 45px; left: 65%; margin-top: 30px; margin-left: -250px; text-align: center; }
+#subject input{display: none;}
+#subject label{ display: block; float: left; cursor: pointer; margin: 10px 3px 0 0; transition: .2s; opacity: 0.3; }
+#subject input[type="radio"]:checked + label{opacity: 1; }
+
+.math, .jap, .soc, .sci, .eng, .etc{
+	position: relative;
+	width: 70px; height: 70px;
+	background: #efefef;
+	float: left;
+	border-radius: 50%;
+}
+
+.math:before, .jap:before, .soc:before, .sci:before, .eng:before, .etc:before{
+	position: absolute;
+	top: 5px; left: 5px;
+	width: 50px; height: 50px;
+	border: solid 5px #fff; border-radius: 50%;
+	color: #fff; line-height: 65px; font-size: 25px;
+}
+
+.math:before{content: '数'; background: #6fc9d8;}
+.jap:before{content: '国'; background: #ff5c57;}
+.soc:before{content: '社'; background: #f9c732;}
+.sci:before{content: '理'; background: #7fe35e;}
+.eng:before{content: '英'; background: #ff6fcf;}
+.etc:before{content: '他'; background: #a35ecd;}
+
+
+.math:after, .jap:after, .soc:after, .sci:after, .eng:after, .etc:after{
+	position: absolute;
+	width: 60px; top: 5px; left: 5px;
+	color: #fff; line-height: 40px; font-size: 9px;
+}
+
+.math:after{content: 'Math';}
+.jap:after{content: 'Japanese';}
+.soc:after{content: 'Society';}
+.sci:after{content: 'Science';}
+.eng:after{content: 'English';}
+.etc:after{content: 'Etc';}
+
+
+/* ↑編集ポップアップの設定 */

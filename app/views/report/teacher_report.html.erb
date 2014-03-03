@@ -1,2 +1,103 @@
+<%= stylesheet_link_tag "home/jqdoc", :media => "all" %>
+<%= stylesheet_link_tag "report/teacher_report", :media => "all" %>  
+<%= javascript_include_tag "search/jquery.min" %>
+  <div id="map-menu">
+	<a class="menu-item" href="/top/teacher_top"><%= image_tag("home.png") %><span>HOME</span></a>
+	<a class="menu-item" href="search.html"><%= image_tag("searchicon.png") %><span>検索</span></a>
+	<a class="menu-item" href="#"><%= image_tag("money.png") %><span>料金</span></a>
+	<a class="menu-item" href="#"><%= image_tag("guide.png") %><span>使い方</span></a>
+  </div>
+
+  <%= form_tag("/home/teacher_mypage", class: "popup") do %>
+
+  	<!-- ここにポップアップ最小化・キャンセル(閉じる)ボタン -->
+  	<div class="close">X</div>
+  	<div class="minimize">_</div>
+  	
+  	<div class="clr"></div>
+  	
+  	<!-- ここに日にち -->
+  	<% today = Time.now %>
+  	<% i = 0 %>	  	
+  	<% day = today + i.day%>	
+  	<% week = day.strftime("#{%w(日 月 火 水 木 金 土)[day.wday]}") %>
+
+  	<div id="Daydata">
+	  	<div class="month"><%= day.month %> <span>月(<%= week %>)</span></div>
+	  	<div class="day"><%= day.day %></div>
+  	</div>
+  	
+  	
+  	<div class="p1d">+1</div>
+  	<div class="m1d">-1</div>
+  	<div class="p7d">+7</div>
+  	<div class="m7d">-7</div>
+  	
+	<div id="subject">
+
+	  	<!-- ここから教科選択 -->
+		<%= radio_button_tag(:subject,"math") %>
+		<%= label_tag(:subject_math,"",{:class => "math"}) %>
+		
+		<%= radio_button_tag(:subject,"jap") %>
+		<%= label_tag(:subject_jap,"",{:class => "jap"}) %>
+		
+		<%= radio_button_tag(:subject,"soc") %>
+		<%= label_tag(:subject_soc,"",{:class => "soc"}) %>
+		
+		<%= radio_button_tag(:subject,"sci") %>
+		<%= label_tag(:subject_sci,"",{:class => "sci"}) %>
+		
+		<%= radio_button_tag(:subject,"eng") %>
+		<%= label_tag(:subject_eng,"",{:class => "eng"}) %>
+		
+		<%= radio_button_tag(:subject,"etc") %>
+		<%= label_tag(:subject_etc,"",{:class => "etc"}) %>
+	
+	</div>
+
+	<!-- 内容 -->
+
+
+  <% end %>
+
+<!--
 指導報告書　先生
 	<a href="/home/teacher_mypage"><div id="return">マイページに戻る</div></a>
+-->
+
+<%= javascript_include_tag "home/jqdoc" %>
+<script>
+$(window).load(function(){
+	
+	$(".minimize").toggle(function(){
+		$(".popup").animate({"width":"200px", "height":"10px", "top":"90%", "left": "70%"})
+		$(this).text("□")
+	},
+	function(){
+		$(".popup").animate({"width":"690px", "height":"450px", "top":"130px", "left": "300px" })
+		$(this).text("_")
+	});
+
+	$(".close").click(function(){
+		$(".popup").fadeOut()
+	});
+
+	$("#Daydata").toggle(function(){
+		$(".p1d").animate({"top": "100px", "left": "175px"})
+		$(".m1d").animate({"top": "100px", "left": "20px"})
+		$(".m7d").animate({"top": "20px", "left": "98px"})
+		$(".p7d").animate({"top": "175px", "left": "98px"})
+	},
+	function(){
+		$(".p1d, .m1d, .p7d, .m7d").animate({"top": "100px", "left": "98px"})
+	});
+	
+	$(".p1d").hover(function(){$(this).stop(true, false).animate({"opacity":1})}, function(){$(this).stop(true, false).animate({"opacity":0.3})});
+	$(".m1d").hover(function(){$(this).stop(true, false).animate({"opacity":1})}, function(){$(this).stop(true, false).animate({"opacity":0.3})});
+	$(".p7d").hover(function(){$(this).stop(true, false).animate({"opacity":1})}, function(){$(this).stop(true, false).animate({"opacity":0.3})});
+	$(".m7d").hover(function(){$(this).stop(true, false).animate({"opacity":1})}, function(){$(this).stop(true, false).animate({"opacity":0.3})});
+	
+	
+});
+</script>
